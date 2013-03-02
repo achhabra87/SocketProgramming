@@ -1,2 +1,0 @@
-Apr 3, 2012 3:36:36 PM com.altera.sopceditor.util.MessageLoggerAdapter receiveMessage
-SEVERE: Error: The module could not be edited. 

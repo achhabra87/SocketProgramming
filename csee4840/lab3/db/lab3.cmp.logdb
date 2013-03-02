@@ -1,4 +1,0 @@
-v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,de2_vga_raster:V2|lpm_mult:Mult1|mult_7o01:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,de2_vga_raster:V2|lpm_mult:Mult0|mult_3o01:auto_generated|mac_out2,
-PORT_SWAPPING,PORT_SWAPPING_FINISHED,de2_vga_raster:V2|lpm_mult:Mult0|mult_3o01:auto_generated|mac_mult1,
