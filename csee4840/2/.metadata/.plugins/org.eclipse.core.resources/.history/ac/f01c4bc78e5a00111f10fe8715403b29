@@ -1,0 +1,225 @@
+/*
+ * CSEE 4840 Lab 2: Keyboard Input and VGA Display Functions
+ *
+ * Stephen A. Edwards et al.
+ *
+ */
+ 
+#include "basic_io.h"
+#include "DM9000A.h"
+#include <alt_types.h>
+#include "alt_up_ps2_port.h"
+#include "ps2_keyboard.h"
+#include "ps2_mouse.h"
+#include "LCD.h"
+#include "VGA.h"
+
+static int gDisplayWidth = 0;
+static int gDisplayHeight = 28;
+
+
+/**********************************************************
+ * Display the cursor at (gDisplayWidth,gDisplayHeight)
+ * 
+*********************************************************/
+static void display_cursor(int rightFlag)
+{
+    int width_count = 0;
+    if(rightFlag){/* Clear the cursor from its previous right position */
+        if(gDisplayWidth == 79){ /* Delete cursor in next line */
+            for(width_count = 0; width_count <8; width_count ++){
+                Vga_Clr_Pixel(VGA_0_BASE, width_count,
+                                (gDisplayHeight)*16+31);
+            }
+        }
+        else{
+            for(width_count = 0; width_count <8; width_count ++){
+                Vga_Clr_Pixel(VGA_0_BASE,(gDisplayWidth+1)*8 + width_count,
+                                (gDisplayHeight)*16+15);
+            } 
+        }
+    }
+    else{/* Clear the cursor from its previous left position */
+        if(gDisplayWidth == 1){ /* Delete cursor in previous line */
+            for(width_count = 0; width_count <8; width_count ++){
+                Vga_Clr_Pixel(VGA_0_BASE, 639-width_count,
+                                (gDisplayHeight)*16-1);
+            }
+        }
+        for(width_count = 0; width_count <8; width_count ++){
+            Vga_Clr_Pixel(VGA_0_BASE,(gDisplayWidth-1)*8 + width_count,
+                            (gDisplayHeight)*16+15);
+        } 
+    }
+    
+    /* Put the cursor at (gDisplayWidth,gDisplayHeight) */
+    for(width_count = 0; width_count <8; width_count ++){
+            Vga_Set_Pixel(VGA_0_BASE,(gDisplayWidth)*8 + width_count,
+                            (gDisplayHeight)*16+15);
+    } 
+}
+
+
+/**********************************************************
+ * move cursor from right if rightFlag == 1; 
+ * else move from left
+ * 
+*********************************************************/
+void move_cursor(int rightFlag)
+{
+    if(rightFlag){
+        if(gDisplayWidth){
+            gDisplayWidth--;
+        }
+        else{
+            if(28 == gDisplayHeight){ /* No data on screen */
+            }
+            else{/* Go to end of last line */
+                gDisplayHeight--;
+                gDisplayWidth = 79;
+            }
+        }
+    }    
+    else{
+        printf("manu\n");
+        if(gDisplayWidth == 80){
+            gDisplayWidth = 0;
+            if(gDisplayHeight == 28){
+                gDisplayHeight = 29; /* There are only 2 lines for input
+                                        setting to 29 is better than
+                                        incrementing to 29*/
+            }
+            else{
+                /* Go back to last 2nd line */
+                gDisplayHeight = 28;
+            }
+        }
+        else{
+            gDisplayWidth++;
+        }
+    }
+    display_cursor(rightFlag);
+}
+
+/**********************************************************
+ * Read user input and display it in bottom
+ * 
+*********************************************************/
+void display_txtInput(char c)
+{
+    int width_count = 0, height_count = 0;
+    put_vga_char(c, gDisplayWidth, gDisplayHeight);
+    gDisplayWidth++;
+    if(gDisplayWidth == 80){
+        gDisplayWidth = 0;
+        if(gDisplayHeight == 28){
+            gDisplayHeight = 29; /* There are only 2 lines for input
+                                    setting to 29 is better than
+                                    incrementing to 29*/
+        }
+        else{
+            /* Clear all data and go back to last 2nd line */
+            gDisplayHeight = 28;
+            for(width_count = 0; width_count <640; width_count ++){
+                for(height_count = 447; height_count <480; height_count++){
+                    Vga_Clr_Pixel(VGA_0_BASE,width_count,height_count);
+                }
+            }
+        }
+    }
+    /* Display Cursor */
+    display_cursor(0); /* 0 since cursor is moving from left */
+    return;
+}
+
+/**********************************************************
+ * Clear the bottom area when data is sent
+ * 
+*********************************************************/
+void display_txtInput_clear(void)
+{
+    int width_count = 0, height_count = 0;
+    for(width_count = 0; width_count <640; width_count ++){
+        for(height_count = 447; height_count <480; height_count++){
+            Vga_Clr_Pixel(VGA_0_BASE,width_count,height_count);
+        }
+    }
+    gDisplayWidth = 0;
+    gDisplayHeight = 28;
+   /* Display Cursor */
+    display_cursor(1); /* 1 since cursor is moving from right */
+}
+
+/**********************************************************
+ * Backspace
+ * 
+*********************************************************/
+void display_txtInput_BackSpace(void)
+{
+    int width_count = 0, height_count = 0;
+    if(gDisplayWidth){
+        gDisplayWidth--;
+    }
+    else{
+        if(28 == gDisplayHeight){ /* No data on screen */
+        }
+        else{/* Go to end of last line */
+            gDisplayHeight--;
+            gDisplayWidth = 79;
+        }
+    }
+    
+    /* Clear the previous character */
+    for(width_count = 0; width_count <8; width_count ++){
+        for(height_count = 0; height_count <16; height_count++){
+            Vga_Clr_Pixel(VGA_0_BASE,gDisplayWidth*8 + width_count,
+                         gDisplayHeight*16 + height_count);
+        }
+    }
+    /* Display Cursor */
+    display_cursor(1); /* 1 since cursor is moving from right */
+    return;
+}
+
+/**********************************************************
+ * make change due to shift being pressed
+ * 
+*********************************************************/
+void shiftTransform(char *c)
+{
+    char key = *c;
+    printf("11111\n");
+    
+    if(123 > key > 96){
+        key=toupper(key);
+    }
+    else{
+        switch(key){
+            case '1':
+                key = '!';
+                printf("22222\n");
+        }
+    }
+    /*
+            else if (key == '1') key = '!';
+            else if (key == '2') key = '@';
+            else if (key == '3') key = '#';
+            else if (key == '4') key = '$';
+            else if (key == '5') key = '%';
+            else if (key == '6') key = '^';
+            else if (key == '7') key = '&';
+            else if (key == '8') key = '*';
+            else if (key == '9') key = '(';
+            else if (key == '0') key = ')';
+            else if (key == '-') key = '_';
+            else if (key == '=') key = '+';
+            else if (key == '[') key = '{';
+            else if (key == ']') key = '}';
+            else if (key == ';') key = ':';
+            else if (key == 39) key = 34;
+            else if (key == '/') key = '?';
+            else if (key == '.') key = '>';
+            else if (key == ',') key = '<';
+            else if (key == '`') key = '~'; */
+}
+

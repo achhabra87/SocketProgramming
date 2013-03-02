@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="hello_led_0.nios2.exec.1679722875" name="Nios II Executable" projectType="nios2.exec">
+<configuration artifactExtension="elf" artifactName="hello_led_0" cleanCommand="rm -rf" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="nios2.exec.debug.36106550" name="Debug" parent="nios2.exec.debug">
+<toolChain id="com.altera.nj.ui.exe.Debug.814734089" name="com.altera.nj.ui.exe.Debug" superClass="com.altera.nj.ui.exe.Debug">
+<tool id="com.altera.nj.ui.tool.compiler.exe.debug.701536138" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.debug"/>
+<tool id="com.altera.nj.ui.tool.linker.exe.debug.2008065973" name="Linker" superClass="com.altera.nj.ui.tool.linker.exe.debug"/>
+</toolChain>
+<resourceConfiguration exclude="false" id="nios2.exec.debug.36106550./hello_led_0/hello_led.c" name="hello_led.c" resourcePath="/lab2/main.c" toolsToInvoke="com.altera.nj.ui.tool.compiler.exe.debug.701536138./hello_led_0/hello_led.c">
+<tool id="com.altera.nj.ui.tool.compiler.exe.debug.701536138./hello_led_0/hello_led.c" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.debug.701536138"/>
+</resourceConfiguration>
+</configuration>
+<configuration artifactExtension="elf" artifactName="hello_led_0" cleanCommand="rm -rf" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="nios2.exec.release.565107960" name="Release" parent="nios2.exec.release">
+<toolChain id="com.altera.nj.ui.exe.Release.267834412" name="com.altera.nj.ui.exe.Release" superClass="com.altera.nj.ui.exe.Release">
+<tool id="com.altera.nj.ui.tool.compiler.exe.release.1757227392" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.release"/>
+<tool id="com.altera.nj.ui.tool.linker.exe.release.1354220902" name="Linker" superClass="com.altera.nj.ui.tool.linker.exe.release"/>
+</toolChain>
+<resourceConfiguration exclude="false" id="nios2.exec.release.565107960./hello_led_0/hello_led.c" name="hello_led.c" resourcePath="/lab2/main.c" toolsToInvoke="com.altera.nj.ui.tool.compiler.exe.release.1757227392./hello_led_0/hello_led.c">
+<tool id="com.altera.nj.ui.tool.compiler.exe.release.1757227392./hello_led_0/hello_led.c" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.release.1757227392"/>
+</resourceConfiguration>
+</configuration>
+</project>
+</ManagedProjectBuildInfo>

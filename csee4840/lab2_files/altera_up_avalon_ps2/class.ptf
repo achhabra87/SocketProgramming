@@ -1,0 +1,300 @@
+# Altera University Program Avalon PS2 Port
+#
+CLASS altera_up_avalon_ps2
+{
+	CB_GENERATOR 
+	{
+		HDL_FILES 
+		{
+			FILE 
+			{
+				use_in_simulation = "1";
+				use_in_synthesis = "1";
+				filepath = "hdl/Altera_UP_Avalon_PS2.v";
+			}
+			FILE 
+			{
+				use_in_simulation = "1";
+				use_in_synthesis = "1";
+				filepath = "hdl/Altera_UP_PS2.v";
+			}
+			FILE 
+			{
+				use_in_simulation = "1";
+				use_in_synthesis = "1";
+				filepath = "hdl/Altera_UP_PS2_Command_Out.v";
+			}
+			FILE 
+			{
+				use_in_simulation = "1";
+				use_in_synthesis = "1";
+				filepath = "hdl/Altera_UP_PS2_Data_In.v";
+			}
+		}
+		top_module_name = "Altera_UP_Avalon_PS2.v:Altera_UP_Avalon_PS2";
+		emit_system_h = "0";
+		LIBRARIES 
+		{
+		}
+	}
+   MODULE_DEFAULTS global_signals
+   {
+      class = "altera_up_avalon_ps2";
+      class_version = "6.1";
+      SYSTEM_BUILDER_INFO 
+      {
+         Instantiate_In_System_Module = "1";
+         Has_Clock = "1";
+         Default_Module_Name = "ps2";
+         Top_Level_Ports_Are_Enumerated = "1";
+      }
+      COMPONENT_BUILDER 
+      {
+         GLS_SETTINGS 
+         {
+         }
+      }
+      PORT_WIRING 
+      {
+         PORT clk
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "clk";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT reset
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "reset";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+      }
+      WIZARD_SCRIPT_ARGUMENTS 
+      {
+         hdl_parameters 
+         {
+         }
+      }
+      SIMULATION 
+      {
+         DISPLAY 
+         {
+         }
+      }
+      SLAVE avalon_PS2_slave
+      {
+         SYSTEM_BUILDER_INFO 
+         {
+            Bus_Type = "avalon";
+            Address_Group = "1";
+            Has_Clock = "0";
+            Address_Width = "1";
+            Address_Alignment = "dynamic";
+            Data_Width = "32";
+            Has_Base_Address = "1";
+            Has_IRQ = "1";
+            Setup_Time = "0";
+            Hold_Time = "0";
+            Read_Wait_States = "peripheral_controlled";
+            Write_Wait_States = "peripheral_controlled";
+            Read_Latency = "1";
+            Maximum_Pending_Read_Transactions = "0";
+            Active_CS_Through_Read_Latency = "0";
+            Is_Printable_Device = "0";
+            Is_Memory_Device = "0";
+            Is_Readable = "1";
+            Is_Writable = "1";
+            Minimum_Uninterrupted_Run_Length = "1";
+         }
+         COMPONENT_BUILDER 
+         {
+            AVS_SETTINGS 
+            {
+               Setup_Value = "0";
+               Read_Wait_Value = "1";
+               Write_Wait_Value = "1";
+               Hold_Value = "0";
+               Timing_Units = "cycles";
+               Read_Latency_Value = "1";
+               Minimum_Arbitration_Shares = "1";
+               Active_CS_Through_Read_Latency = "0";
+               Max_Pending_Read_Transactions_Value = "1";
+               Address_Alignment = "dynamic";
+               Is_Printable_Device = "0";
+               interface_name = "Avalon Slave";
+               external_wait = "1";
+               Is_Memory_Device = "1";
+            }
+         }
+         PORT_WIRING 
+         {
+            PORT address
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "address";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT chipselect
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "chipselect";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT byteenable
+            {
+               width = "4";
+               width_expression = "";
+               direction = "input";
+               type = "byteenable";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT read
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "read";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT write
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "write";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT writedata
+            {
+               width = "32";
+               width_expression = "";
+               direction = "input";
+               type = "writedata";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT PS2_CLK
+            {
+               width = "1";
+               width_expression = "";
+               direction = "inout";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT PS2_DAT
+            {
+               width = "1";
+               width_expression = "";
+               direction = "inout";
+               type = "export";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT irq
+            {
+               width = "1";
+               width_expression = "";
+               direction = "output";
+               type = "irq";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT readdata
+            {
+               width = "32";
+               width_expression = "";
+               direction = "output";
+               type = "readdata";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT waitrequest
+            {
+               width = "1";
+               width_expression = "";
+               direction = "output";
+               type = "waitrequest";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+         }
+      }
+   }
+	USER_INTERFACE 
+	{
+		USER_LABELS 
+		{
+			name = "PS2 Serial Port";
+			technology = "University Program DE2 Board";
+		}
+		LINKS
+		{
+			LINK datasheet
+			{
+				title = "Data Sheet";
+				url = "../doc/PS2.pdf";
+			}
+		}
+		WIZARD_UI the_wizard_ui
+		{
+			title = "PS2 Serial Port - {{ $MOD }}";
+			CONTEXT 
+			{
+				H = "WIZARD_SCRIPT_ARGUMENTS/hdl_parameters";
+				M = "";
+				SBI_global_signals = "SYSTEM_BUILDER_INFO";
+				SBI_avalon_PS2_slave = "SLAVE avalon_PS2_slave/SYSTEM_BUILDER_INFO";
+			}
+			GROUP
+			{
+				TEXT
+				{
+					title = "PS2 Core";
+				}
+				TEXT 
+				{
+					title = "DE2 Development and Education Board";
+				}
+				TEXT
+				{
+					title = "Communicates with a PS2 Keyboard or Mouse";
+				}
+			}
+		}
+	}
+	ASSOCIATED_FILES 
+	{
+		Add_Program = "the_wizard_ui";
+		Edit_Program = "the_wizard_ui";
+		Generator_Program = "cb_generator.pl";
+	}
+}

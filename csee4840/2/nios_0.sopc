@@ -1,0 +1,2516 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<system name="nios_0">
+    <parameter valueString="3939297553" name="systemHash"/>
+    <parameter name="quartusRootDir">/opt/e4840/altera7.2/quartus</parameter>
+    <parameter valueString="1201926662963" name="timeStamp"/>
+    <parameter valueString="false" name="generateLegacySDK"/>
+    <parameter name="bonusData">bonusData 
+{
+   element SEG7_Display.avalonS
+   {
+      datum baseAddress
+      {
+         value = "9437224";
+         type = "long";
+      }
+   }
+   element timer_1
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element timer_0.s1
+   {
+      datum baseAddress
+      {
+         value = "9437184";
+         type = "long";
+      }
+   }
+   element led_red
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element jtag_uart_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element lcd_16207_0.control_slave
+   {
+      datum baseAddress
+      {
+         value = "9437232";
+         type = "long";
+      }
+   }
+   element led_red.s1
+   {
+      datum baseAddress
+      {
+         value = "9437392";
+         type = "long";
+      }
+   }
+   element jtag_uart_0.avalon_jtag_slave
+   {
+      datum baseAddress
+      {
+         value = "16793600";
+         type = "long";
+      }
+   }
+   element button_pio
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element sysid.control_slave
+   {
+      datum baseAddress
+      {
+         value = "9437216";
+         type = "long";
+      }
+   }
+   element tri_state_bridge_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element epcs_controller
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+   }
+   element ISP1362
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "18";
+         type = "int";
+      }
+   }
+   element switch_pio.s1
+   {
+      datum baseAddress
+      {
+         value = "9437488";
+         type = "long";
+      }
+   }
+   element sdram_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element I2C_0.avalonS
+   {
+      datum baseAddress
+      {
+         value = "9437440";
+         type = "long";
+      }
+   }
+   element ISP1362.avalonS
+   {
+      datum baseAddress
+      {
+         value = "9437312";
+         type = "long";
+      }
+   }
+   element binary_vga_controller_0.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "10485760";
+         type = "long";
+      }
+   }
+   element uart_0.s1
+   {
+      datum baseAddress
+      {
+         value = "9437248";
+         type = "long";
+      }
+   }
+   element sram_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "15";
+         type = "int";
+      }
+   }
+   element lcd_16207_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element led_green.s1
+   {
+      datum baseAddress
+      {
+         value = "9437376";
+         type = "long";
+      }
+   }
+   element cpu_0.jtag_debug_module
+   {
+      datum baseAddress
+      {
+         value = "16777216";
+         type = "long";
+      }
+   }
+   element DM9000A.avalonS
+   {
+      datum baseAddress
+      {
+         value = "9437328";
+         type = "long";
+      }
+   }
+   element button_pio.s1
+   {
+      datum baseAddress
+      {
+         value = "9437472";
+         type = "long";
+      }
+   }
+   element binary_vga_controller_0
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
+   element ps2_0.avalon_PS2_slave
+   {
+      datum _lockedAddress
+      {
+         value = "0";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "9437696";
+         type = "long";
+      }
+   }
+   element cfi_flash_0.s1
+   {
+      datum baseAddress
+      {
+         value = "8388608";
+         type = "long";
+      }
+   }
+   element led_green
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element timer_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element switch_pio
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element sram_0.avalonS
+   {
+      datum baseAddress
+      {
+         value = "9961472";
+         type = "long";
+      }
+   }
+   element DM9000A
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "19";
+         type = "int";
+      }
+   }
+   element cfi_flash_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element sysid
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element cpu_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element ps2_0
+   {
+      datum _sortIndex
+      {
+         value = "20";
+         type = "int";
+      }
+   }
+   element sdram_0.s1
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "long";
+      }
+   }
+   element I2C_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+   }
+   element clk.clk
+   {
+      datum clock_domain
+      {
+         value = "clk";
+         type = "String";
+      }
+   }
+   element epcs_controller.epcs_control_port
+   {
+      datum baseAddress
+      {
+         value = "9439232";
+         type = "long";
+      }
+   }
+   element timer_1.s1
+   {
+      datum baseAddress
+      {
+         value = "9437280";
+         type = "long";
+      }
+   }
+   element uart_0
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element tri_state_bridge_0.avalon_slave
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "long";
+      }
+   }
+   element SEG7_Display
+   {
+      datum _enabled
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
+}
+</parameter>
+    <parameter valueString="false" name="hardcopyCompatible"/>
+    <parameter valueString="CYCLONEII" name="deviceFamily"/>
+    <parameter valueString="false" name="generateLegacySim"/>
+    <parameter valueString="DE2_NET.qpf" name="projectName"/>
+    <parameter valueString="VERILOG" name="hdlLanguage"/>
+    <parameter name="projectDirectory">/tmp/sedwards/lab2-new</parameter>
+    <module version="7.2" name="clk" kind="clock_source">
+        <parameter valueString="true" name="clockFrequencyKnown"/>
+        <parameter valueString="50000000" name="clockFrequency"/>
+    </module>
+    <module version="7.2" name="cpu_0" kind="altera_nios2">
+        <parameter valueString="" name="userDefinedSettings"/>
+        <parameter valueString="Dynamic" name="setting_branchPredictionType"/>
+        <parameter valueString="_10" name="mmu_processIDNumBits"/>
+        <parameter valueString="32" name="exceptionOffset"/>
+        <parameter valueString="EmbeddedMulFast" name="muldiv_multiplierType"/>
+        <parameter valueString="_4096" name="icache_size"/>
+        <parameter valueString="_128" name="debug_OCIOnchipTrace"/>
+        <parameter valueString="Fast" name="impl"/>
+        <parameter valueString="_4" name="mmu_uitlbNumEntries"/>
+        <parameter valueString="sdram_0.s1" name="exceptionSlave"/>
+        <parameter valueString="false" name="dcache_omitDataMaster"/>
+        <parameter valueString="0" name="mmu_TLBMissExcOffset"/>
+        <parameter valueString="false" name="setting_illegalMemAccessDetection"/>
+        <parameter valueString="32" name="breakOffset"/>
+        <parameter valueString="true" name="debug_embeddedPLL"/>
+        <parameter valueString="false" name="setting_debugSimGen"/>
+        <parameter valueString="false" name="setting_alwaysBypassDCache"/>
+        <parameter valueString="_0" name="icache_numTCIM"/>
+        <parameter valueString="false" name="setting_showInternalSettings"/>
+        <parameter valueString="false" name="setting_illegalInstructionsTrap"/>
+        <parameter valueString="0" name="resetOffset"/>
+        <parameter valueString="false" name="setting_bhtIndexPcOnly"/>
+        <parameter valueString="true" name="setting_HDLSimCachesCleared"/>
+        <parameter valueString="true" name="setting_alwaysEncrypt"/>
+        <parameter valueString="false" name="setting_activateModelChecker"/>
+        <parameter valueString="_4" name="dcache_lineSize"/>
+        <parameter valueString="false" name="setting_allowFullAddressRange"/>
+        <parameter valueString="_7" name="mmu_dtlbPtrSz"/>
+        <parameter valueString="_4" name="mmu_itlbNumWays"/>
+        <parameter valueString="false" name="setting_avalonDebugPortPresent"/>
+        <parameter valueString="false" name="cpuReset"/>
+        <parameter valueString="true" name="setting_clearXBitsLDNonBypass"/>
+        <parameter valueString="_4" name="mmu_dtlbNumWays"/>
+        <parameter name="resetSlave">epcs_controller.epcs_control_port</parameter>
+        <parameter valueString="_32" name="setting_perfCounterWidth"/>
+        <parameter valueString="" name="mmu_TLBMissExcSlave"/>
+        <parameter name="breakSlave">cpu_0.jtag_debug_module</parameter>
+        <parameter valueString="false" name="setting_preciseIllegalMemAccessException"/>
+        <parameter valueString="Level1" name="debug_level"/>
+        <parameter valueString="false" name="muldiv_divider"/>
+        <parameter valueString="false" name="dcache_bursts"/>
+        <parameter valueString="true" name="setting_activateMonitors"/>
+        <parameter valueString="true" name="setting_bit31BypassDCache"/>
+        <parameter valueString="Automatic" name="icache_ramBlockType"/>
+        <parameter valueString="_8" name="setting_bhtPtrSz"/>
+        <parameter valueString="false" name="setting_preciseDivisionErrorException"/>
+        <parameter valueString="false" name="setting_preciseSlaveAccessErrorException"/>
+        <parameter valueString="false" name="debug_debugReqSignals"/>
+        <parameter valueString="_6" name="mmu_udtlbNumEntries"/>
+        <parameter valueString="_0" name="dcache_numTCDM"/>
+        <parameter valueString="false" name="setting_fullWaveformSignals"/>
+        <parameter valueString="false" name="setting_performanceCounter"/>
+        <parameter valueString="_7" name="mmu_itlbPtrSz"/>
+        <parameter valueString="_2048" name="dcache_size"/>
+        <parameter valueString="Automatic" name="dcache_ramBlockType"/>
+        <parameter valueString="true" name="setting_activateTrace"/>
+        <parameter valueString="false" name="setting_HBreakTest"/>
+        <parameter valueString="false" name="setting_exportPCB"/>
+        <parameter valueString="false" name="setting_activateTestEndChecker"/>
+        <parameter valueString="None" name="icache_burstType"/>
+        <parameter valueString="false" name="setting_showUnpublishedSettings"/>
+        <parameter valueString="true" name="debug_triggerArming"/>
+        <parameter valueString="false" name="mmu_enabled"/>
+    </module>
+    <module version="7.2" name="jtag_uart_0" kind="altera_avalon_jtag_uart">
+        <parameter valueString="8" name="readIRQThreshold"/>
+        <parameter valueString="" name="simInputCharacterStream"/>
+        <parameter valueString="0" name="hubInstanceID"/>
+        <parameter valueString="64" name="readBufferDepth"/>
+        <parameter valueString="false" name="allowMultipleConnections"/>
+        <parameter valueString="64" name="writeBufferDepth"/>
+        <parameter valueString="8" name="writeIRQThreshold"/>
+        <parameter valueString="false" name="useRegistersForWriteBuffer"/>
+        <parameter valueString="false" name="useRegistersForReadBuffer"/>
+        <parameter name="simInteractiveOptions">INTERACTIVE_ASCII_OUTPUT</parameter>
+    </module>
+    <module version="7.2" name="sdram_0" kind="altera_avalon_new_sdram_controller">
+        <parameter valueString="20.0" name="TRP"/>
+        <parameter valueString="16" name="dataWidth"/>
+        <parameter valueString="12" name="rowWidth"/>
+        <parameter valueString="70.0" name="TRFC"/>
+        <parameter valueString="true" name="registerDataIn"/>
+        <parameter valueString="3" name="casLatency"/>
+        <parameter valueString="100.0" name="powerUpDelay"/>
+        <parameter valueString="true" name="generateSimulationModel"/>
+        <parameter valueString="2" name="initRefreshCommands"/>
+        <parameter valueString="" name="masteredTristateBridgeSlave"/>
+        <parameter valueString="3" name="TMRD"/>
+        <parameter valueString="14.0" name="TWR"/>
+        <parameter valueString="0.0" name="initNOPDelay"/>
+        <parameter valueString="15.625" name="refreshPeriod"/>
+        <parameter valueString="5.5" name="TAC"/>
+        <parameter valueString="8" name="columnWidth"/>
+        <parameter valueString="4" name="numberOfBanks"/>
+        <parameter valueString="1" name="numberOfChipSelects"/>
+        <parameter valueString="false" name="pinsSharedViaTriState"/>
+        <parameter valueString="20.0" name="TRCD"/>
+        <parameter valueString="custom" name="model"/>
+        <parameter valueString="8388608" name="size"/>
+    </module>
+    <module version="7.2" name="tri_state_bridge_0" kind="altera_avalon_tri_state_bridge">
+        <parameter valueString="true" name="registerIncomingSignals"/>
+    </module>
+    <module version="7.2" name="cfi_flash_0" kind="altera_avalon_cfi_flash">
+        <parameter valueString="8" name="dataWidth"/>
+        <parameter name="sharedPorts">s1/data,s1/address,s1/read_n</parameter>
+        <parameter valueString="40" name="holdTime"/>
+        <parameter valueString="40.0" name="actualSetupTime"/>
+        <parameter valueString="160.0" name="actualWaitTime"/>
+        <parameter valueString="40.0" name="actualHoldTime"/>
+        <parameter valueString="CUSTOM" name="corePreset"/>
+        <parameter valueString="NS" name="timingUnits"/>
+        <parameter valueString="160" name="waitTime"/>
+        <parameter valueString="40" name="setupTime"/>
+        <parameter valueString="20" name="addressWidth"/>
+    </module>
+    <module version="7.2" name="timer_0" kind="altera_avalon_timer">
+        <parameter valueString="CUSTOM" name="timerPreset"/>
+        <parameter valueString="1.0" name="period"/>
+        <parameter valueString="false" name="resetOutput"/>
+        <parameter valueString="MSEC" name="periodUnits"/>
+        <parameter valueString="false" name="fixedPeriod"/>
+        <parameter valueString="false" name="alwaysRun"/>
+        <parameter valueString="false" name="timeoutPulseOutput"/>
+        <parameter valueString="true" name="snapshot"/>
+    </module>
+    <module version="7.2" name="sysid" kind="altera_avalon_sysid">
+        <parameter valueString="1201926663" name="timestamp"/>
+        <parameter valueString="2107934667" name="id"/>
+    </module>
+    <module version="7.2" name="uart_0" kind="altera_avalon_uart">
+        <parameter valueString="115200" name="baud"/>
+        <parameter valueString="8" name="dataBits"/>
+        <parameter valueString="NONE" name="parity"/>
+        <parameter valueString="false" name="simTrueBaud"/>
+        <parameter valueString="false" name="useEopRegister"/>
+        <parameter valueString="1" name="stopBits"/>
+        <parameter valueString="50000000" name="clockRate"/>
+        <parameter valueString="false" name="simInteractiveOutputEnable"/>
+        <parameter valueString="" name="simCharStream"/>
+        <parameter valueString="0.01" name="baudError"/>
+        <parameter valueString="true" name="fixedBaud"/>
+        <parameter valueString="false" name="useCtsRts"/>
+        <parameter valueString="false" name="simInteractiveInputEnable"/>
+    </module>
+    <module version="7.2" name="timer_1" kind="altera_avalon_timer">
+        <parameter valueString="CUSTOM" name="timerPreset"/>
+        <parameter valueString="1.0" name="period"/>
+        <parameter valueString="false" name="resetOutput"/>
+        <parameter valueString="MSEC" name="periodUnits"/>
+        <parameter valueString="false" name="fixedPeriod"/>
+        <parameter valueString="false" name="alwaysRun"/>
+        <parameter valueString="false" name="timeoutPulseOutput"/>
+        <parameter valueString="true" name="snapshot"/>
+    </module>
+    <module version="7.2" name="lcd_16207_0" kind="altera_avalon_lcd_16207"/>
+    <module version="7.2" name="led_green" kind="altera_avalon_pio">
+        <parameter valueString="RISING" name="edgeType"/>
+        <parameter valueString="9" name="width"/>
+        <parameter valueString="Output" name="direction"/>
+        <parameter valueString="LEVEL" name="irqType"/>
+        <parameter valueString="false" name="captureEdge"/>
+        <parameter valueString="false" name="simDoTestBenchWiring"/>
+        <parameter valueString="false" name="generateIRQ"/>
+        <parameter valueString="false" name="bitClearingEdgeCapReg"/>
+        <parameter valueString="0" name="simDrivenValue"/>
+    </module>
+    <module version="7.2" name="led_red" kind="altera_avalon_pio">
+        <parameter valueString="RISING" name="edgeType"/>
+        <parameter valueString="18" name="width"/>
+        <parameter valueString="Output" name="direction"/>
+        <parameter valueString="LEVEL" name="irqType"/>
+        <parameter valueString="false" name="captureEdge"/>
+        <parameter valueString="false" name="simDoTestBenchWiring"/>
+        <parameter valueString="false" name="generateIRQ"/>
+        <parameter valueString="false" name="bitClearingEdgeCapReg"/>
+        <parameter valueString="0" name="simDrivenValue"/>
+    </module>
+    <module version="7.2" name="button_pio" kind="altera_avalon_pio">
+        <parameter valueString="FALLING" name="edgeType"/>
+        <parameter valueString="4" name="width"/>
+        <parameter valueString="Input" name="direction"/>
+        <parameter valueString="EDGE" name="irqType"/>
+        <parameter valueString="true" name="captureEdge"/>
+        <parameter valueString="false" name="simDoTestBenchWiring"/>
+        <parameter valueString="true" name="generateIRQ"/>
+        <parameter valueString="false" name="bitClearingEdgeCapReg"/>
+        <parameter valueString="0" name="simDrivenValue"/>
+    </module>
+    <module version="7.2" name="switch_pio" kind="altera_avalon_pio">
+        <parameter valueString="RISING" name="edgeType"/>
+        <parameter valueString="18" name="width"/>
+        <parameter valueString="Input" name="direction"/>
+        <parameter valueString="LEVEL" name="irqType"/>
+        <parameter valueString="false" name="captureEdge"/>
+        <parameter valueString="false" name="simDoTestBenchWiring"/>
+        <parameter valueString="false" name="generateIRQ"/>
+        <parameter valueString="false" name="bitClearingEdgeCapReg"/>
+        <parameter valueString="0" name="simDrivenValue"/>
+    </module>
+    <module version="2.0" name="SEG7_Display" kind="user_logic_SEG7_LUT_8_classic">
+        <parameter valueString="" name="sharedPorts"/>
+        <parameter name="instancePTF">MODULE SEG7_Display
+{
+   class = "user_logic_SEG7_LUT_8";
+   class_version = "2.0";
+   SYSTEM_BUILDER_INFO 
+   {
+      Instantiate_In_System_Module = "1";
+      Is_Enabled = "1";
+      Date_Modified = "--unknown--";
+      Clock_Source = "clk";
+      View 
+      {
+         Is_Collapsed = "1";
+         MESSAGES 
+         {
+         }
+      }
+   }
+   WIZARD_SCRIPT_ARGUMENTS 
+   {
+   }
+   SLAVE avalonS
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "avalon";
+         Address_Alignment = "native";
+         Address_Width = "0";
+         Data_Width = "32";
+         Has_IRQ = "0";
+         Has_Base_Address = "1";
+         Read_Wait_States = "0ns";
+         Write_Wait_States = "0ns";
+         Setup_Time = "0ns";
+         Hold_Time = "0ns";
+         Is_Memory_Device = "0";
+         Uses_Tri_State_Data_Bus = "0";
+         Is_Enabled = "1";
+         IRQ_MASTER cpu_0/data_master
+         {
+            IRQ_Number = "NC";
+         }
+         MASTERED_BY cpu_0/data_master
+         {
+            priority = "1";
+         }
+         Base_Address = "0x00900028";
+         Address_Group = "0";
+      }
+      PORT_WIRING 
+      {
+         PORT oSEG0
+         {
+            width = "7";
+            direction = "output";
+            type = "export";
+         }
+         PORT oSEG1
+         {
+            width = "7";
+            direction = "output";
+            type = "export";
+         }
+         PORT oSEG2
+         {
+            width = "7";
+            direction = "output";
+            type = "export";
+         }
+         PORT oSEG3
+         {
+            width = "7";
+            direction = "output";
+            type = "export";
+         }
+         PORT oSEG4
+         {
+            width = "7";
+            direction = "output";
+            type = "export";
+         }
+         PORT oSEG5
+         {
+            width = "7";
+            direction = "output";
+            type = "export";
+         }
+         PORT oSEG6
+         {
+            width = "7";
+            direction = "output";
+            type = "export";
+         }
+         PORT oSEG7
+         {
+            width = "7";
+            direction = "output";
+            type = "export";
+         }
+         PORT iDIG
+         {
+            width = "32";
+            direction = "input";
+            type = "writedata";
+         }
+         PORT iWR
+         {
+            width = "1";
+            direction = "input";
+            type = "write";
+         }
+         PORT iCLK
+         {
+            width = "1";
+            direction = "input";
+            type = "clk";
+         }
+         PORT iRST_N
+         {
+            width = "1";
+            direction = "input";
+            type = "reset_n";
+         }
+      }
+   }
+   SIMULATION 
+   {
+      DISPLAY 
+      {
+         SIGNAL a
+         {
+            name = "oSEG0";
+            radix = "hexadecimal";
+         }
+         SIGNAL b
+         {
+            name = "oSEG1";
+            radix = "hexadecimal";
+         }
+         SIGNAL c
+         {
+            name = "oSEG2";
+            radix = "hexadecimal";
+         }
+         SIGNAL d
+         {
+            name = "oSEG3";
+            radix = "hexadecimal";
+         }
+         SIGNAL e
+         {
+            name = "oSEG4";
+            radix = "hexadecimal";
+         }
+         SIGNAL f
+         {
+            name = "oSEG5";
+            radix = "hexadecimal";
+         }
+         SIGNAL g
+         {
+            name = "oSEG6";
+            radix = "hexadecimal";
+         }
+         SIGNAL h
+         {
+            name = "oSEG7";
+            radix = "hexadecimal";
+         }
+         SIGNAL i
+         {
+            name = "iDIG";
+            radix = "hexadecimal";
+         }
+         SIGNAL j
+         {
+            name = "iWR";
+         }
+         SIGNAL k
+         {
+            name = "iCLK";
+         }
+         SIGNAL l
+         {
+            name = "iRST_N";
+         }
+      }
+   }
+   HDL_INFO 
+   {
+      Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/SEG7_LUT.v,__PROJECT_DIRECTORY__/SEG7_LUT_8.v, __PROJECT_DIRECTORY__/SEG7_Display.v";
+   }
+}
+</parameter>
+    </module>
+    <module version="2.0" name="sram_0" kind="user_logic_SRAM_16Bits_512K_classic">
+        <parameter valueString="" name="sharedPorts"/>
+        <parameter name="instancePTF">MODULE sram_0
+{
+   class = "user_logic_SRAM_16Bits_512K";
+   class_version = "2.0";
+   SYSTEM_BUILDER_INFO 
+   {
+      Instantiate_In_System_Module = "1";
+      Is_Enabled = "1";
+      Date_Modified = "--unknown--";
+      Clock_Source = "clk";
+      View 
+      {
+         Is_Collapsed = "1";
+         MESSAGES 
+         {
+         }
+      }
+   }
+   WIZARD_SCRIPT_ARGUMENTS 
+   {
+   }
+   SLAVE avalonS
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "avalon";
+         Address_Alignment = "dynamic";
+         Address_Width = "18";
+         Data_Width = "16";
+         Has_IRQ = "0";
+         Has_Base_Address = "1";
+         Read_Wait_States = "20ns";
+         Write_Wait_States = "20ns";
+         Setup_Time = "20ns";
+         Hold_Time = "20ns";
+         Is_Memory_Device = "1";
+         Uses_Tri_State_Data_Bus = "0";
+         Is_Enabled = "1";
+         MASTERED_BY cpu_0/instruction_master
+         {
+            priority = "1";
+         }
+         MASTERED_BY cpu_0/data_master
+         {
+            priority = "1";
+         }
+         Base_Address = "0x00980000";
+         IRQ_MASTER cpu_0/data_master
+         {
+            IRQ_Number = "NC";
+         }
+         Address_Group = "0";
+      }
+      PORT_WIRING 
+      {
+         PORT oDATA
+         {
+            width = "16";
+            direction = "output";
+            type = "readdata";
+         }
+         PORT iDATA
+         {
+            width = "16";
+            direction = "input";
+            type = "writedata";
+         }
+         PORT iADDR
+         {
+            width = "18";
+            direction = "input";
+            type = "address";
+         }
+         PORT iWE_N
+         {
+            width = "1";
+            direction = "input";
+            type = "write_n";
+         }
+         PORT iOE_N
+         {
+            width = "1";
+            direction = "input";
+            type = "outputenable_n";
+         }
+         PORT iCE_N
+         {
+            width = "1";
+            direction = "input";
+            type = "chipselect_n";
+         }
+         PORT iRST_N
+         {
+            width = "1";
+            direction = "input";
+            type = "reset_n";
+         }
+         PORT iUB_N
+         {
+            width = "1";
+            direction = "input";
+            type = "byteenable_n";
+         }
+         PORT iLB_N
+         {
+            width = "1";
+            direction = "input";
+            type = "byteenable_n";
+         }
+         PORT SRAM_DQ
+         {
+            width = "16";
+            direction = "inout";
+            type = "export";
+         }
+         PORT SRAM_ADDR
+         {
+            width = "18";
+            direction = "output";
+            type = "export";
+         }
+         PORT SRAM_UB_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT SRAM_LB_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT SRAM_WE_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT SRAM_CE_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT SRAM_OE_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+      }
+   }
+   SIMULATION 
+   {
+      DISPLAY 
+      {
+         SIGNAL a
+         {
+            name = "oDATA";
+            radix = "hexadecimal";
+         }
+         SIGNAL b
+         {
+            name = "iDATA";
+            radix = "hexadecimal";
+         }
+         SIGNAL c
+         {
+            name = "iADDR";
+            radix = "hexadecimal";
+         }
+         SIGNAL d
+         {
+            name = "iWE_N";
+         }
+         SIGNAL e
+         {
+            name = "iOE_N";
+         }
+         SIGNAL f
+         {
+            name = "iCE_N";
+         }
+         SIGNAL g
+         {
+            name = "iRST_N";
+         }
+         SIGNAL h
+         {
+            name = "iUB_N";
+         }
+         SIGNAL i
+         {
+            name = "iLB_N";
+         }
+         SIGNAL j
+         {
+            name = "SRAM_DQ";
+            radix = "hexadecimal";
+         }
+         SIGNAL k
+         {
+            name = "SRAM_ADDR";
+            radix = "hexadecimal";
+         }
+         SIGNAL l
+         {
+            name = "SRAM_UB_N";
+         }
+         SIGNAL m
+         {
+            name = "SRAM_LB_N";
+         }
+         SIGNAL n
+         {
+            name = "SRAM_WE_N";
+         }
+         SIGNAL o
+         {
+            name = "SRAM_CE_N";
+         }
+         SIGNAL p
+         {
+            name = "SRAM_OE_N";
+         }
+      }
+   }
+   HDL_INFO 
+   {
+      Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/SRAM_16Bit_512K.v, __PROJECT_DIRECTORY__/sram_0.v";
+   }
+}
+</parameter>
+    </module>
+    <module version="2.0" name="I2C_0" kind="user_logic_Open_I2C_classic">
+        <parameter valueString="" name="sharedPorts"/>
+        <parameter name="instancePTF">MODULE I2C_0
+{
+   class = "user_logic_Open_I2C";
+   class_version = "2.0";
+   SYSTEM_BUILDER_INFO 
+   {
+      Instantiate_In_System_Module = "1";
+      Is_Enabled = "1";
+      Date_Modified = "--unknown--";
+      Clock_Source = "clk";
+      View 
+      {
+         Is_Collapsed = "1";
+         MESSAGES 
+         {
+         }
+      }
+   }
+   WIZARD_SCRIPT_ARGUMENTS 
+   {
+   }
+   SLAVE avalonS
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "avalon";
+         Address_Alignment = "native";
+         Address_Width = "3";
+         Data_Width = "8";
+         Has_IRQ = "1";
+         Has_Base_Address = "1";
+         Read_Wait_States = "peripheral_controlled";
+         Write_Wait_States = "peripheral_controlled";
+         Setup_Time = "0";
+         Hold_Time = "0";
+         Is_Memory_Device = "0";
+         Uses_Tri_State_Data_Bus = "0";
+         Is_Enabled = "1";
+         MASTERED_BY cpu_0/data_master
+         {
+            priority = "1";
+         }
+         IRQ_MASTER cpu_0/data_master
+         {
+            IRQ_Number = "6";
+         }
+         Base_Address = "0x00900100";
+         Address_Group = "0";
+      }
+      PORT_WIRING 
+      {
+         PORT wb_clk_i
+         {
+            width = "1";
+            direction = "input";
+            type = "clk";
+         }
+         PORT wb_rst_i
+         {
+            width = "1";
+            direction = "input";
+            type = "always0";
+         }
+         PORT arst_i
+         {
+            width = "1";
+            direction = "input";
+            type = "reset_n";
+         }
+         PORT wb_adr_i
+         {
+            width = "3";
+            direction = "input";
+            type = "address";
+         }
+         PORT wb_dat_i
+         {
+            width = "8";
+            direction = "input";
+            type = "writedata";
+         }
+         PORT wb_dat_o
+         {
+            width = "8";
+            direction = "output";
+            type = "readdata";
+         }
+         PORT wb_we_i
+         {
+            width = "1";
+            direction = "input";
+            type = "write";
+         }
+         PORT wb_stb_i
+         {
+            width = "1";
+            direction = "input";
+            type = "chipselect";
+         }
+         PORT wb_cyc_i
+         {
+            width = "1";
+            direction = "input";
+            type = "chipselect";
+         }
+         PORT wb_ack_o
+         {
+            width = "1";
+            direction = "output";
+            type = "waitrequest_n";
+         }
+         PORT wb_inta_o
+         {
+            width = "1";
+            direction = "output";
+            type = "irq";
+         }
+         PORT scl_pad_i
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+         PORT scl_pad_o
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT scl_padoen_o
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT sda_pad_i
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+         PORT sda_pad_o
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT sda_padoen_o
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+      }
+   }
+   SIMULATION 
+   {
+      DISPLAY 
+      {
+         SIGNAL a
+         {
+            name = "wb_clk_i";
+         }
+         SIGNAL b
+         {
+            name = "wb_rst_i";
+         }
+         SIGNAL c
+         {
+            name = "arst_i";
+         }
+         SIGNAL d
+         {
+            name = "wb_adr_i";
+            radix = "hexadecimal";
+         }
+         SIGNAL e
+         {
+            name = "wb_dat_i";
+            radix = "hexadecimal";
+         }
+         SIGNAL f
+         {
+            name = "wb_dat_o";
+            radix = "hexadecimal";
+         }
+         SIGNAL g
+         {
+            name = "wb_we_i";
+         }
+         SIGNAL h
+         {
+            name = "wb_stb_i";
+         }
+         SIGNAL i
+         {
+            name = "wb_cyc_i";
+         }
+         SIGNAL j
+         {
+            name = "wb_ack_o";
+         }
+         SIGNAL k
+         {
+            name = "wb_inta_o";
+         }
+         SIGNAL l
+         {
+            name = "scl_pad_i";
+         }
+         SIGNAL m
+         {
+            name = "scl_pad_o";
+         }
+         SIGNAL n
+         {
+            name = "scl_padoen_o";
+         }
+         SIGNAL o
+         {
+            name = "sda_pad_i";
+         }
+         SIGNAL p
+         {
+            name = "sda_pad_o";
+         }
+         SIGNAL q
+         {
+            name = "sda_padoen_o";
+         }
+      }
+   }
+   HDL_INFO 
+   {
+      Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/i2c_master_bit_ctrl.v,__PROJECT_DIRECTORY__/i2c_master_byte_ctrl.v,__PROJECT_DIRECTORY__/i2c_master_defines.v,__PROJECT_DIRECTORY__/i2c_master_top.v, __PROJECT_DIRECTORY__/I2C_0.v";
+   }
+}
+</parameter>
+    </module>
+    <module version="7.2" name="epcs_controller" kind="altera_avalon_epcs_flash_controller">
+        <parameter valueString="true" name="useASMIAtom"/>
+    </module>
+    <module version="7.0.7" name="ISP1362" kind="altera_avalon_user_defined_interface_classic">
+        <parameter valueString="" name="sharedPorts"/>
+        <parameter name="instancePTF">MODULE ISP1362
+{
+   class = "altera_avalon_user_defined_interface";
+   class_version = "6.05";
+   SYSTEM_BUILDER_INFO 
+   {
+      Instantiate_In_System_Module = "1";
+      Is_Enabled = "1";
+      Date_Modified = "--unknown--";
+      Clock_Source = "clk";
+      View 
+      {
+         MESSAGES 
+         {
+         }
+         Is_Collapsed = "1";
+      }
+   }
+   WIZARD_SCRIPT_ARGUMENTS 
+   {
+      Imported_Wait = "0";
+      Nios_Gen_Waits = "1";
+      Simulate_Imported_HDL = "1";
+      Port_Type = "Avalon Slave";
+      HDL_Import = "1";
+      Timing_Units = "ns";
+      Unit_Multiplier = "1";
+      Setup_Value = "200";
+      Hold_Value = "200";
+      Wait_Value = "100";
+      Address_Width = "32";
+      Module_List = "";
+      Show_Streaming = "0";
+      Show_Latency = "0";
+      Technology = "User Logic";
+      File_Count = "1";
+      Port_Count = "24";
+      Component_Desc = "ISP1362";
+      Module_Name = "ISP1362_IF";
+   }
+   SLAVE avalonS
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "avalon";
+         Address_Alignment = "native";
+         Address_Width = "2";
+         Data_Width = "16";
+         Has_IRQ = "1";
+         Base_Address = "0x00900080";
+         Has_Base_Address = "1";
+         Read_Wait_States = "100ns";
+         Write_Wait_States = "100ns";
+         Setup_Time = "200ns";
+         Hold_Time = "200ns";
+         Is_Memory_Device = "0";
+         Uses_Tri_State_Data_Bus = "0";
+         Is_Enabled = "1";
+         MASTERED_BY cpu_0/data_master
+         {
+            priority = "1";
+         }
+         IRQ_MASTER cpu_0/data_master
+         {
+            IRQ_Number = "4";
+         }
+         Address_Group = "0";
+      }
+      PORT_WIRING 
+      {
+         PORT iDATA
+         {
+            width = "16";
+            direction = "input";
+            type = "writedata";
+         }
+         PORT oDATA
+         {
+            width = "16";
+            direction = "output";
+            type = "readdata";
+         }
+         PORT iADDR
+         {
+            width = "2";
+            direction = "input";
+            type = "address";
+         }
+         PORT iRD_N
+         {
+            width = "1";
+            direction = "input";
+            type = "read_n";
+         }
+         PORT iWR_N
+         {
+            width = "1";
+            direction = "input";
+            type = "write_n";
+         }
+         PORT iCS_N
+         {
+            width = "1";
+            direction = "input";
+            type = "chipselect_n";
+         }
+         PORT iRST_N
+         {
+            width = "1";
+            direction = "input";
+            type = "reset_n";
+         }
+         PORT OTG_DATA
+         {
+            width = "16";
+            direction = "inout";
+            type = "export";
+         }
+         PORT OTG_ADDR
+         {
+            width = "2";
+            direction = "output";
+            type = "export";
+         }
+         PORT OTG_RD_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT OTG_WR_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT OTG_CS_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT OTG_RST_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT OTG_INT0
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+         PORT OTG_INT1
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+         PORT OTG_DREQ0
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+         PORT OTG_DREQ1
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+         PORT OTG_DACK0_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT OTG_DACK1_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT oINT
+         {
+            width = "1";
+            direction = "output";
+            type = "irq_n";
+         }
+         PORT iFSPEED
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+         PORT iLSPEED
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+         PORT OTG_FSPEED
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT OTG_LSPEED
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+      }
+   }
+   MASTER avalonM
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "avalon";
+         Data_Width = "32";
+         Address_Width = "8";
+         Max_Address_Width = "32";
+         Is_Enabled = "0";
+      }
+      PORT_WIRING 
+      {
+      }
+   }
+   SLAVE ahbS
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "AHB";
+         Has_IRQ = "0";
+         Has_Base_Address = "1";
+         Address_Width = "10";
+         Data_Width = "32";
+         Base_Address = "--unknown--";
+         Address_Alignment = "native";
+         Read_Wait_States = "0";
+         Write_Wait_States = "0";
+         Is_Enabled = "0";
+      }
+      PORT_WIRING 
+      {
+      }
+   }
+   MASTER ahbM
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "AHB";
+         Address_Width = "32";
+         Max_Address_Width = "32";
+         Data_Width = "32";
+         Interrupts_Enabled = "1";
+         Irq_Scheme = "Individual_requests";
+         Is_Enabled = "0";
+      }
+      PORT_WIRING 
+      {
+      }
+   }
+   HDL_INFO 
+   {
+      Imported_HDL_Files = "./ISP1362_IF.v";
+      Synthesis_HDL_Files = "./ISP1362_IF.v,__PROJECT_DIRECTORY__/ISP1362.v";
+   }
+}
+</parameter>
+    </module>
+    <module version="2.0" name="DM9000A" kind="user_logic_DM9000A_classic">
+        <parameter valueString="" name="sharedPorts"/>
+        <parameter name="instancePTF">MODULE DM9000A
+{
+   class = "user_logic_DM9000A";
+   class_version = "2.0";
+   SYSTEM_BUILDER_INFO 
+   {
+      Instantiate_In_System_Module = "1";
+      Is_Enabled = "1";
+      Date_Modified = "--unknown--";
+      Clock_Source = "clk";
+      View 
+      {
+         Is_Collapsed = "1";
+         MESSAGES 
+         {
+         }
+      }
+   }
+   WIZARD_SCRIPT_ARGUMENTS 
+   {
+   }
+   SLAVE avalonS
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "avalon";
+         Address_Alignment = "native";
+         Address_Width = "1";
+         Data_Width = "16";
+         Has_IRQ = "1";
+         Has_Base_Address = "1";
+         Read_Wait_States = "20ns";
+         Write_Wait_States = "20ns";
+         Setup_Time = "20ns";
+         Hold_Time = "20ns";
+         Is_Memory_Device = "0";
+         Uses_Tri_State_Data_Bus = "0";
+         Is_Enabled = "1";
+         IRQ_MASTER cpu_0/data_master
+         {
+            IRQ_Number = "8";
+         }
+         MASTERED_BY cpu_0/data_master
+         {
+            priority = "1";
+         }
+         Base_Address = "0x00900090";
+         Address_Group = "0";
+      }
+      PORT_WIRING 
+      {
+         PORT iDATA
+         {
+            width = "16";
+            direction = "input";
+            type = "writedata";
+         }
+         PORT oDATA
+         {
+            width = "16";
+            direction = "output";
+            type = "readdata";
+         }
+         PORT iCMD
+         {
+            width = "1";
+            direction = "input";
+            type = "address";
+         }
+         PORT iRD_N
+         {
+            width = "1";
+            direction = "input";
+            type = "read_n";
+         }
+         PORT iWR_N
+         {
+            width = "1";
+            direction = "input";
+            type = "write_n";
+         }
+         PORT iCS_N
+         {
+            width = "1";
+            direction = "input";
+            type = "chipselect_n";
+         }
+         PORT iRST_N
+         {
+            width = "1";
+            direction = "input";
+            type = "reset_n";
+         }
+         PORT oINT
+         {
+            width = "1";
+            direction = "output";
+            type = "irq";
+         }
+         PORT ENET_DATA
+         {
+            width = "16";
+            direction = "inout";
+            type = "export";
+         }
+         PORT ENET_CMD
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT ENET_RD_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT ENET_WR_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT ENET_CS_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT ENET_RST_N
+         {
+            width = "1";
+            direction = "output";
+            type = "export";
+         }
+         PORT ENET_INT
+         {
+            width = "1";
+            direction = "input";
+            type = "export";
+         }
+      }
+   }
+   SIMULATION 
+   {
+      DISPLAY 
+      {
+         SIGNAL a
+         {
+            name = "iDATA";
+            radix = "hexadecimal";
+         }
+         SIGNAL b
+         {
+            name = "oDATA";
+            radix = "hexadecimal";
+         }
+         SIGNAL c
+         {
+            name = "iCMD";
+         }
+         SIGNAL d
+         {
+            name = "iRD_N";
+         }
+         SIGNAL e
+         {
+            name = "iWR_N";
+         }
+         SIGNAL f
+         {
+            name = "iCS_N";
+         }
+         SIGNAL g
+         {
+            name = "iRST_N";
+         }
+         SIGNAL h
+         {
+            name = "oINT";
+         }
+         SIGNAL i
+         {
+            name = "ENET_DATA";
+            radix = "hexadecimal";
+         }
+         SIGNAL j
+         {
+            name = "ENET_CMD";
+         }
+         SIGNAL k
+         {
+            name = "ENET_RD_N";
+         }
+         SIGNAL l
+         {
+            name = "ENET_WR_N";
+         }
+         SIGNAL m
+         {
+            name = "ENET_CS_N";
+         }
+         SIGNAL n
+         {
+            name = "ENET_RST_N";
+         }
+         SIGNAL o
+         {
+            name = "ENET_INT";
+         }
+      }
+   }
+   HDL_INFO 
+   {
+      Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/DM9000A_IF.v, __PROJECT_DIRECTORY__/DM9000A.v";
+   }
+}
+</parameter>
+    </module>
+    <module version="6.1" name="ps2_0" kind="altera_up_avalon_ps2_classic">
+        <parameter valueString="" name="sharedPorts"/>
+        <parameter name="instancePTF">MODULE ps2_0
+{
+   class = "altera_up_avalon_ps2";
+   class_version = "6.1";
+   SYSTEM_BUILDER_INFO 
+   {
+      Instantiate_In_System_Module = "1";
+      Has_Clock = "1";
+      Default_Module_Name = "ps2";
+      Top_Level_Ports_Are_Enumerated = "1";
+      Is_Enabled = "1";
+      Clock_Source = "clk";
+      View 
+      {
+         MESSAGES 
+         {
+         }
+      }
+   }
+   COMPONENT_BUILDER 
+   {
+      GLS_SETTINGS 
+      {
+      }
+   }
+   PORT_WIRING 
+   {
+      PORT clk
+      {
+         width = "1";
+         width_expression = "";
+         direction = "input";
+         type = "clk";
+         is_shared = "0";
+         vhdl_record_name = "";
+         vhdl_record_type = "";
+      }
+      PORT reset
+      {
+         width = "1";
+         width_expression = "";
+         direction = "input";
+         type = "reset";
+         is_shared = "0";
+         vhdl_record_name = "";
+         vhdl_record_type = "";
+      }
+   }
+   WIZARD_SCRIPT_ARGUMENTS 
+   {
+      hdl_parameters 
+      {
+      }
+   }
+   SIMULATION 
+   {
+      DISPLAY 
+      {
+      }
+   }
+   SLAVE avalon_PS2_slave
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "avalon";
+         Address_Group = "1";
+         Has_Clock = "0";
+         Address_Width = "1";
+         Address_Alignment = "dynamic";
+         Data_Width = "32";
+         Has_Base_Address = "1";
+         Has_IRQ = "1";
+         Setup_Time = "0";
+         Hold_Time = "0";
+         Read_Wait_States = "peripheral_controlled";
+         Write_Wait_States = "peripheral_controlled";
+         Read_Latency = "1";
+         Maximum_Pending_Read_Transactions = "0";
+         Active_CS_Through_Read_Latency = "0";
+         Is_Printable_Device = "0";
+         Is_Memory_Device = "0";
+         Is_Readable = "1";
+         Is_Writable = "1";
+         Minimum_Uninterrupted_Run_Length = "1";
+      }
+      COMPONENT_BUILDER 
+      {
+         AVS_SETTINGS 
+         {
+            Setup_Value = "0";
+            Read_Wait_Value = "1";
+            Write_Wait_Value = "1";
+            Hold_Value = "0";
+            Timing_Units = "cycles";
+            Read_Latency_Value = "1";
+            Minimum_Arbitration_Shares = "1";
+            Active_CS_Through_Read_Latency = "0";
+            Max_Pending_Read_Transactions_Value = "1";
+            Address_Alignment = "dynamic";
+            Is_Printable_Device = "0";
+            interface_name = "Avalon Slave";
+            external_wait = "1";
+            Is_Memory_Device = "1";
+         }
+      }
+      PORT_WIRING 
+      {
+         PORT address
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "address";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT chipselect
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "chipselect";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT byteenable
+         {
+            width = "4";
+            width_expression = "";
+            direction = "input";
+            type = "byteenable";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT read
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "read";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT write
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "write";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT writedata
+         {
+            width = "32";
+            width_expression = "";
+            direction = "input";
+            type = "writedata";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT PS2_CLK
+         {
+            width = "1";
+            width_expression = "";
+            direction = "inout";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT PS2_DAT
+         {
+            width = "1";
+            width_expression = "";
+            direction = "inout";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT irq
+         {
+            width = "1";
+            width_expression = "";
+            direction = "output";
+            type = "irq";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT readdata
+         {
+            width = "32";
+            width_expression = "";
+            direction = "output";
+            type = "readdata";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT waitrequest
+         {
+            width = "1";
+            width_expression = "";
+            direction = "output";
+            type = "waitrequest";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+      }
+   }
+   HDL_INFO 
+   {
+      Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/Altera_UP_Avalon_PS2.v,__PROJECT_DIRECTORY__/Altera_UP_PS2.v,__PROJECT_DIRECTORY__/Altera_UP_PS2_Command_Out.v,__PROJECT_DIRECTORY__/Altera_UP_PS2_Data_In.v, __PROJECT_DIRECTORY__/ps2_0.v";
+   }
+}
+</parameter>
+    </module>
+    <module version="1.0" name="binary_vga_controller_0" kind="binary_vga_controller">
+        <parameter valueString="" name="sharedPorts"/>
+        <parameter name="instancePTF">MODULE binary_vga_controller_0
+{
+   class = "binary_vga_controller";
+   class_version = "1.0";
+   SYSTEM_BUILDER_INFO 
+   {
+      Instantiate_In_System_Module = "1";
+      Has_Clock = "1";
+      Top_Level_Ports_Are_Enumerated = "1";
+      Is_Enabled = "1";
+      Clock_Source = "clk";
+      View 
+      {
+         MESSAGES 
+         {
+         }
+      }
+   }
+   COMPONENT_BUILDER 
+   {
+      GLS_SETTINGS 
+      {
+      }
+   }
+   PORT_WIRING 
+   {
+      PORT iCLK
+      {
+         width = "1";
+         width_expression = "";
+         direction = "input";
+         type = "clk";
+         is_shared = "0";
+         vhdl_record_name = "";
+         vhdl_record_type = "";
+      }
+   }
+   WIZARD_SCRIPT_ARGUMENTS 
+   {
+      hdl_parameters 
+      {
+         ram_size = "19'b1001011000000000000";
+      }
+   }
+   SIMULATION 
+   {
+      DISPLAY 
+      {
+      }
+   }
+   SLAVE avalon_slave_0
+   {
+      SYSTEM_BUILDER_INFO 
+      {
+         Bus_Type = "avalon";
+         Address_Group = "1";
+         Has_Clock = "0";
+         Address_Width = "19";
+         Address_Alignment = "native";
+         Data_Width = "16";
+         Has_Base_Address = "1";
+         Has_IRQ = "0";
+         Setup_Time = "1cycles";
+         Hold_Time = "1cycles";
+         Read_Wait_States = "0cycles";
+         Write_Wait_States = "0cycles";
+         Read_Latency = "0";
+         Maximum_Pending_Read_Transactions = "0";
+         Active_CS_Through_Read_Latency = "0";
+         Is_Printable_Device = "0";
+         Is_Memory_Device = "0";
+         Is_Readable = "1";
+         Is_Writable = "1";
+         Minimum_Uninterrupted_Run_Length = "1";
+      }
+      COMPONENT_BUILDER 
+      {
+         AVS_SETTINGS 
+         {
+            Setup_Value = "1";
+            Read_Wait_Value = "0";
+            Write_Wait_Value = "0";
+            Hold_Value = "1";
+            Timing_Units = "cycles";
+            Read_Latency_Value = "0";
+            Minimum_Arbitration_Shares = "1";
+            Active_CS_Through_Read_Latency = "0";
+            Max_Pending_Read_Transactions_Value = "1";
+            Address_Alignment = "native";
+            Is_Printable_Device = "0";
+            Interleave_Bursts = "0";
+            interface_name = "Avalon Slave";
+            external_wait = "0";
+            Is_Memory_Device = "0";
+         }
+      }
+      PORT_WIRING 
+      {
+         PORT oDATA
+         {
+            width = "16";
+            width_expression = "";
+            direction = "output";
+            type = "readdata";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT iDATA
+         {
+            width = "16";
+            width_expression = "";
+            direction = "input";
+            type = "writedata";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT iADDR
+         {
+            width = "19";
+            width_expression = "";
+            direction = "input";
+            type = "address";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT iWR
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "write";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT iRD
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "read";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT iCS
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "chipselect";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT iRST_N
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "reset_n";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT VGA_R
+         {
+            width = "10";
+            width_expression = "";
+            direction = "output";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT VGA_G
+         {
+            width = "10";
+            width_expression = "";
+            direction = "output";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT VGA_B
+         {
+            width = "10";
+            width_expression = "";
+            direction = "output";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT VGA_HS
+         {
+            width = "1";
+            width_expression = "";
+            direction = "output";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT VGA_VS
+         {
+            width = "1";
+            width_expression = "";
+            direction = "output";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT VGA_SYNC
+         {
+            width = "1";
+            width_expression = "";
+            direction = "output";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT VGA_BLANK
+         {
+            width = "1";
+            width_expression = "";
+            direction = "output";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT VGA_CLK
+         {
+            width = "1";
+            width_expression = "";
+            direction = "output";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT iCLK_25
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+      }
+   }
+   HDL_INFO 
+   {
+      Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/Img_DATA.hex,__PROJECT_DIRECTORY__/VGA_Param.h,__PROJECT_DIRECTORY__/Img_RAM.v,__PROJECT_DIRECTORY__/VGA_Controller.v,__PROJECT_DIRECTORY__/VGA_NIOS_CTRL.v,__PROJECT_DIRECTORY__/VGA_OSD_RAM.v, __PROJECT_DIRECTORY__/binary_vga_controller_0.v";
+   }
+}
+</parameter>
+    </module>
+    <connection version="7.2" start="clk.clk" kind="clock" end="cpu_0.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="jtag_uart_0.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="sdram_0.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="tri_state_bridge_0.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="cfi_flash_0.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="timer_0.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="sysid.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="uart_0.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="timer_1.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="lcd_16207_0.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="led_green.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="led_red.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="button_pio.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="switch_pio.clk"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="SEG7_Display.avalonS_clock"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="I2C_0.avalonS_clock"/>
+    <connection version="7.2" start="clk.clk" kind="clock" end="epcs_controller.clk"/>
+    <connection version="7.2" start="cpu_0.instruction_master" kind="avalon" end="cpu_0.jtag_debug_module">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x01000000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="cpu_0.jtag_debug_module">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x01000000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="jtag_uart_0.avalon_jtag_slave">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x01004000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="jtag_uart_0.irq">
+        <parameter valueString="1" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.instruction_master" kind="avalon" end="sdram_0.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x0000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="sdram_0.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x0000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.instruction_master" kind="avalon" end="tri_state_bridge_0.avalon_slave">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x0000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="tri_state_bridge_0.avalon_slave">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x0000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="tri_state_bridge_0.tristate_master" kind="avalon_tristate" end="cfi_flash_0.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00800000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="timer_0.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="timer_0.irq">
+        <parameter valueString="0" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="sysid.control_slave">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900020" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="uart_0.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900040" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="uart_0.irq">
+        <parameter valueString="2" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="timer_1.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900060" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="timer_1.irq">
+        <parameter valueString="3" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="lcd_16207_0.control_slave">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900030" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="led_green.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x009000c0" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="led_red.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x009000d0" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="button_pio.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900120" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="button_pio.irq">
+        <parameter valueString="5" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="switch_pio.s1">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900130" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="SEG7_Display.avalonS">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900028" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.instruction_master" kind="avalon" end="sram_0.avalonS">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00980000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="sram_0.avalonS">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00980000" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="I2C_0.avalonS">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900100" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="I2C_0.avalonS_irq">
+        <parameter valueString="6" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.instruction_master" kind="avalon" end="epcs_controller.epcs_control_port">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900800" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="epcs_controller.epcs_control_port">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900800" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="epcs_controller.irq">
+        <parameter valueString="7" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="ISP1362.avalonS">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900080" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="ISP1362.avalonS_irq">
+        <parameter valueString="4" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="DM9000A.avalonS">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900090" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="DM9000A.avalonS_irq">
+        <parameter valueString="8" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="clk.clk" kind="clock" end="ps2_0.clk"/>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="ps2_0.avalon_PS2_slave">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00900098" name="baseAddress"/>
+    </connection>
+    <connection version="7.2" start="cpu_0.d_irq" kind="interrupt" end="ps2_0.avalon_PS2_slave_irq">
+        <parameter valueString="9" name="irqNumber"/>
+    </connection>
+    <connection version="7.2" start="clk.clk" kind="clock" end="binary_vga_controller_0.clk"/>
+    <connection version="7.2" start="cpu_0.data_master" kind="avalon" end="binary_vga_controller_0.avalon_slave_0">
+        <parameter valueString="1" name="arbitrationPriority"/>
+        <parameter valueString="0x00a00000" name="baseAddress"/>
+    </connection>
+</system>
+

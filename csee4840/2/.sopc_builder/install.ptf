@@ -1,0 +1,46 @@
+PACKAGE install
+{
+   version = "4.01:213";
+   COMPONENT user_logic_Open_I2C
+   {
+      VERSION 2.0
+      {
+         local = "/home/user4/spring12/md3073/Labs/2/user_logic_Open_I2C";
+      }
+   }
+   COMPONENT user_logic_SRAM_16Bits_512K
+   {
+      VERSION 2.0
+      {
+         local = "/home/user4/spring12/md3073/Labs/2/user_logic_SRAM_16Bits_512K";
+      }
+   }
+   COMPONENT user_logic_DM9000A
+   {
+      VERSION 2.0
+      {
+         local = "/home/user4/spring12/md3073/Labs/2/user_logic_DM9000A";
+      }
+   }
+   COMPONENT user_logic_SEG7_LUT_8
+   {
+      VERSION 2.0
+      {
+         local = "/home/user4/spring12/md3073/Labs/2/user_logic_SEG7_LUT_8";
+      }
+   }
+   COMPONENT binary_vga_controller
+   {
+      VERSION 1.0
+      {
+         local = "/home/user4/spring12/md3073/Labs/2/Binary_VGA_Controller";
+      }
+   }
+   COMPONENT altera_up_avalon_ps2
+   {
+      VERSION 6.1
+      {
+         local = "/home/user4/spring12/md3073/Labs/2/altera_up_avalon_ps2";
+      }
+   }
+}

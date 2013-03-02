@@ -1,0 +1,175 @@
+Analysis & Synthesis report for DE2_NET
+Sat Mar 17 17:43:00 2012
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sat Mar 17 17:43:00 2012        ;
+; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Full Version ;
+; Revision Name                      ; DE2_NET                                  ;
+; Top-level Entity Name              ; DE2_NET                                  ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; N/A until Partition Merge                ;
+;     Total combinational functions  ; N/A until Partition Merge                ;
+;     Dedicated logic registers      ; N/A until Partition Merge                ;
+; Total registers                    ; N/A until Partition Merge                ;
+; Total pins                         ; N/A until Partition Merge                ;
+; Total virtual pins                 ; N/A until Partition Merge                ;
+; Total memory bits                  ; N/A until Partition Merge                ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                ;
+; Total PLLs                         ; N/A until Partition Merge                ;
++------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                         ; Setting            ; Default Value      ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                         ; EP2C35F672C8       ;                    ;
+; Top-level entity name                                                          ; DE2_NET            ; DE2_NET            ;
+; Family name                                                                    ; Cyclone II         ; Stratix II         ;
+; Use smart compilation                                                          ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation                            ; 1                  ; 1                  ;
+; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
+; Preserve fewer node names                                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
+; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                                       ; Auto               ; Auto               ;
+; Safe State Machine                                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
+; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
+; Parallel Synthesis                                                             ; Off                ; Off                ;
+; DSP Block Balancing                                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
+; Optimization Technique -- Cyclone II/Cyclone III                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
+; Auto Carry Chains                                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
+; Perform gate-level register retiming                                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
+; Auto ROM Replacement                                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                              ; Off                ; Off                ;
+; Auto Resource Sharing                                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                  ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                           ; On                 ; On                 ;
+; Block Design Naming                                                            ; Auto               ; Auto               ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 7.2 Build 151 09/26/2007 SJ Full Version
+    Info: Processing started: Sat Mar 17 17:42:59 2012
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_NET -c DE2_NET
+Info: Found 1 design units, including 1 entities, in source file DE2_NET.v
+    Info: Found entity 1: DE2_NET
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/cpu_0.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/cpu_0_jtag_debug_module.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/cpu_0_jtag_debug_module_wrapper.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/cpu_0_mult_cell.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/cpu_0_test_bench.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/jtag_uart_0.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/lcd_16207_0.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/lcd_ctrl_pio.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/lcd_data_pio.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/lcd_pio.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/led_pio.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/nios_0.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/onchip_memory_0.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/sdram_0.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/sdram_0_test_component.v is missing
+Info: Found 1 design units, including 1 entities, in source file SDRAM_PLL.v
+    Info: Found entity 1: SDRAM_PLL
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/sysid.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/timer_0.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/timer_1.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/uart_0.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/SEG7_LUT.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/SEG7_LUT_8.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/ISP1362_Interface.v is missing
+Info: Found 1 design units, including 1 entities, in source file Reset_Delay.v
+    Info: Found entity 1: Reset_Delay
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/SRAM_16Bit_512K.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/ISP1362_IF.v is missing
+Warning: Can't analyze file -- file /home/user2/spring12/asc2171/csee4840/lab2_files/DM9000A_IF.v is missing
+Info: Elaborating entity "DE2_NET" for the top level hierarchy
+Warning (10034): Output port "SD_CLK" at DE2_NET.v(233) has no driver
+Warning (10034): Output port "SD_CMD" at DE2_NET.v(234) has no driver
+Info: Elaborating entity "SDRAM_PLL" for hierarchy "SDRAM_PLL:PLL1"
+Info: Found 1 design units, including 1 entities, in source file /opt/altera/altera7.2/quartus/libraries/megafunctions/altpll.tdf
+    Info: Found entity 1: altpll
+Info: Elaborating entity "altpll" for hierarchy "SDRAM_PLL:PLL1|altpll:altpll_component"
+Info: Elaborated megafunction instantiation "SDRAM_PLL:PLL1|altpll:altpll_component"
+Info: Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:rst"
+Warning (10230): Verilog HDL assignment warning at Reset_Delay.v(10): truncated value with size 32 to match size of target (16)
+Error: Node instance "u0" instantiates undefined entity "nios_0" File: /home/user2/spring12/asc2171/csee4840/lab2_files/DE2_NET.v Line: 400
+Error: Quartus II Analysis & Synthesis was unsuccessful. 1 error, 28 warnings
+    Error: Processing ended: Sat Mar 17 17:43:00 2012
+    Error: Elapsed time: 00:00:01
+
+

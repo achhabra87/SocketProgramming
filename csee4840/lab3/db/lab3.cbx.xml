@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|de2_vga_raster:V2|lpm_mult:Mult0" CBX_FILE_NAME="mult_3o01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|nios_system:V1|jtag_uart:the_jtag_uart|jtag_uart_scfifo_r:the_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|sld_hub:sld_hub_inst|lpm_decode:instruction_decoder" CBX_FILE_NAME="decode_aoi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|de2_vga_raster:V2|lpm_mult:Mult1" CBX_FILE_NAME="mult_7o01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|nios_system:V1|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_nios2_oci_im:the_cpu_nios2_oci_im|cpu_traceram_lpm_dram_bdp_component_module:cpu_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e502.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|nios_system:V1|cpu:the_cpu|cpu_nios2_oci:the_cpu_nios2_oci|cpu_nios2_ocimem:the_cpu_nios2_ocimem|cpu_ociram_lpm_dram_bdp_component_module:cpu_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_t072.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|nios_system:V1|cpu:the_cpu|cpu_rf_module:cpu_rf|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_ig22.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab3|nios_system:V1|jtag_uart:the_jtag_uart|jtag_uart_scfifo_w:the_jtag_uart_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

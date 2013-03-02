@@ -1,0 +1,106 @@
+Flow report for lab3
+Wed Mar  7 20:18:25 2012
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++------------------------------------+------------------------------------------+
+; Flow Status                        ; Successful - Wed Mar  7 20:18:25 2012    ;
+; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Full Version ;
+; Revision Name                      ; lab3                                     ;
+; Top-level Entity Name              ; lab3                                     ;
+; Family                             ; Cyclone II                               ;
+; Device                             ; EP2C35F672C6                             ;
+; Timing Models                      ; Final                                    ;
+; Met timing requirements            ; Yes                                      ;
+; Total logic elements               ; 1,551 / 33,216 ( 5 % )                   ;
+;     Total combinational functions  ; 1,452 / 33,216 ( 4 % )                   ;
+;     Dedicated logic registers      ; 796 / 33,216 ( 2 % )                     ;
+; Total registers                    ; 796                                      ;
+; Total pins                         ; 428 / 475 ( 90 % )                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 10,240 / 483,840 ( 2 % )                 ;
+; Embedded Multiplier 9-bit elements ; 4 / 70 ( 6 % )                           ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                            ;
++------------------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/07/2012 20:17:30 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab3                ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                        ;
++------------------------------------+---------+---------------+-------------+------------+
+; Assignment Name                    ; Value   ; Default Value ; Entity Name ; Section Id ;
++------------------------------------+---------+---------------+-------------+------------+
+; FMAX_REQUIREMENT                   ; 50 MHz  ; --            ; --          ; --         ;
+; IGNORE_CLOCK_SETTINGS              ; On      ; Off           ; --          ; --         ;
+; PARTITION_COLOR                    ; 2147039 ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE             ; SOURCE  ; --            ; --          ; Top        ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off     ; --            ; --          ; eda_palace ;
++------------------------------------+---------+---------------+-------------+------------+
+
+
++------------------------------------------------------------------+
+; Flow Elapsed Time                                                ;
++-------------------------+--------------+-------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ;
++-------------------------+--------------+-------------------------+
+; Analysis & Synthesis    ; 00:00:20     ; 1.0                     ;
+; Fitter                  ; 00:00:19     ; 1.0                     ;
+; Assembler               ; 00:00:08     ; 1.0                     ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ;
+; Total                   ; 00:00:49     ; --                      ;
++-------------------------+--------------+-------------------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab3 -c lab3
+quartus_fit --read_settings_files=off --write_settings_files=off lab3 -c lab3
+quartus_asm --read_settings_files=off --write_settings_files=off lab3 -c lab3
+quartus_tan --read_settings_files=off --write_settings_files=off lab3 -c lab3 --timing_analysis_only
+
+
+

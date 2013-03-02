@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="207"/>
+		<item key="DIALOG_FONT_NAME" value="1|Sans|10|0|GTK|1|"/>
+		<item key="DIALOG_HEIGHT" value="319"/>
+		<item key="DIALOG_Y_ORIGIN" value="170"/>
+		<item key="DIALOG_WIDTH" value="609"/>
+	</section>
+</section>

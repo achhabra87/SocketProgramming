@@ -1,0 +1,21 @@
+<preferences>
+  <systemtable>
+    <columns>
+      <connections
+        preferredWidth="63"
+        />
+      <irq
+        preferredWidth="34"
+        />
+    </columns>
+  </systemtable>
+  <window
+    width="1153"
+    height="860"
+    x="-174"
+    y="201"
+    />
+  <library
+    expandedCategories="Memories and Memory Controllers,Memories and Memory Controllers/Flash,Memories and Memory Controllers/SDRAM"
+    />
+</preferences>

@@ -1,0 +1,76 @@
+This directory contains files helpful for performing Lab 3.
+
+README			This file
+
+----------------------------------------------------------------------
+Files for the SOPC Builder tutorial
+----------------------------------------------------------------------
+
+DE2_pin_assignments.csv	A map of pin names to pin locations on the DE board.
+			Import this into your Quartus project with
+			Assignments -> Import Assignments
+
+de2_sram_controller.vhd	The VHDL file for an Avalon bus SRAM controller that
+			works with the 512K SRAM on the DE2 board.  In
+			SOPC Builder, do File -> Create New Component, specify
+			this file, and then adjust the pin connections, etc.
+
+de2_led_flasher.vhd	The VHDL file for a simple Avalon peripheral that
+			holds 16 patterns to be displayed on the LEDs.
+			Like de2_sram_controller.vhd, use this as the file
+			for a new component in SOPC Builder.  This illustrates
+			how to interface registers and memories to the
+			Avalon bus.
+
+lab3.vhd		A top-level VHDL file for a Nios II-based project
+			that includes the SRAM controller and the LED flasher.
+			Add this to your Quartus project when you build the
+			LED flasher system.			
+
+hello_world.c		A simple C program for exercising the LED flasher
+			system.  In the Nios II IDE, use this to replace the
+			contents of the default "hello world" program.
+
+----------------------------------------------------------------------
+Files for the FM Synthesizer project
+----------------------------------------------------------------------
+de2_wm8731_audio.vhd	A controller for the Wolfson WM8731 audio codec
+			on the DE2.  This feeds either a test waveform or
+			a user-supplied stream of 16-bit samples out through
+			the audio DAC.  Use this as output for your FM waveform
+			synthesizer, which should be an Avalon peripheral.
+
+de2_i2c_controller.v	A very simple I2C bus controller. (Verilog)
+
+de2_i2c_av_config.v	This makes the de2_i2c_controller initialize the
+			audio CODEC (and video decoder) appropriately.
+			Instantiate it and feed it a clock. (Verilog)
+
+lab3_audio.vhd		A variant of "DE2_TOP" that instantiates the
+			I2C controller and WM8731 controller and connects
+			it to the appropriate DE2 pins.  This demonstrates
+			the use of the above VHDL entities.
+
+de2_ps2/cb_generator.pl	An SOPC Builder component for an Avalon peripheral
+de2_ps2/class.ptf	that lets you read key presses coming from the	  
+de2_ps2/hdl/de2_ps2.vhd	PS/2 keyboard.  Copy the contents of the de2_ps2
+			directory into your project directory and
+			do File->Refresh Component List to see the
+			new component.
+			
+----------------------------------------------------------------------
+Files for the bouncing ball project
+----------------------------------------------------------------------
+
+video_display.vhd	A simple VHDL entity that displays a 640 X 480
+			VGA raster of a white square on a blue background.
+			Use this as a starting point for building an Avalon
+			peripheral that displays a ball on the screen.
+
+lab3_vga.vhd		A variant of "DE2_TOP" that instantiates the
+			entity in video_display and connects it to the
+			appropriate DE2 pins.
+
+lab3_vga_tb.vhd		A testbench for the video_display circuit that
+			applies a clock to it so you can see the output
+			waveforms.

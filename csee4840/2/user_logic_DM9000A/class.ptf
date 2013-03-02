@@ -1,0 +1,225 @@
+CLASS user_logic_DM9000A
+{
+   ASSOCIATED_FILES 
+   {
+      Add_Program = "";
+      Edit_Program = "";
+      Generator_Program = "mk_user_logic_DM9000A.pl";
+   }
+   MODULE_DEFAULTS 
+   {
+      class = "user_logic_DM9000A";
+      class_version = "2.0";
+      SYSTEM_BUILDER_INFO 
+      {
+         Instantiate_In_System_Module = "1";
+         Is_Enabled = "1";
+         Date_Modified = "--unknown--";
+         Clock_Source = "clk";
+      }
+      WIZARD_SCRIPT_ARGUMENTS 
+      {
+      }
+      SLAVE avalonS
+      {
+         SYSTEM_BUILDER_INFO 
+         {
+            Bus_Type = "avalon";
+            Address_Alignment = "native";
+            Address_Width = "1";
+            Data_Width = "16";
+            Has_IRQ = "1";
+            Has_Base_Address = "1";
+            Read_Wait_States = "20ns";
+            Write_Wait_States = "20ns";
+            Setup_Time = "20ns";
+            Hold_Time = "20ns";
+            Is_Memory_Device = "0";
+            Uses_Tri_State_Data_Bus = "0";
+            Is_Enabled = "1";
+            IRQ_MASTER cpu_0/data_master
+            {
+               IRQ_Number = "8";
+            }
+         }
+         PORT_WIRING 
+         {
+            PORT iDATA
+            {
+               width = "16";
+               direction = "input";
+               type = "writedata";
+            }
+            PORT oDATA
+            {
+               width = "16";
+               direction = "output";
+               type = "readdata";
+            }
+            PORT iCMD
+            {
+               width = "1";
+               direction = "input";
+               type = "address";
+            }
+            PORT iRD_N
+            {
+               width = "1";
+               direction = "input";
+               type = "read_n";
+            }
+            PORT iWR_N
+            {
+               width = "1";
+               direction = "input";
+               type = "write_n";
+            }
+            PORT iCS_N
+            {
+               width = "1";
+               direction = "input";
+               type = "chipselect_n";
+            }
+            PORT iRST_N
+            {
+               width = "1";
+               direction = "input";
+               type = "reset_n";
+            }
+            PORT oINT
+            {
+               width = "1";
+               direction = "output";
+               type = "irq";
+            }
+            PORT ENET_DATA
+            {
+               width = "16";
+               direction = "inout";
+               type = "export";
+            }
+            PORT ENET_CMD
+            {
+               width = "1";
+               direction = "output";
+               type = "export";
+            }
+            PORT ENET_RD_N
+            {
+               width = "1";
+               direction = "output";
+               type = "export";
+            }
+            PORT ENET_WR_N
+            {
+               width = "1";
+               direction = "output";
+               type = "export";
+            }
+            PORT ENET_CS_N
+            {
+               width = "1";
+               direction = "output";
+               type = "export";
+            }
+            PORT ENET_RST_N
+            {
+               width = "1";
+               direction = "output";
+               type = "export";
+            }
+            PORT ENET_INT
+            {
+               width = "1";
+               direction = "input";
+               type = "export";
+            }
+         }
+      }
+      SIMULATION 
+      {
+         DISPLAY 
+         {
+            SIGNAL a
+            {
+               name = "iDATA";
+               radix = "hexadecimal";
+            }
+            SIGNAL b
+            {
+               name = "oDATA";
+               radix = "hexadecimal";
+            }
+            SIGNAL c
+            {
+               name = "iCMD";
+            }
+            SIGNAL d
+            {
+               name = "iRD_N";
+            }
+            SIGNAL e
+            {
+               name = "iWR_N";
+            }
+            SIGNAL f
+            {
+               name = "iCS_N";
+            }
+            SIGNAL g
+            {
+               name = "iRST_N";
+            }
+            SIGNAL h
+            {
+               name = "oINT";
+            }
+            SIGNAL i
+            {
+               name = "ENET_DATA";
+               radix = "hexadecimal";
+            }
+            SIGNAL j
+            {
+               name = "ENET_CMD";
+            }
+            SIGNAL k
+            {
+               name = "ENET_RD_N";
+            }
+            SIGNAL l
+            {
+               name = "ENET_WR_N";
+            }
+            SIGNAL m
+            {
+               name = "ENET_CS_N";
+            }
+            SIGNAL n
+            {
+               name = "ENET_RST_N";
+            }
+            SIGNAL o
+            {
+               name = "ENET_INT";
+            }
+         }
+      }
+   }
+   USER_INTERFACE 
+   {
+      USER_LABELS 
+      {
+         name = "DM9000A";
+         technology = "User Logic";
+      }
+   }
+   DEFAULT_GENERATOR 
+   {
+      top_module_name = "DM9000A_IF";
+      black_box = "0";
+      vhdl_synthesis_files = "";
+      verilog_synthesis_files = "DM9000A_IF.v";
+      black_box_files = "";
+   }
+}

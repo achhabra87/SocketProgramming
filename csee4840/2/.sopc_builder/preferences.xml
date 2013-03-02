@@ -1,0 +1,21 @@
+<preferences>
+  <systemtable>
+    <columns>
+      <connections
+        preferredWidth="63"
+        />
+      <irq
+        preferredWidth="34"
+        />
+    </columns>
+  </systemtable>
+  <window
+    width="1280"
+    height="974"
+    x="0"
+    y="25"
+    />
+  <library
+    expandedCategories="Bridges and Adapters,Interface Protocols"
+    />
+</preferences>

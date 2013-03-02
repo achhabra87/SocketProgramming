@@ -1,0 +1,559 @@
+#
+# This class.ptf file built by Component Editor
+# 2007.02.09.00:56:45
+#
+# DO NOT MODIFY THIS FILE
+# If you hand-modify this file you will likely
+# interfere with Component Editor's ability to
+# read and edit it. And then Component Editor
+# will overwrite your changes anyway. So, for
+# the very best results, just relax and
+# DO NOT MODIFY THIS FILE
+#
+CLASS de2_ps2
+{
+   CB_GENERATOR 
+   {
+      HDL_FILES 
+      {
+         FILE 
+         {
+            use_in_simulation = "1";
+            use_in_synthesis = "1";
+            type = "vhdl";
+            filepath = "hdl/de2_ps2.vhd";
+         }
+      }
+      top_module_name = "de2_ps2.vhd:de2_ps2";
+      emit_system_h = "0";
+      LIBRARIES 
+      {
+         library = "ieee.std_logic_1164.all";
+         library = "ieee.std_logic_arith.all";
+         library = "ieee.std_logic_unsigned.all";
+         library = "std.standard.all";
+      }
+   }
+   MODULE_DEFAULTS global_signals
+   {
+      class = "de2_ps2";
+      class_version = "1.0";
+      SYSTEM_BUILDER_INFO 
+      {
+         Instantiate_In_System_Module = "1";
+         Has_Clock = "0";
+         Top_Level_Ports_Are_Enumerated = "1";
+      }
+      COMPONENT_BUILDER 
+      {
+         GLS_SETTINGS 
+         {
+         }
+      }
+      PORT_WIRING 
+      {
+         PORT PS2_Clk
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+         PORT PS2_Data
+         {
+            width = "1";
+            width_expression = "";
+            direction = "input";
+            type = "export";
+            is_shared = "0";
+            vhdl_record_name = "";
+            vhdl_record_type = "";
+         }
+      }
+      WIZARD_SCRIPT_ARGUMENTS 
+      {
+         hdl_parameters 
+         {
+         }
+      }
+      SIMULATION 
+      {
+         DISPLAY 
+         {
+         }
+      }
+      SLAVE s1
+      {
+         SYSTEM_BUILDER_INFO 
+         {
+            Bus_Type = "avalon";
+            Address_Group = "1";
+            Has_Clock = "1";
+            Address_Width = "1";
+            Address_Alignment = "native";
+            Data_Width = "8";
+            Has_Base_Address = "1";
+            Has_IRQ = "0";
+            Setup_Time = "0cycles";
+            Hold_Time = "0cycles";
+            Read_Wait_States = "1cycles";
+            Write_Wait_States = "1cycles";
+            Read_Latency = "0";
+            Maximum_Pending_Read_Transactions = "0";
+            Active_CS_Through_Read_Latency = "0";
+            Is_Printable_Device = "0";
+            Is_Memory_Device = "0";
+            Is_Readable = "1";
+            Is_Writable = "1";
+            Minimum_Uninterrupted_Run_Length = "1";
+         }
+         COMPONENT_BUILDER 
+         {
+            AVS_SETTINGS 
+            {
+               Setup_Value = "0";
+               Read_Wait_Value = "1";
+               Write_Wait_Value = "1";
+               Hold_Value = "0";
+               Timing_Units = "cycles";
+               Read_Latency_Value = "0";
+               Minimum_Arbitration_Shares = "1";
+               Active_CS_Through_Read_Latency = "0";
+               Max_Pending_Read_Transactions_Value = "1";
+               Address_Alignment = "native";
+               Is_Printable_Device = "0";
+               Interleave_Bursts = "0";
+               interface_name = "Avalon Slave";
+               external_wait = "0";
+               Is_Memory_Device = "0";
+            }
+         }
+         PORT_WIRING 
+         {
+            PORT avs_s1_clk
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "clk";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avs_s1_reset
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "reset";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avs_s1_address
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "address";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avs_s1_read
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "read";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avs_s1_chipselect
+            {
+               width = "1";
+               width_expression = "";
+               direction = "input";
+               type = "chipselect";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+            PORT avs_s1_readdata
+            {
+               width = "8";
+               width_expression = "";
+               direction = "output";
+               type = "readdata";
+               is_shared = "0";
+               vhdl_record_name = "";
+               vhdl_record_type = "";
+            }
+         }
+      }
+   }
+   USER_INTERFACE 
+   {
+      USER_LABELS 
+      {
+         name = "de2_ps2";
+         technology = "User Logic";
+      }
+      WIZARD_UI the_wizard_ui
+      {
+         title = "de2_ps2 - {{ $MOD }}";
+         CONTEXT 
+         {
+            H = "WIZARD_SCRIPT_ARGUMENTS/hdl_parameters";
+            M = "";
+            SBI_global_signals = "SYSTEM_BUILDER_INFO";
+            SBI_s1 = "SLAVE s1/SYSTEM_BUILDER_INFO";
+         }
+         PAGES main
+         {
+            PAGE 1
+            {
+               align = "left";
+               title = "<b>de2_ps2 1.0</b> Settings";
+               layout = "vertical";
+               TEXT 
+               {
+                  title = "Built on: 2007.02.09.00:56:45";
+               }
+               TEXT 
+               {
+                  title = "Class name: de2_ps2";
+               }
+               TEXT 
+               {
+                  title = "Class version: 1.0";
+               }
+               TEXT 
+               {
+                  title = "Component name: de2_ps2";
+               }
+               TEXT 
+               {
+                  title = "Component Group: User Logic";
+               }
+            }
+         }
+      }
+   }
+   SOPC_Builder_Version = "6.10";
+   COMPONENT_BUILDER 
+   {
+      HDL_PARAMETERS 
+      {
+         # generated by CBDocument.getParameterContainer
+         # used only by Component Editor
+      }
+      SW_FILES 
+      {
+      }
+      built_on = "2007.02.09.00:56:45";
+      CACHED_HDL_INFO 
+      {
+         # cached hdl info, emitted by CBFrameRealtime.getDocumentCachedHDLInfoSection
+         # used only by Component Builder
+         FILE de2_ps2.vhd
+         {
+            file_mod = "Thu Feb 08 22:50:48 EST 2007";
+            quartus_map_start = "Fri Feb 09 00:41:42 EST 2007";
+            quartus_map_finished = "Fri Feb 09 00:41:59 EST 2007";
+            #found 2 valid modules
+            WRAPPER de2_ps2
+            {
+               CLASS de2_ps2
+               {
+                  CB_GENERATOR 
+                  {
+                     HDL_FILES 
+                     {
+                        FILE 
+                        {
+                           use_in_simulation = "1";
+                           use_in_synthesis = "1";
+                           type = "";
+                           filepath = "/home/sedwards/cvs/classes/2007/4840/lab3/de2_ps2.vhd";
+                        }
+                     }
+                     top_module_name = "de2_ps2";
+                     emit_system_h = "0";
+                     LIBRARIES 
+                     {
+                        library = "ieee.std_logic_1164.all";
+                        library = "ieee.std_logic_arith.all";
+                        library = "ieee.std_logic_unsigned.all";
+                        library = "std.standard.all";
+                     }
+                  }
+                  MODULE_DEFAULTS global_signals
+                  {
+                     class = "de2_ps2";
+                     class_version = "1.0";
+                     SYSTEM_BUILDER_INFO 
+                     {
+                        Instantiate_In_System_Module = "1";
+                     }
+                     SLAVE s1
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT avs_s1_clk
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "clk";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avs_s1_reset
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "reset";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avs_s1_address
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "address";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avs_s1_read
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "read";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avs_s1_chipselect
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "chipselect";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT avs_s1_readdata
+                           {
+                              width = "8";
+                              width_expression = "";
+                              direction = "output";
+                              type = "readdata";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                     SLAVE avalon_slave_0
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT PS2_Clk
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "clk";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT PS2_Data
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                  }
+                  USER_INTERFACE 
+                  {
+                     USER_LABELS 
+                     {
+                        name = "de2_ps2";
+                        technology = "imported components";
+                     }
+                  }
+                  SOPC_Builder_Version = "0.0";
+               }
+            }
+            WRAPPER PS2_Ctrl
+            {
+               CLASS PS2_Ctrl
+               {
+                  CB_GENERATOR 
+                  {
+                     HDL_FILES 
+                     {
+                        FILE 
+                        {
+                           use_in_simulation = "1";
+                           use_in_synthesis = "1";
+                           type = "";
+                           filepath = "/home/sedwards/cvs/classes/2007/4840/lab3/de2_ps2.vhd";
+                        }
+                     }
+                     top_module_name = "PS2_Ctrl";
+                     emit_system_h = "0";
+                     LIBRARIES 
+                     {
+                        library = "ieee.std_logic_1164.all";
+                        library = "ieee.numeric_std.all";
+                        library = "std.standard.all";
+                     }
+                  }
+                  MODULE_DEFAULTS global_signals
+                  {
+                     class = "PS2_Ctrl";
+                     class_version = "1.0";
+                     SYSTEM_BUILDER_INFO 
+                     {
+                        Instantiate_In_System_Module = "1";
+                     }
+                     SLAVE avalon_slave_0
+                     {
+                        SYSTEM_BUILDER_INFO 
+                        {
+                           Bus_Type = "avalon";
+                        }
+                        PORT_WIRING 
+                        {
+                           PORT Clk
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "clk";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT Reset
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "reset";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT PS2_Clk
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "clk";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT PS2_Data
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT DoRead
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "input";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT Scan_Err
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT Scan_DAV
+                           {
+                              width = "1";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                           PORT Scan_Code
+                           {
+                              width = "8";
+                              width_expression = "";
+                              direction = "output";
+                              type = "export";
+                              is_shared = "0";
+                              vhdl_record_name = "";
+                              vhdl_record_type = "";
+                           }
+                        }
+                     }
+                  }
+                  USER_INTERFACE 
+                  {
+                     USER_LABELS 
+                     {
+                        name = "PS2_Ctrl";
+                        technology = "imported components";
+                     }
+                  }
+                  SOPC_Builder_Version = "0.0";
+               }
+            }
+         }
+      }
+   }
+   ASSOCIATED_FILES 
+   {
+      Add_Program = "the_wizard_ui";
+      Edit_Program = "the_wizard_ui";
+      Generator_Program = "cb_generator.pl";
+   }
+}

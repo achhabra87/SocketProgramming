@@ -1,0 +1,4 @@
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) /home/user2/spring12/asc2171/csee4840/lab3/de2_sram_controller_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) /home/user2/spring12/asc2171/csee4840/lab3/de2_sram_controller.vhd]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) /home/user2/spring12/asc2171/csee4840/lab3/de2_vga_controller_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) /home/user2/spring12/asc2171/csee4840/lab3/de2_vga_controller.vhd]
