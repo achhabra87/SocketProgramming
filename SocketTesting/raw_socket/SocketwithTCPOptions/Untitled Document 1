@@ -1,0 +1,54 @@
+createmessage(char * buffer,char **argv){
+
+int flags = 0, c, numtries=90;
+  char src_ip[17];
+  char dst_ip[17];
+  short dst_port=80;
+  short th_sport=56573;
+  short tcp_flags=TH_SYN;
+  short pig_ack=0;
+  short pig_seq=31337;
+  //struct ether_header *eh = (struct ether_header *) sendbuf;
+  struct ip *iph = (struct ip *) datagram;
+  struct tcphdr *tcph = (struct tcphdr *) (datagram + sizeof (struct ip));
+  struct tcp_options *tcpopt = (struct tcp_options *) (datagram + sizeof(struct ip) + sizeof(struct tcphdr));
+  struct sockaddr_in servaddr;
+  memset(datagram, 0, 4096); /* zero out the buffer */
+
+
+
+
+  inet_pton(AF_INET, dst_ip,&servaddr.sin_addr);
+  int tcphdr_size = sizeof(struct tcphdr);
+
+  iph->ip_hl = 5;
+  iph->ip_v = 4;
+  iph->ip_tos = 0x10;
+  iph->ip_len = sizeof (struct ip) + sizeof (struct tcphdr) + 8 +6 +6; /* data size = 0, but tcp using option flags */
+  iph->ip_id = htons (31337);
+  iph->ip_off = 0;
+  iph->ip_ttl = 250;
+  iph->ip_p = 6;
+  iph->ip_sum = 0;
+  //OLD WAY iph->ip_src.s_addr = inet_addr (src_ip);/* source ip  */
+  inet_pton(AF_INET, src_ip, &(iph->ip_src));
+  iph->ip_dst.s_addr = servaddr.sin_addr.s_addr;
+
+  tcph->th_sport = htons (th_sport); /* source port */
+  tcph->th_dport = htons (dst_port); /* destination port */
+  tcph->th_seq = htonl(31337);
+  tcph->th_ack = htonl(pig_ack);/* in first SYN packet, ACK is not present */
+  tcph->th_x2 = 0;
+  // tcph->th_off = sizeof(struct tcphdr)/4; /* data position in the packet */
+  tcph->th_off = 7+2+1 ;
+
+
+  tcph->th_flags = tcp_flags; /* initial connection request */
+  tcph->th_win = htons (32896); /* */
+  tcph->th_sum = 0; /* we will compute it later */
+  tcph->th_urp = 0;
+
+  tcphdr_size=40;
+
+
+
