@@ -1,0 +1,92 @@
+No.     Time        Source                Destination           Protocol Info
+      4 5.719131    10.0.2.15             74.125.228.66         TCP      56573 > http [ACK] Seq=1 Ack=2 Win=65535[Malformed Packet]
+
+Frame 4: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Arrival Time: Mar  2, 2013 14:48:38.752287000 EST
+    Epoch Time: 1362253718.752287000 seconds
+    [Time delta from previous captured frame: 0.000261000 seconds]
+    [Time delta from previous displayed frame: 0.000261000 seconds]
+    [Time since reference or first frame: 5.719131000 seconds]
+    Frame Number: 4
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: Checksum Errors]
+    [Coloring Rule String: cdp.checksum_bad==1 || edp.checksum_bad==1 || ip.checksum_bad==1 || tcp.checksum_bad==1 || udp.checksum_bad==1 || mstp.checksum_bad==1]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+    Trailer: 00000000000000000000000000000000
+    Frame check sequence: 0x00000000 [incorrect, should be 0x2867844c]
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.66 (74.125.228.66)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x0001 (1)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xb9dc [incorrect, should be 0x4001]
+        [Good: False]
+        [Bad: True]
+            [Expert Info (Error/Checksum): Bad checksum]
+                [Message: Bad checksum]
+                [Severity level: Error]
+                [Group: Checksum]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.66 (74.125.228.66)
+Transmission Control Protocol, Src Port: 56573 (56573), Dst Port: http (80), Seq: 1, Ack: 2
+    Source port: 56573 (56573)
+    Destination port: http (80)
+    [Stream index: 0]
+    [Short segment. Segment/fragment does not contain a full TCP header (might be NMAP or someone else deliberately sending unusual packets)]
+        [Expert Info (Warn/Malformed): Short segment]
+            [Message: Short segment]
+            [Severity level: Warn]
+            [Group: Malformed]
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 2    (relative ack number)
+    Header length: 24 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0x5592 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+[Malformed Packet: TCP]
+    [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
+        [Message: Malformed Packet (Exception occurred)]
+        [Severity level: Error]
+        [Group: Malformed]
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 00   RT..5...'..q..E.
+0010  00 28 00 01 00 00 40 06 b9 dc 0a 00 02 0f 4a 7d   .(....@.......J}
+0020  e4 42 dc fd 00 50 00 00 00 01 00 00 00 02 60 10   .B...P........`.
+0030  ff ff 55 92 00 00 00 00 00 00 00 00 00 00 00 00   ..U.............
+0040  00 00 00 00 00 00 00 00 00 00                     ..........

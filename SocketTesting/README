@@ -1,0 +1,108 @@
+<errno.h>
+The header file errno.h lists a bunch of constant symbolic names for errors, such as EADDRINUSE,
+EPIPE, ECONNREFUSED, etc. The local man pages will tell you what codes can be returned as an error, and
+you can use these at run time to handle different errors in different ways.
+
+
+ <netinet/in.h>
+This header defines the sockaddr_in structure
+
+<netdb.h> 
+Defines for network database operations
+
+
+<sys/socket.h> 
+header defines the sockaddr structure that includes at least the following members:
+
+sockfd is the socket file descriptor
+
+addrinfo 
+The addrinfo structure is used by the getaddrinfo function to hold host address information.
+typedef struct addrinfo {
+  int             ai_flags;
+  int             ai_family;
+  int             ai_socktype;
+  int             ai_protocol;
+  size_t          ai_addrlen;
+  char            *ai_canonname;
+  struct sockaddr  *ai_addr;
+  struct addrinfo  *ai_next;
+} ADDRINFOA, *PADDRINFOA;
+
+
+
+
+int getaddrinfo(const char *hostname,
+                const char *service,
+                const struct addrinfo *hints,
+                struct addrinfo **res);
+
+
+
+sockaddr_storage
+The SOCKADDR_STORAGE structure stores socket address information. 
+typedef struct sockaddr_storage {
+  short   ss_family;
+  char    __ss_pad1[_SS_PAD1SIZE];
+  __int64 __ss_align;
+  char    __ss_pad2[_SS_PAD2SIZE];
+} SOCKADDR_STORAGE, *PSOCKADDR_STORAGE;
+
+
+sigaction - examine and change a signal action
+#include <signal.h>
+int sigaction(int sig, const struct sigaction *restrict act,
+       struct sigaction *restrict oact); 
+
+void * memset ( void * ptr, int value, size_t num );
+Fill block of memory
+Sets the first num bytes of the block of memory pointed by ptr to the specified value (interpreted as an unsigned char).
+
+AF_UNSPEC
+The value AF_UNSPEC indicates that getaddrinfo() should
+                   return socket addresses for any address family (either IPv4 or
+                   IPv6, for example) that can be used with node and service.
+
+
+sockfd = socket(int socket_family, int socket_type, int protocol);
+
+setsockopt()
+The setsockopt function sets a socket option.
+int setsockopt(
+  _In_  SOCKET s,
+  _In_  int level,
+  _In_  int optname,
+  _In_  const char *optval,
+  _In_  int optlen
+);
+
+
+
+
+
+bind 
+bind a name to a socket
+#include <sys/socket.h>
+int bind(int socket, const struct sockaddr *address,
+       socklen_t address_len);
+
+
+listen 
+listen for connections on a socket
+#include <sys/types.h>          /* See NOTES */
+#include <sys/socket.h>
+int listen(int sockfd, int backlog);
+
+
+
+accept
+accept a connection on a socket
+
+#include <sys/types.h>          /* See NOTES */#include <sys/socket.h>
+int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);#define _GNU_SOURCE
+            
+#include <sys/socket.h>
+int accept4(int sockfd, struct sockaddr *addr,socklen_t *addrlen, int flags);
+
+
+inet_ntop, inet_pton - convert IPv4 and IPv6 addresses between binary and text form

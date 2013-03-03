@@ -1,0 +1,1709 @@
+No.     Time        Source                Destination           Protocol Info
+      5 0.394261    10.0.2.15             74.125.228.1          TCP      57306 > http [SYN] Seq=0 Win=14600 Len=0 MSS=1460 SACK_PERM=1 TSV=15398 TSER=0 WS=7
+
+Frame 5: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Arrival Time: Mar  2, 2013 14:39:08.868375000 EST
+    Epoch Time: 1362253148.868375000 seconds
+    [Time delta from previous captured frame: 0.000283000 seconds]
+    [Time delta from previous displayed frame: 0.000283000 seconds]
+    [Time since reference or first frame: 0.394261000 seconds]
+    Frame Number: 5
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.1 (74.125.228.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00)
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 60
+    Identification: 0x34a9 (13481)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xcb75 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.1 (74.125.228.1)
+Transmission Control Protocol, Src Port: 57306 (57306), Dst Port: http (80), Seq: 0, Len: 0
+    Source port: 57306 (57306)
+    Destination port: http (80)
+    [Stream index: 2]
+    Sequence number: 0    (relative sequence number)
+    Header length: 40 bytes
+    Flags: 0x02 (SYN)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...0 .... = Acknowledgement: Not set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..1. = Syn: Set
+            [Expert Info (Chat/Sequence): Connection establish request (SYN): server port http]
+                [Message: Connection establish request (SYN): server port http]
+                [Severity level: Chat]
+                [Group: Sequence]
+        .... .... ...0 = Fin: Not set
+    Window size: 14600
+    Checksum: 0x3abc [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    Options: (20 bytes)
+        Maximum segment size: 1460 bytes
+        TCP SACK Permitted Option: True
+        Timestamps: TSval 15398, TSecr 0
+        NOP
+        Window scale: 7 (multiply by 128)
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 10   RT..5...'..q..E.
+0010  00 3c 34 a9 40 00 40 06 cb 75 0a 00 02 0f 4a 7d   .<4.@.@..u....J}
+0020  e4 01 df da 00 50 16 e6 08 8f 00 00 00 00 a0 02   .....P..........
+0030  39 08 3a bc 00 00 02 04 05 b4 04 02 08 0a 00 00   9.:.............
+0040  3c 26 00 00 00 00 01 03 03 07                     <&........
+No.     Time        Source                Destination           Protocol Info
+      6 0.395135    74.125.228.1          10.0.2.15             TCP      http > 57306 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460
+
+Frame 6: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+    Arrival Time: Mar  2, 2013 14:39:08.869249000 EST
+    Epoch Time: 1362253148.869249000 seconds
+    [Time delta from previous captured frame: 0.000874000 seconds]
+    [Time delta from previous displayed frame: 0.000874000 seconds]
+    [Time since reference or first frame: 0.395135000 seconds]
+    Frame Number: 6
+    Frame Length: 60 bytes (480 bits)
+    Capture Length: 60 bytes (480 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+    Destination: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Source: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+    Trailer: 0000
+Internet Protocol, Src: 74.125.228.1 (74.125.228.1), Dst: 10.0.2.15 (10.0.2.15)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 44
+    Identification: 0x0210 (528)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x3e2f [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 74.125.228.1 (74.125.228.1)
+    Destination: 10.0.2.15 (10.0.2.15)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 57306 (57306), Seq: 0, Ack: 1, Len: 0
+    Source port: http (80)
+    Destination port: 57306 (57306)
+    [Stream index: 2]
+    Sequence number: 0    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 24 bytes
+    Flags: 0x12 (SYN, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..1. = Syn: Set
+            [Expert Info (Chat/Sequence): Connection establish acknowledge (SYN+ACK): server port http]
+                [Message: Connection establish acknowledge (SYN+ACK): server port http]
+                [Severity level: Chat]
+                [Group: Sequence]
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0xcb2e [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    Options: (4 bytes)
+        Maximum segment size: 1460 bytes
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 5]
+        [The RTT to ACK the segment was: 0.000874000 seconds]
+
+0000  08 00 27 b5 93 71 52 54 00 12 35 02 08 00 45 00   ..'..qRT..5...E.
+0010  00 2c 02 10 00 00 40 06 3e 2f 4a 7d e4 01 0a 00   .,....@.>/J}....
+0020  02 0f 00 50 df da 00 b8 92 01 16 e6 08 90 60 12   ...P..........`.
+0030  ff ff cb 2e 00 00 02 04 05 b4 00 00               ............
+No.     Time        Source                Destination           Protocol Info
+      7 0.395163    10.0.2.15             74.125.228.1          TCP      57306 > http [ACK] Seq=1 Ack=1 Win=14600 Len=0
+
+Frame 7: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+    Arrival Time: Mar  2, 2013 14:39:08.869277000 EST
+    Epoch Time: 1362253148.869277000 seconds
+    [Time delta from previous captured frame: 0.000028000 seconds]
+    [Time delta from previous displayed frame: 0.000028000 seconds]
+    [Time since reference or first frame: 0.395163000 seconds]
+    Frame Number: 7
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.1 (74.125.228.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00)
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x34aa (13482)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xcb88 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.1 (74.125.228.1)
+Transmission Control Protocol, Src Port: 57306 (57306), Dst Port: http (80), Seq: 1, Ack: 1, Len: 0
+    Source port: 57306 (57306)
+    Destination port: http (80)
+    [Stream index: 2]
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 14600
+    Checksum: 0x3aa8 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 6]
+        [The RTT to ACK the segment was: 0.000028000 seconds]
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 10   RT..5...'..q..E.
+0010  00 28 34 aa 40 00 40 06 cb 88 0a 00 02 0f 4a 7d   .(4.@.@.......J}
+0020  e4 01 df da 00 50 16 e6 08 90 00 b8 92 02 50 10   .....P........P.
+0030  39 08 3a a8 00 00                                 9.:...
+No.     Time        Source                Destination           Protocol Info
+      8 3.941369    10.0.2.15             74.125.228.1          TCP      [TCP segment of a reassembled PDU]
+
+Frame 8: 61 bytes on wire (488 bits), 61 bytes captured (488 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.415483000 EST
+    Epoch Time: 1362253152.415483000 seconds
+    [Time delta from previous captured frame: 3.546206000 seconds]
+    [Time delta from previous displayed frame: 3.546206000 seconds]
+    [Time since reference or first frame: 3.941369000 seconds]
+    Frame Number: 8
+    Frame Length: 61 bytes (488 bits)
+    Capture Length: 61 bytes (488 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp:http]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.1 (74.125.228.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00)
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 47
+    Identification: 0x34ab (13483)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xcb80 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.1 (74.125.228.1)
+Transmission Control Protocol, Src Port: 57306 (57306), Dst Port: http (80), Seq: 1, Ack: 1, Len: 7
+    Source port: 57306 (57306)
+    Destination port: http (80)
+    [Stream index: 2]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 8    (relative sequence number)]
+    Acknowledgement number: 1    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x18 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 14600
+    Checksum: 0x3aaf [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 7]
+    TCP segment data (7 bytes)
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 10   RT..5...'..q..E.
+0010  00 2f 34 ab 40 00 40 06 cb 80 0a 00 02 0f 4a 7d   ./4.@.@.......J}
+0020  e4 01 df da 00 50 16 e6 08 90 00 b8 92 02 50 18   .....P........P.
+0030  39 08 3a af 00 00 47 45 54 20 2f 0d 0a            9.:...GET /..
+No.     Time        Source                Destination           Protocol Info
+      9 3.942073    74.125.228.1          10.0.2.15             TCP      http > 57306 [ACK] Seq=1 Ack=8 Win=65535 Len=0
+
+Frame 9: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.416187000 EST
+    Epoch Time: 1362253152.416187000 seconds
+    [Time delta from previous captured frame: 0.000704000 seconds]
+    [Time delta from previous displayed frame: 0.000704000 seconds]
+    [Time since reference or first frame: 3.942073000 seconds]
+    Frame Number: 9
+    Frame Length: 60 bytes (480 bits)
+    Capture Length: 60 bytes (480 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+    Destination: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Source: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+    Trailer: 000000000000
+Internet Protocol, Src: 74.125.228.1 (74.125.228.1), Dst: 10.0.2.15 (10.0.2.15)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x0211 (529)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x3e32 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 74.125.228.1 (74.125.228.1)
+    Destination: 10.0.2.15 (10.0.2.15)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 57306 (57306), Seq: 1, Ack: 8, Len: 0
+    Source port: http (80)
+    Destination port: 57306 (57306)
+    [Stream index: 2]
+    Sequence number: 1    (relative sequence number)
+    Acknowledgement number: 8    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0xe2e4 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 8]
+        [The RTT to ACK the segment was: 0.000704000 seconds]
+
+0000  08 00 27 b5 93 71 52 54 00 12 35 02 08 00 45 00   ..'..qRT..5...E.
+0010  00 28 02 11 00 00 40 06 3e 32 4a 7d e4 01 0a 00   .(....@.>2J}....
+0020  02 0f 00 50 df da 00 b8 92 02 16 e6 08 97 50 10   ...P..........P.
+0030  ff ff e2 e4 00 00 00 00 00 00 00 00               ............
+No.     Time        Source                Destination           Protocol Info
+     10 4.075994    74.125.228.1          10.0.2.15             TCP      [TCP segment of a reassembled PDU]
+
+Frame 10: 1474 bytes on wire (11792 bits), 1474 bytes captured (11792 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.550108000 EST
+    Epoch Time: 1362253152.550108000 seconds
+    [Time delta from previous captured frame: 0.133921000 seconds]
+    [Time delta from previous displayed frame: 0.133921000 seconds]
+    [Time since reference or first frame: 4.075994000 seconds]
+    Frame Number: 10
+    Frame Length: 1474 bytes (11792 bits)
+    Capture Length: 1474 bytes (11792 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp:http]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+    Destination: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Source: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 74.125.228.1 (74.125.228.1), Dst: 10.0.2.15 (10.0.2.15)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 1460
+    Identification: 0x0212 (530)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x38a5 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 74.125.228.1 (74.125.228.1)
+    Destination: 10.0.2.15 (10.0.2.15)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 57306 (57306), Seq: 1, Ack: 8, Len: 1420
+    Source port: http (80)
+    Destination port: 57306 (57306)
+    [Stream index: 2]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 1421    (relative sequence number)]
+    Acknowledgement number: 8    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0xb5f2 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 1420]
+    TCP segment data (1420 bytes)
+
+0000  08 00 27 b5 93 71 52 54 00 12 35 02 08 00 45 00   ..'..qRT..5...E.
+0010  05 b4 02 12 00 00 40 06 38 a5 4a 7d e4 01 0a 00   ......@.8.J}....
+0020  02 0f 00 50 df da 00 b8 92 02 16 e6 08 97 50 10   ...P..........P.
+0030  ff ff b5 f2 00 00 48 54 54 50 2f 31 2e 30 20 32   ......HTTP/1.0 2
+0040  30 30 20 4f 4b 0d 0a 44 61 74 65 3a 20 53 61 74   00 OK..Date: Sat
+0050  2c 20 30 32 20 4d 61 72 20 32 30 31 33 20 31 39   , 02 Mar 2013 19
+0060  3a 33 39 3a 32 37 20 47 4d 54 0d 0a 45 78 70 69   :39:27 GMT..Expi
+0070  72 65 73 3a 20 2d 31 0d 0a 43 61 63 68 65 2d 43   res: -1..Cache-C
+0080  6f 6e 74 72 6f 6c 3a 20 70 72 69 76 61 74 65 2c   ontrol: private,
+0090  20 6d 61 78 2d 61 67 65 3d 30 0d 0a 43 6f 6e 74    max-age=0..Cont
+00a0  65 6e 74 2d 54 79 70 65 3a 20 74 65 78 74 2f 68   ent-Type: text/h
+00b0  74 6d 6c 3b 20 63 68 61 72 73 65 74 3d 49 53 4f   tml; charset=ISO
+00c0  2d 38 38 35 39 2d 31 0d 0a 53 65 74 2d 43 6f 6f   -8859-1..Set-Coo
+00d0  6b 69 65 3a 20 50 52 45 46 3d 49 44 3d 39 62 36   kie: PREF=ID=9b6
+00e0  37 33 36 63 35 65 65 39 65 64 30 39 32 3a 46 46   736c5ee9ed092:FF
+00f0  3d 30 3a 54 4d 3d 31 33 36 32 32 35 33 31 36 37   =0:TM=1362253167
+0100  3a 4c 4d 3d 31 33 36 32 32 35 33 31 36 37 3a 53   :LM=1362253167:S
+0110  3d 6d 71 54 54 66 57 2d 72 6a 71 7a 64 34 44 52   =mqTTfW-rjqzd4DR
+0120  6b 3b 20 65 78 70 69 72 65 73 3d 4d 6f 6e 2c 20   k; expires=Mon, 
+0130  30 32 2d 4d 61 72 2d 32 30 31 35 20 31 39 3a 33   02-Mar-2015 19:3
+0140  39 3a 32 37 20 47 4d 54 3b 20 70 61 74 68 3d 2f   9:27 GMT; path=/
+0150  3b 20 64 6f 6d 61 69 6e 3d 2e 67 6f 6f 67 6c 65   ; domain=.google
+0160  2e 63 6f 6d 0d 0a 53 65 74 2d 43 6f 6f 6b 69 65   .com..Set-Cookie
+0170  3a 20 4e 49 44 3d 36 37 3d 54 4f 49 32 67 6e 7a   : NID=67=TOI2gnz
+0180  38 51 77 5f 6c 7a 5f 49 43 4d 34 77 33 36 6e 31   8Qw_lz_ICM4w36n1
+0190  68 5a 4d 6a 68 79 52 67 35 50 79 4c 7a 52 38 55   hZMjhyRg5PyLzR8U
+01a0  39 63 76 37 68 58 73 31 4c 52 67 71 64 51 56 66   9cv7hXs1LRgqdQVf
+01b0  66 56 7a 58 63 4e 48 71 38 5a 41 71 30 2d 66 48   fVzXcNHq8ZAq0-fH
+01c0  64 79 77 46 42 49 73 2d 48 2d 64 59 47 79 77 6e   dywFBIs-H-dYGywn
+01d0  35 73 34 69 56 57 75 72 56 31 53 4d 57 59 4e 2d   5s4iVWurV1SMWYN-
+01e0  4e 6c 68 41 62 5f 62 50 5a 68 6d 6e 64 63 4f 63   NlhAb_bPZhmndcOc
+01f0  53 67 75 30 35 72 52 6f 48 3b 20 65 78 70 69 72   Sgu05rRoH; expir
+0200  65 73 3d 53 75 6e 2c 20 30 31 2d 53 65 70 2d 32   es=Sun, 01-Sep-2
+0210  30 31 33 20 31 39 3a 33 39 3a 32 37 20 47 4d 54   013 19:39:27 GMT
+0220  3b 20 70 61 74 68 3d 2f 3b 20 64 6f 6d 61 69 6e   ; path=/; domain
+0230  3d 2e 67 6f 6f 67 6c 65 2e 63 6f 6d 3b 20 48 74   =.google.com; Ht
+0240  74 70 4f 6e 6c 79 0d 0a 50 33 50 3a 20 43 50 3d   tpOnly..P3P: CP=
+0250  22 54 68 69 73 20 69 73 20 6e 6f 74 20 61 20 50   "This is not a P
+0260  33 50 20 70 6f 6c 69 63 79 21 20 53 65 65 20 68   3P policy! See h
+0270  74 74 70 3a 2f 2f 77 77 77 2e 67 6f 6f 67 6c 65   ttp://www.google
+0280  2e 63 6f 6d 2f 73 75 70 70 6f 72 74 2f 61 63 63   .com/support/acc
+0290  6f 75 6e 74 73 2f 62 69 6e 2f 61 6e 73 77 65 72   ounts/bin/answer
+02a0  2e 70 79 3f 68 6c 3d 65 6e 26 61 6e 73 77 65 72   .py?hl=en&answer
+02b0  3d 31 35 31 36 35 37 20 66 6f 72 20 6d 6f 72 65   =151657 for more
+02c0  20 69 6e 66 6f 2e 22 0d 0a 53 65 72 76 65 72 3a    info."..Server:
+02d0  20 67 77 73 0d 0a 58 2d 58 53 53 2d 50 72 6f 74    gws..X-XSS-Prot
+02e0  65 63 74 69 6f 6e 3a 20 31 3b 20 6d 6f 64 65 3d   ection: 1; mode=
+02f0  62 6c 6f 63 6b 0d 0a 58 2d 46 72 61 6d 65 2d 4f   block..X-Frame-O
+0300  70 74 69 6f 6e 73 3a 20 53 41 4d 45 4f 52 49 47   ptions: SAMEORIG
+0310  49 4e 0d 0a 0d 0a 3c 21 64 6f 63 74 79 70 65 20   IN....<!doctype 
+0320  68 74 6d 6c 3e 3c 68 74 6d 6c 20 69 74 65 6d 73   html><html items
+0330  63 6f 70 65 3d 22 69 74 65 6d 73 63 6f 70 65 22   cope="itemscope"
+0340  20 69 74 65 6d 74 79 70 65 3d 22 68 74 74 70 3a    itemtype="http:
+0350  2f 2f 73 63 68 65 6d 61 2e 6f 72 67 2f 57 65 62   //schema.org/Web
+0360  50 61 67 65 22 3e 3c 68 65 61 64 3e 3c 6d 65 74   Page"><head><met
+0370  61 20 63 6f 6e 74 65 6e 74 3d 22 53 65 61 72 63   a content="Searc
+0380  68 20 74 68 65 20 77 6f 72 6c 64 27 73 20 69 6e   h the world's in
+0390  66 6f 72 6d 61 74 69 6f 6e 2c 20 69 6e 63 6c 75   formation, inclu
+03a0  64 69 6e 67 20 77 65 62 70 61 67 65 73 2c 20 69   ding webpages, i
+03b0  6d 61 67 65 73 2c 20 76 69 64 65 6f 73 20 61 6e   mages, videos an
+03c0  64 20 6d 6f 72 65 2e 20 47 6f 6f 67 6c 65 20 68   d more. Google h
+03d0  61 73 20 6d 61 6e 79 20 73 70 65 63 69 61 6c 20   as many special 
+03e0  66 65 61 74 75 72 65 73 20 74 6f 20 68 65 6c 70   features to help
+03f0  20 79 6f 75 20 66 69 6e 64 20 65 78 61 63 74 6c    you find exactl
+0400  79 20 77 68 61 74 20 79 6f 75 27 72 65 20 6c 6f   y what you're lo
+0410  6f 6b 69 6e 67 20 66 6f 72 2e 22 20 6e 61 6d 65   oking for." name
+0420  3d 22 64 65 73 63 72 69 70 74 69 6f 6e 22 3e 3c   ="description"><
+0430  6d 65 74 61 20 63 6f 6e 74 65 6e 74 3d 22 6e 6f   meta content="no
+0440  6f 64 70 22 20 6e 61 6d 65 3d 22 72 6f 62 6f 74   odp" name="robot
+0450  73 22 3e 3c 6d 65 74 61 20 69 74 65 6d 70 72 6f   s"><meta itempro
+0460  70 3d 22 69 6d 61 67 65 22 20 63 6f 6e 74 65 6e   p="image" conten
+0470  74 3d 22 2f 69 6d 61 67 65 73 2f 67 6f 6f 67 6c   t="/images/googl
+0480  65 5f 66 61 76 69 63 6f 6e 5f 31 32 38 2e 70 6e   e_favicon_128.pn
+0490  67 22 3e 3c 74 69 74 6c 65 3e 47 6f 6f 67 6c 65   g"><title>Google
+04a0  3c 2f 74 69 74 6c 65 3e 3c 73 63 72 69 70 74 3e   </title><script>
+04b0  28 66 75 6e 63 74 69 6f 6e 28 29 7b 0a 77 69 6e   (function(){.win
+04c0  64 6f 77 2e 67 6f 6f 67 6c 65 3d 7b 6b 45 49 3a   dow.google={kEI:
+04d0  22 62 31 55 79 55 61 65 4d 46 6f 72 43 67 41 65   "b1UyUaeMForCgAe
+04e0  71 37 34 48 41 42 67 22 2c 67 65 74 45 49 3a 66   q74HABg",getEI:f
+04f0  75 6e 63 74 69 6f 6e 28 61 29 7b 66 6f 72 28 76   unction(a){for(v
+0500  61 72 20 62 3b 61 26 26 28 21 61 2e 67 65 74 41   ar b;a&&(!a.getA
+0510  74 74 72 69 62 75 74 65 7c 7c 21 28 62 3d 61 2e   ttribute||!(b=a.
+0520  67 65 74 41 74 74 72 69 62 75 74 65 28 22 65 69   getAttribute("ei
+0530  64 22 29 29 29 3b 29 61 3d 61 2e 70 61 72 65 6e   d")));)a=a.paren
+0540  74 4e 6f 64 65 3b 72 65 74 75 72 6e 20 62 7c 7c   tNode;return b||
+0550  67 6f 6f 67 6c 65 2e 6b 45 49 7d 2c 68 74 74 70   google.kEI},http
+0560  73 3a 66 75 6e 63 74 69 6f 6e 28 29 7b 72 65 74   s:function(){ret
+0570  75 72 6e 22 68 74 74 70 73 3a 22 3d 3d 77 69 6e   urn"https:"==win
+0580  64 6f 77 2e 6c 6f 63 61 74 69 6f 6e 2e 70 72 6f   dow.location.pro
+0590  74 6f 63 6f 6c 7d 2c 6b 45 58 50 49 3a 22 31 37   tocol},kEXPI:"17
+05a0  32 35 39 2c 33 39 35 32 33 2c 34 30 30 30 31 31   259,39523,400011
+05b0  36 2c 34 30 30 31 35 36 39 2c 34 30 30 31 39 34   6,4001569,400194
+05c0  37 2c                                             7,
+No.     Time        Source                Destination           Protocol Info
+     11 4.076036    10.0.2.15             74.125.228.1          TCP      57306 > http [ACK] Seq=8 Ack=1421 Win=17040 Len=0
+
+Frame 11: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.550150000 EST
+    Epoch Time: 1362253152.550150000 seconds
+    [Time delta from previous captured frame: 0.000042000 seconds]
+    [Time delta from previous displayed frame: 0.000042000 seconds]
+    [Time since reference or first frame: 4.076036000 seconds]
+    Frame Number: 11
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.1 (74.125.228.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00)
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x34ac (13484)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xcb86 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.1 (74.125.228.1)
+Transmission Control Protocol, Src Port: 57306 (57306), Dst Port: http (80), Seq: 8, Ack: 1421, Len: 0
+    Source port: 57306 (57306)
+    Destination port: http (80)
+    [Stream index: 2]
+    Sequence number: 8    (relative sequence number)
+    Acknowledgement number: 1421    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 17040
+    Checksum: 0x3aa8 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 10]
+        [The RTT to ACK the segment was: 0.000042000 seconds]
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 10   RT..5...'..q..E.
+0010  00 28 34 ac 40 00 40 06 cb 86 0a 00 02 0f 4a 7d   .(4.@.@.......J}
+0020  e4 01 df da 00 50 16 e6 08 97 00 b8 97 8e 50 10   .....P........P.
+0030  42 90 3a a8 00 00                                 B.:...
+No.     Time        Source                Destination           Protocol Info
+     12 4.076087    74.125.228.1          10.0.2.15             TCP      [TCP segment of a reassembled PDU]
+
+Frame 12: 1474 bytes on wire (11792 bits), 1474 bytes captured (11792 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.550201000 EST
+    Epoch Time: 1362253152.550201000 seconds
+    [Time delta from previous captured frame: 0.000051000 seconds]
+    [Time delta from previous displayed frame: 0.000051000 seconds]
+    [Time since reference or first frame: 4.076087000 seconds]
+    Frame Number: 12
+    Frame Length: 1474 bytes (11792 bits)
+    Capture Length: 1474 bytes (11792 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+    Destination: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Source: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 74.125.228.1 (74.125.228.1), Dst: 10.0.2.15 (10.0.2.15)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 1460
+    Identification: 0x0213 (531)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x38a4 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 74.125.228.1 (74.125.228.1)
+    Destination: 10.0.2.15 (10.0.2.15)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 57306 (57306), Seq: 1421, Ack: 8, Len: 1420
+    Source port: http (80)
+    Destination port: 57306 (57306)
+    [Stream index: 2]
+    Sequence number: 1421    (relative sequence number)
+    [Next sequence number: 2841    (relative sequence number)]
+    Acknowledgement number: 8    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0x294e [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 1420]
+    [Reassembled PDU in frame: 76]
+    TCP segment data (1420 bytes)
+
+0000  08 00 27 b5 93 71 52 54 00 12 35 02 08 00 45 00   ..'..qRT..5...E.
+0010  05 b4 02 13 00 00 40 06 38 a4 4a 7d e4 01 0a 00   ......@.8.J}....
+0020  02 0f 00 50 df da 00 b8 97 8e 16 e6 08 97 50 10   ...P..........P.
+0030  ff ff 29 4e 00 00 34 30 30 31 39 35 39 2c 34 30   ..)N..4001959,40
+0040  30 31 39 37 35 2c 34 30 30 32 32 30 37 2c 34 30   01975,4002207,40
+0050  30 32 35 36 32 2c 34 30 30 32 37 33 34 2c 34 30   02562,4002734,40
+0060  30 32 38 35 34 2c 34 30 30 33 31 37 38 2c 34 30   02854,4003178,40
+0070  30 33 33 38 36 2c 34 30 30 33 35 37 35 2c 34 30   03386,4003575,40
+0080  30 33 36 33 38 2c 34 30 30 33 37 32 31 2c 34 30   03638,4003721,40
+0090  30 33 38 38 31 2c 34 30 30 33 39 31 37 2c 34 30   03881,4003917,40
+00a0  30 33 39 34 34 2c 34 30 30 34 30 36 35 2c 34 30   03944,4004065,40
+00b0  30 34 30 38 32 2c 34 30 30 34 31 38 31 2c 34 30   04082,4004181,40
+00c0  30 34 32 31 33 2c 34 30 30 34 32 32 32 2c 34 30   04213,4004222,40
+00d0  30 34 32 35 36 2c 34 30 30 34 32 37 36 2c 34 30   04256,4004276,40
+00e0  30 34 33 35 35 2c 34 30 30 34 34 38 38 2c 34 30   04355,4004488,40
+00f0  30 34 34 39 30 22 2c 6b 43 53 49 3a 7b 65 3a 22   04490",kCSI:{e:"
+0100  31 37 32 35 39 2c 33 39 35 32 33 2c 34 30 30 30   17259,39523,4000
+0110  31 31 36 2c 34 30 30 31 35 36 39 2c 34 30 30 31   116,4001569,4001
+0120  39 34 37 2c 34 30 30 31 39 35 39 2c 34 30 30 31   947,4001959,4001
+0130  39 37 35 2c 34 30 30 32 32 30 37 2c 34 30 30 32   975,4002207,4002
+0140  35 36 32 2c 34 30 30 32 37 33 34 2c 34 30 30 32   562,4002734,4002
+0150  38 35 34 2c 34 30 30 33 31 37 38 2c 34 30 30 33   854,4003178,4003
+0160  33 38 36 2c 34 30 30 33 35 37 35 2c 34 30 30 33   386,4003575,4003
+0170  36 33 38 2c 34 30 30 33 37 32 31 2c 34 30 30 33   638,4003721,4003
+0180  38 38 31 2c 34 30 30 33 39 31 37 2c 34 30 30 33   881,4003917,4003
+0190  39 34 34 2c 34 30 30 34 30 36 35 2c 34 30 30 34   944,4004065,4004
+01a0  30 38 32 2c 34 30 30 34 31 38 31 2c 34 30 30 34   082,4004181,4004
+01b0  32 31 33 2c 34 30 30 34 32 32 32 2c 34 30 30 34   213,4004222,4004
+01c0  32 35 36 2c 34 30 30 34 32 37 36 2c 34 30 30 34   256,4004276,4004
+01d0  33 35 35 2c 34 30 30 34 34 38 38 2c 34 30 30 34   355,4004488,4004
+01e0  34 39 30 22 2c 65 69 3a 22 62 31 55 79 55 61 65   490",ei:"b1UyUae
+01f0  4d 46 6f 72 43 67 41 65 71 37 34 48 41 42 67 22   MForCgAeq74HABg"
+0200  7d 2c 61 75 74 68 75 73 65 72 3a 30 2c 6d 6c 3a   },authuser:0,ml:
+0210  66 75 6e 63 74 69 6f 6e 28 29 7b 7d 2c 6b 48 4c   function(){},kHL
+0220  3a 22 65 6e 22 2c 74 69 6d 65 3a 66 75 6e 63 74   :"en",time:funct
+0230  69 6f 6e 28 29 7b 72 65 74 75 72 6e 28 6e 65 77   ion(){return(new
+0240  20 44 61 74 65 29 2e 67 65 74 54 69 6d 65 28 29    Date).getTime()
+0250  7d 2c 6c 6f 67 3a 66 75 6e 63 74 69 6f 6e 28 61   },log:function(a
+0260  2c 0a 62 2c 63 2c 6b 29 7b 76 61 72 20 64 3d 6e   ,.b,c,k){var d=n
+0270  65 77 20 49 6d 61 67 65 2c 66 3d 67 6f 6f 67 6c   ew Image,f=googl
+0280  65 2e 6c 63 2c 65 3d 67 6f 6f 67 6c 65 2e 6c 69   e.lc,e=google.li
+0290  2c 67 3d 22 22 3b 64 2e 6f 6e 65 72 72 6f 72 3d   ,g="";d.onerror=
+02a0  64 2e 6f 6e 6c 6f 61 64 3d 64 2e 6f 6e 61 62 6f   d.onload=d.onabo
+02b0  72 74 3d 66 75 6e 63 74 69 6f 6e 28 29 7b 64 65   rt=function(){de
+02c0  6c 65 74 65 20 66 5b 65 5d 7d 3b 66 5b 65 5d 3d   lete f[e]};f[e]=
+02d0  64 3b 21 63 26 26 2d 31 3d 3d 62 2e 73 65 61 72   d;!c&&-1==b.sear
+02e0  63 68 28 22 26 65 69 3d 22 29 26 26 28 67 3d 22   ch("&ei=")&&(g="
+02f0  26 65 69 3d 22 2b 67 6f 6f 67 6c 65 2e 67 65 74   &ei="+google.get
+0300  45 49 28 6b 29 29 3b 63 3d 63 7c 7c 22 2f 67 65   EI(k));c=c||"/ge
+0310  6e 5f 32 30 34 3f 61 74 79 70 3d 69 26 63 74 3d   n_204?atyp=i&ct=
+0320  22 2b 61 2b 22 26 63 61 64 3d 22 2b 62 2b 67 2b   "+a+"&cad="+b+g+
+0330  22 26 7a 78 3d 22 2b 67 6f 6f 67 6c 65 2e 74 69   "&zx="+google.ti
+0340  6d 65 28 29 3b 61 3d 2f 5e 68 74 74 70 3a 2f 69   me();a=/^http:/i
+0350  3b 61 2e 74 65 73 74 28 63 29 26 26 67 6f 6f 67   ;a.test(c)&&goog
+0360  6c 65 2e 68 74 74 70 73 28 29 3f 28 67 6f 6f 67   le.https()?(goog
+0370  6c 65 2e 6d 6c 28 45 72 72 6f 72 28 22 47 4c 4d   le.ml(Error("GLM
+0380  4d 22 29 2c 21 31 2c 7b 73 72 63 3a 63 7d 29 2c   M"),!1,{src:c}),
+0390  64 65 6c 65 74 65 20 66 5b 65 5d 29 3a 28 64 2e   delete f[e]):(d.
+03a0  73 72 63 3d 63 2c 67 6f 6f 67 6c 65 2e 6c 69 3d   src=c,google.li=
+03b0  65 2b 31 29 7d 2c 6c 63 3a 5b 5d 2c 6c 69 3a 30   e+1)},lc:[],li:0
+03c0  2c 54 6f 6f 6c 62 65 6c 74 3a 7b 7d 2c 79 3a 7b   ,Toolbelt:{},y:{
+03d0  7d 2c 78 3a 66 75 6e 63 74 69 6f 6e 28 61 2c 62   },x:function(a,b
+03e0  29 7b 67 6f 6f 67 6c 65 2e 79 5b 61 2e 69 64 5d   ){google.y[a.id]
+03f0  3d 5b 61 2c 62 5d 3b 72 65 74 75 72 6e 21 31 7d   =[a,b];return!1}
+0400  2c 6c 6f 61 64 3a 66 75 6e 63 74 69 6f 6e 28 61   ,load:function(a
+0410  2c 62 29 7b 67 6f 6f 67 6c 65 2e 78 28 7b 69 64   ,b){google.x({id
+0420  3a 22 6c 22 2b 61 7d 2c 66 75 6e 63 74 69 6f 6e   :"l"+a},function
+0430  28 29 7b 67 6f 6f 67 6c 65 2e 6c 6f 61 64 28 61   (){google.load(a
+0440  2c 62 29 7d 29 7d 7d 3b 0a 7d 29 28 29 3b 0a 28   ,b)})}};.})();.(
+0450  66 75 6e 63 74 69 6f 6e 28 29 7b 76 61 72 20 64   function(){var d
+0460  3d 21 31 3b 67 6f 6f 67 6c 65 2e 73 6e 3d 22 77   =!1;google.sn="w
+0470  65 62 68 70 22 3b 67 6f 6f 67 6c 65 2e 74 69 6d   ebhp";google.tim
+0480  65 72 73 3d 7b 7d 3b 67 6f 6f 67 6c 65 2e 73 74   ers={};google.st
+0490  61 72 74 54 69 63 6b 3d 66 75 6e 63 74 69 6f 6e   artTick=function
+04a0  28 61 2c 62 29 7b 67 6f 6f 67 6c 65 2e 74 69 6d   (a,b){google.tim
+04b0  65 72 73 5b 61 5d 3d 7b 74 3a 7b 73 74 61 72 74   ers[a]={t:{start
+04c0  3a 67 6f 6f 67 6c 65 2e 74 69 6d 65 28 29 7d 2c   :google.time()},
+04d0  62 66 72 3a 21 21 62 7d 7d 3b 67 6f 6f 67 6c 65   bfr:!!b}};google
+04e0  2e 74 69 63 6b 3d 66 75 6e 63 74 69 6f 6e 28 61   .tick=function(a
+04f0  2c 62 2c 68 29 7b 67 6f 6f 67 6c 65 2e 74 69 6d   ,b,h){google.tim
+0500  65 72 73 5b 61 5d 7c 7c 67 6f 6f 67 6c 65 2e 73   ers[a]||google.s
+0510  74 61 72 74 54 69 63 6b 28 61 29 3b 67 6f 6f 67   tartTick(a);goog
+0520  6c 65 2e 74 69 6d 65 72 73 5b 61 5d 2e 74 5b 62   le.timers[a].t[b
+0530  5d 3d 68 7c 7c 67 6f 6f 67 6c 65 2e 74 69 6d 65   ]=h||google.time
+0540  28 29 7d 3b 67 6f 6f 67 6c 65 2e 73 74 61 72 74   ()};google.start
+0550  54 69 63 6b 28 22 6c 6f 61 64 22 2c 21 30 29 3b   Tick("load",!0);
+0560  0a 74 72 79 7b 7d 63 61 74 63 68 28 65 29 7b 7d   .try{}catch(e){}
+0570  7d 29 28 29 3b 0a 76 61 72 20 5f 67 6a 77 6c 3d   })();.var _gjwl=
+0580  6c 6f 63 61 74 69 6f 6e 3b 66 75 6e 63 74 69 6f   location;functio
+0590  6e 20 5f 67 6a 75 63 28 29 7b 76 61 72 20 61 3d   n _gjuc(){var a=
+05a0  5f 67 6a 77 6c 2e 68 72 65 66 2e 69 6e 64 65 78   _gjwl.href.index
+05b0  4f 66 28 22 23 22 29 3b 69 66 28 30 3c 3d 61 26   Of("#");if(0<=a&
+05c0  26 28                                             &(
+No.     Time        Source                Destination           Protocol Info
+     13 4.076097    10.0.2.15             74.125.228.1          TCP      57306 > http [ACK] Seq=8 Ack=2841 Win=19880 Len=0
+
+Frame 13: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.550211000 EST
+    Epoch Time: 1362253152.550211000 seconds
+    [Time delta from previous captured frame: 0.000010000 seconds]
+    [Time delta from previous displayed frame: 0.000010000 seconds]
+    [Time since reference or first frame: 4.076097000 seconds]
+    Frame Number: 13
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.1 (74.125.228.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00)
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x34ad (13485)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xcb85 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.1 (74.125.228.1)
+Transmission Control Protocol, Src Port: 57306 (57306), Dst Port: http (80), Seq: 8, Ack: 2841, Len: 0
+    Source port: 57306 (57306)
+    Destination port: http (80)
+    [Stream index: 2]
+    Sequence number: 8    (relative sequence number)
+    Acknowledgement number: 2841    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 19880
+    Checksum: 0x3aa8 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 12]
+        [The RTT to ACK the segment was: 0.000010000 seconds]
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 10   RT..5...'..q..E.
+0010  00 28 34 ad 40 00 40 06 cb 85 0a 00 02 0f 4a 7d   .(4.@.@.......J}
+0020  e4 01 df da 00 50 16 e6 08 97 00 b8 9d 1a 50 10   .....P........P.
+0030  4d a8 3a a8 00 00                                 M.:...
+No.     Time        Source                Destination           Protocol Info
+     14 4.076138    74.125.228.1          10.0.2.15             TCP      [TCP segment of a reassembled PDU]
+
+Frame 14: 686 bytes on wire (5488 bits), 686 bytes captured (5488 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.550252000 EST
+    Epoch Time: 1362253152.550252000 seconds
+    [Time delta from previous captured frame: 0.000041000 seconds]
+    [Time delta from previous displayed frame: 0.000041000 seconds]
+    [Time since reference or first frame: 4.076138000 seconds]
+    Frame Number: 14
+    Frame Length: 686 bytes (5488 bits)
+    Capture Length: 686 bytes (5488 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+    Destination: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Source: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 74.125.228.1 (74.125.228.1), Dst: 10.0.2.15 (10.0.2.15)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 672
+    Identification: 0x0214 (532)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x3bb7 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 74.125.228.1 (74.125.228.1)
+    Destination: 10.0.2.15 (10.0.2.15)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 57306 (57306), Seq: 2841, Ack: 8, Len: 632
+    Source port: http (80)
+    Destination port: 57306 (57306)
+    [Stream index: 2]
+    Sequence number: 2841    (relative sequence number)
+    [Next sequence number: 3473    (relative sequence number)]
+    Acknowledgement number: 8    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x18 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0x9ac9 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 632]
+    [Reassembled PDU in frame: 76]
+    TCP segment data (632 bytes)
+
+0000  08 00 27 b5 93 71 52 54 00 12 35 02 08 00 45 00   ..'..qRT..5...E.
+0010  02 a0 02 14 00 00 40 06 3b b7 4a 7d e4 01 0a 00   ......@.;.J}....
+0020  02 0f 00 50 df da 00 b8 9d 1a 16 e6 08 97 50 18   ...P..........P.
+0030  ff ff 9a c9 00 00 61 3d 5f 67 6a 77 6c 2e 68 72   ......a=_gjwl.hr
+0040  65 66 2e 73 75 62 73 74 72 69 6e 67 28 61 29 2c   ef.substring(a),
+0050  30 3c 61 2e 69 6e 64 65 78 4f 66 28 22 26 71 3d   0<a.indexOf("&q=
+0060  22 29 7c 7c 30 3c 3d 61 2e 69 6e 64 65 78 4f 66   ")||0<=a.indexOf
+0070  28 22 23 71 3d 22 29 29 29 69 66 28 61 3d 61 2e   ("#q=")))if(a=a.
+0080  73 75 62 73 74 72 69 6e 67 28 31 29 2c 2d 31 3d   substring(1),-1=
+0090  3d 61 2e 69 6e 64 65 78 4f 66 28 22 23 22 29 29   =a.indexOf("#"))
+00a0  7b 66 6f 72 28 76 61 72 20 64 3d 30 3b 64 3c 61   {for(var d=0;d<a
+00b0  2e 6c 65 6e 67 74 68 3b 29 7b 76 61 72 20 62 3d   .length;){var b=
+00c0  64 3b 22 26 22 3d 3d 61 2e 63 68 61 72 41 74 28   d;"&"==a.charAt(
+00d0  62 29 26 26 2b 2b 62 3b 76 61 72 20 63 3d 61 2e   b)&&++b;var c=a.
+00e0  69 6e 64 65 78 4f 66 28 22 26 22 2c 62 29 3b 2d   indexOf("&",b);-
+00f0  31 3d 3d 63 26 26 28 63 3d 61 2e 6c 65 6e 67 74   1==c&&(c=a.lengt
+0100  68 29 3b 62 3d 61 2e 73 75 62 73 74 72 69 6e 67   h);b=a.substring
+0110  28 62 2c 63 29 3b 69 66 28 30 3d 3d 62 2e 69 6e   (b,c);if(0==b.in
+0120  64 65 78 4f 66 28 22 66 70 3d 22 29 29 61 3d 61   dexOf("fp="))a=a
+0130  2e 73 75 62 73 74 72 69 6e 67 28 30 2c 64 29 2b   .substring(0,d)+
+0140  61 2e 73 75 62 73 74 72 69 6e 67 28 63 2c 61 2e   a.substring(c,a.
+0150  6c 65 6e 67 74 68 29 2c 63 3d 64 3b 65 6c 73 65   length),c=d;else
+0160  20 69 66 28 22 63 61 64 3d 68 22 3d 3d 62 29 72    if("cad=h"==b)r
+0170  65 74 75 72 6e 20 30 3b 64 3d 63 7d 5f 67 6a 77   eturn 0;d=c}_gjw
+0180  6c 2e 68 72 65 66 3d 22 2f 73 65 61 72 63 68 3f   l.href="/search?
+0190  22 2b 61 2b 22 26 63 61 64 3d 68 22 3b 72 65 74   "+a+"&cad=h";ret
+01a0  75 72 6e 20 31 7d 72 65 74 75 72 6e 20 30 7d 0a   urn 1}return 0}.
+01b0  66 75 6e 63 74 69 6f 6e 20 5f 67 6a 70 28 29 7b   function _gjp(){
+01c0  28 21 77 69 6e 64 6f 77 2e 5f 67 6a 77 6c 2e 68   (!window._gjwl.h
+01d0  61 73 68 7c 7c 21 77 69 6e 64 6f 77 2e 5f 67 6a   ash||!window._gj
+01e0  75 63 28 29 29 26 26 73 65 74 54 69 6d 65 6f 75   uc())&&setTimeou
+01f0  74 28 5f 67 6a 70 2c 35 30 30 29 7d 3b 0a 77 69   t(_gjp,500)};.wi
+0200  6e 64 6f 77 2e 5f 67 6a 70 26 26 5f 67 6a 70 28   ndow._gjp&&_gjp(
+0210  29 3b 3c 2f 73 63 72 69 70 74 3e 3c 73 74 79 6c   );</script><styl
+0220  65 3e 23 67 62 7b 66 6f 6e 74 3a 31 33 70 78 2f   e>#gb{font:13px/
+0230  32 37 70 78 20 41 72 69 61 6c 2c 73 61 6e 73 2d   27px Arial,sans-
+0240  73 65 72 69 66 3b 68 65 69 67 68 74 3a 33 30 70   serif;height:30p
+0250  78 7d 23 67 62 7a 2c 23 67 62 67 7b 70 6f 73 69   x}#gbz,#gbg{posi
+0260  74 69 6f 6e 3a 61 62 73 6f 6c 75 74 65 3b 77 68   tion:absolute;wh
+0270  69 74 65 2d 73 70 61 63 65 3a 6e 6f 77 72 61 70   ite-space:nowrap
+0280  3b 74 6f 70 3a 30 3b 68 65 69 67 68 74 3a 33 30   ;top:0;height:30
+0290  70 78 3b 7a 2d 69 6e 64 65 78 3a 31 30 30 30 7d   px;z-index:1000}
+02a0  23 67 62 7a 7b 6c 65 66 74 3a 30 3b 70 61         #gbz{left:0;pa
+No.     Time        Source                Destination           Protocol Info
+     15 4.076153    10.0.2.15             74.125.228.1          TCP      57306 > http [ACK] Seq=8 Ack=3473 Win=22720 Len=0
+
+Frame 15: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.550267000 EST
+    Epoch Time: 1362253152.550267000 seconds
+    [Time delta from previous captured frame: 0.000015000 seconds]
+    [Time delta from previous displayed frame: 0.000015000 seconds]
+    [Time since reference or first frame: 4.076153000 seconds]
+    Frame Number: 15
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.1 (74.125.228.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00)
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x34ae (13486)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xcb84 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.1 (74.125.228.1)
+Transmission Control Protocol, Src Port: 57306 (57306), Dst Port: http (80), Seq: 8, Ack: 3473, Len: 0
+    Source port: 57306 (57306)
+    Destination port: http (80)
+    [Stream index: 2]
+    Sequence number: 8    (relative sequence number)
+    Acknowledgement number: 3473    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 22720
+    Checksum: 0x3aa8 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 14]
+        [The RTT to ACK the segment was: 0.000015000 seconds]
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 10   RT..5...'..q..E.
+0010  00 28 34 ae 40 00 40 06 cb 84 0a 00 02 0f 4a 7d   .(4.@.@.......J}
+0020  e4 01 df da 00 50 16 e6 08 97 00 b8 9f 92 50 10   .....P........P.
+0030  58 c0 3a a8 00 00                                 X.:...
+No.     Time        Source                Destination           Protocol Info
+     16 4.124773    74.125.228.1          10.0.2.15             TCP      [TCP segment of a reassembled PDU]
+
+Frame 16: 1474 bytes on wire (11792 bits), 1474 bytes captured (11792 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.598887000 EST
+    Epoch Time: 1362253152.598887000 seconds
+    [Time delta from previous captured frame: 0.048620000 seconds]
+    [Time delta from previous displayed frame: 0.048620000 seconds]
+    [Time since reference or first frame: 4.124773000 seconds]
+    Frame Number: 16
+    Frame Length: 1474 bytes (11792 bits)
+    Capture Length: 1474 bytes (11792 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+    Destination: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Source: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 74.125.228.1 (74.125.228.1), Dst: 10.0.2.15 (10.0.2.15)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 1460
+    Identification: 0x0215 (533)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x38a2 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 74.125.228.1 (74.125.228.1)
+    Destination: 10.0.2.15 (10.0.2.15)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 57306 (57306), Seq: 3473, Ack: 8, Len: 1420
+    Source port: http (80)
+    Destination port: 57306 (57306)
+    [Stream index: 2]
+    Sequence number: 3473    (relative sequence number)
+    [Next sequence number: 4893    (relative sequence number)]
+    Acknowledgement number: 8    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0xef2b [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 1420]
+    [Reassembled PDU in frame: 76]
+    TCP segment data (1420 bytes)
+
+0000  08 00 27 b5 93 71 52 54 00 12 35 02 08 00 45 00   ..'..qRT..5...E.
+0010  05 b4 02 15 00 00 40 06 38 a2 4a 7d e4 01 0a 00   ......@.8.J}....
+0020  02 0f 00 50 df da 00 b8 9f 92 16 e6 08 97 50 10   ...P..........P.
+0030  ff ff ef 2b 00 00 64 64 69 6e 67 2d 6c 65 66 74   ...+..dding-left
+0040  3a 34 70 78 7d 23 67 62 67 7b 72 69 67 68 74 3a   :4px}#gbg{right:
+0050  30 3b 70 61 64 64 69 6e 67 2d 72 69 67 68 74 3a   0;padding-right:
+0060  35 70 78 7d 23 67 62 73 7b 62 61 63 6b 67 72 6f   5px}#gbs{backgro
+0070  75 6e 64 3a 74 72 61 6e 73 70 61 72 65 6e 74 3b   und:transparent;
+0080  70 6f 73 69 74 69 6f 6e 3a 61 62 73 6f 6c 75 74   position:absolut
+0090  65 3b 74 6f 70 3a 2d 39 39 39 70 78 3b 76 69 73   e;top:-999px;vis
+00a0  69 62 69 6c 69 74 79 3a 68 69 64 64 65 6e 3b 7a   ibility:hidden;z
+00b0  2d 69 6e 64 65 78 3a 39 39 38 7d 2e 67 62 74 6f   -index:998}.gbto
+00c0  20 23 67 62 73 7b 62 61 63 6b 67 72 6f 75 6e 64    #gbs{background
+00d0  3a 23 66 66 66 7d 23 67 62 78 33 2c 23 67 62 78   :#fff}#gbx3,#gbx
+00e0  34 7b 62 61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c   4{background-col
+00f0  6f 72 3a 23 32 64 32 64 32 64 3b 62 61 63 6b 67   or:#2d2d2d;backg
+0100  72 6f 75 6e 64 2d 69 6d 61 67 65 3a 6e 6f 6e 65   round-image:none
+0110  3b 5f 62 61 63 6b 67 72 6f 75 6e 64 2d 69 6d 61   ;_background-ima
+0120  67 65 3a 6e 6f 6e 65 3b 62 61 63 6b 67 72 6f 75   ge:none;backgrou
+0130  6e 64 2d 70 6f 73 69 74 69 6f 6e 3a 30 20 2d 31   nd-position:0 -1
+0140  33 38 70 78 3b 62 61 63 6b 67 72 6f 75 6e 64 2d   38px;background-
+0150  72 65 70 65 61 74 3a 72 65 70 65 61 74 2d 78 3b   repeat:repeat-x;
+0160  62 6f 72 64 65 72 2d 62 6f 74 74 6f 6d 3a 31 70   border-bottom:1p
+0170  78 20 73 6f 6c 69 64 20 23 30 30 30 3b 66 6f 6e   x solid #000;fon
+0180  74 2d 73 69 7a 65 3a 32 34 70 78 3b 68 65 69 67   t-size:24px;heig
+0190  68 74 3a 32 39 70 78 3b 5f 68 65 69 67 68 74 3a   ht:29px;_height:
+01a0  33 30 70 78 3b 6f 70 61 63 69 74 79 3a 31 3b 66   30px;opacity:1;f
+01b0  69 6c 74 65 72 3a 61 6c 70 68 61 28 6f 70 61 63   ilter:alpha(opac
+01c0  69 74 79 3d 31 30 30 29 3b 70 6f 73 69 74 69 6f   ity=100);positio
+01d0  6e 3a 61 62 73 6f 6c 75 74 65 3b 74 6f 70 3a 30   n:absolute;top:0
+01e0  3b 77 69 64 74 68 3a 31 30 30 25 3b 7a 2d 69 6e   ;width:100%;z-in
+01f0  64 65 78 3a 39 39 30 7d 23 67 62 78 33 7b 6c 65   dex:990}#gbx3{le
+0200  66 74 3a 30 7d 23 67 62 78 34 7b 72 69 67 68 74   ft:0}#gbx4{right
+0210  3a 30 7d 23 67 62 62 7b 70 6f 73 69 74 69 6f 6e   :0}#gbb{position
+0220  3a 72 65 6c 61 74 69 76 65 7d 23 67 62 62 77 7b   :relative}#gbbw{
+0230  6c 65 66 74 3a 30 3b 70 6f 73 69 74 69 6f 6e 3a   left:0;position:
+0240  61 62 73 6f 6c 75 74 65 3b 74 6f 70 3a 33 30 70   absolute;top:30p
+0250  78 3b 77 69 64 74 68 3a 31 30 30 25 7d 2e 67 62   x;width:100%}.gb
+0260  74 63 62 7b 70 6f 73 69 74 69 6f 6e 3a 61 62 73   tcb{position:abs
+0270  6f 6c 75 74 65 3b 76 69 73 69 62 69 6c 69 74 79   olute;visibility
+0280  3a 68 69 64 64 65 6e 7d 23 67 62 7a 20 2e 67 62   :hidden}#gbz .gb
+0290  74 63 62 7b 72 69 67 68 74 3a 30 7d 23 67 62 67   tcb{right:0}#gbg
+02a0  20 2e 67 62 74 63 62 7b 6c 65 66 74 3a 30 7d 2e    .gbtcb{left:0}.
+02b0  67 62 78 78 7b 64 69 73 70 6c 61 79 3a 6e 6f 6e   gbxx{display:non
+02c0  65 20 21 69 6d 70 6f 72 74 61 6e 74 7d 2e 67 62   e !important}.gb
+02d0  78 6f 7b 6f 70 61 63 69 74 79 3a 30 20 21 69 6d   xo{opacity:0 !im
+02e0  70 6f 72 74 61 6e 74 3b 66 69 6c 74 65 72 3a 61   portant;filter:a
+02f0  6c 70 68 61 28 6f 70 61 63 69 74 79 3d 30 29 20   lpha(opacity=0) 
+0300  21 69 6d 70 6f 72 74 61 6e 74 7d 2e 67 62 6d 7b   !important}.gbm{
+0310  70 6f 73 69 74 69 6f 6e 3a 61 62 73 6f 6c 75 74   position:absolut
+0320  65 3b 7a 2d 69 6e 64 65 78 3a 39 39 39 3b 74 6f   e;z-index:999;to
+0330  70 3a 2d 39 39 39 70 78 3b 76 69 73 69 62 69 6c   p:-999px;visibil
+0340  69 74 79 3a 68 69 64 64 65 6e 3b 74 65 78 74 2d   ity:hidden;text-
+0350  61 6c 69 67 6e 3a 6c 65 66 74 3b 62 6f 72 64 65   align:left;borde
+0360  72 3a 31 70 78 20 73 6f 6c 69 64 20 23 62 65 62   r:1px solid #beb
+0370  65 62 65 3b 62 61 63 6b 67 72 6f 75 6e 64 3a 23   ebe;background:#
+0380  66 66 66 3b 2d 6d 6f 7a 2d 62 6f 78 2d 73 68 61   fff;-moz-box-sha
+0390  64 6f 77 3a 2d 31 70 78 20 31 70 78 20 31 70 78   dow:-1px 1px 1px
+03a0  20 72 67 62 61 28 30 2c 30 2c 30 2c 2e 32 29 3b    rgba(0,0,0,.2);
+03b0  2d 77 65 62 6b 69 74 2d 62 6f 78 2d 73 68 61 64   -webkit-box-shad
+03c0  6f 77 3a 30 20 32 70 78 20 34 70 78 20 72 67 62   ow:0 2px 4px rgb
+03d0  61 28 30 2c 30 2c 30 2c 2e 32 29 3b 62 6f 78 2d   a(0,0,0,.2);box-
+03e0  73 68 61 64 6f 77 3a 30 20 32 70 78 20 34 70 78   shadow:0 2px 4px
+03f0  20 72 67 62 61 28 30 2c 30 2c 30 2c 2e 32 29 7d    rgba(0,0,0,.2)}
+0400  2e 67 62 72 74 6c 20 2e 67 62 6d 7b 2d 6d 6f 7a   .gbrtl .gbm{-moz
+0410  2d 62 6f 78 2d 73 68 61 64 6f 77 3a 31 70 78 20   -box-shadow:1px 
+0420  31 70 78 20 31 70 78 20 72 67 62 61 28 30 2c 30   1px 1px rgba(0,0
+0430  2c 30 2c 2e 32 29 7d 2e 67 62 74 6f 20 2e 67 62   ,0,.2)}.gbto .gb
+0440  6d 2c 2e 67 62 74 6f 20 23 67 62 73 7b 74 6f 70   m,.gbto #gbs{top
+0450  3a 32 39 70 78 3b 76 69 73 69 62 69 6c 69 74 79   :29px;visibility
+0460  3a 76 69 73 69 62 6c 65 7d 23 67 62 7a 20 2e 67   :visible}#gbz .g
+0470  62 6d 2c 23 67 62 7a 20 23 67 62 73 7b 6c 65 66   bm,#gbz #gbs{lef
+0480  74 3a 30 7d 23 67 62 67 20 2e 67 62 6d 2c 23 67   t:0}#gbg .gbm,#g
+0490  62 67 20 23 67 62 73 7b 72 69 67 68 74 3a 30 7d   bg #gbs{right:0}
+04a0  2e 67 62 78 6d 73 7b 62 61 63 6b 67 72 6f 75 6e   .gbxms{backgroun
+04b0  64 2d 63 6f 6c 6f 72 3a 23 63 63 63 3b 64 69 73   d-color:#ccc;dis
+04c0  70 6c 61 79 3a 62 6c 6f 63 6b 3b 70 6f 73 69 74   play:block;posit
+04d0  69 6f 6e 3a 61 62 73 6f 6c 75 74 65 3b 7a 2d 69   ion:absolute;z-i
+04e0  6e 64 65 78 3a 31 3b 74 6f 70 3a 2d 31 70 78 3b   ndex:1;top:-1px;
+04f0  6c 65 66 74 3a 2d 32 70 78 3b 72 69 67 68 74 3a   left:-2px;right:
+0500  2d 32 70 78 3b 62 6f 74 74 6f 6d 3a 2d 32 70 78   -2px;bottom:-2px
+0510  3b 6f 70 61 63 69 74 79 3a 2e 34 3b 2d 6d 6f 7a   ;opacity:.4;-moz
+0520  2d 62 6f 72 64 65 72 2d 72 61 64 69 75 73 3a 33   -border-radius:3
+0530  70 78 3b 66 69 6c 74 65 72 3a 70 72 6f 67 69 64   px;filter:progid
+0540  3a 44 58 49 6d 61 67 65 54 72 61 6e 73 66 6f 72   :DXImageTransfor
+0550  6d 2e 4d 69 63 72 6f 73 6f 66 74 2e 42 6c 75 72   m.Microsoft.Blur
+0560  28 70 69 78 65 6c 72 61 64 69 75 73 3d 35 29 3b   (pixelradius=5);
+0570  2a 6f 70 61 63 69 74 79 3a 31 3b 2a 74 6f 70 3a   *opacity:1;*top:
+0580  2d 32 70 78 3b 2a 6c 65 66 74 3a 2d 35 70 78 3b   -2px;*left:-5px;
+0590  2a 72 69 67 68 74 3a 35 70 78 3b 2a 62 6f 74 74   *right:5px;*bott
+05a0  6f 6d 3a 34 70 78 3b 2d 6d 73 2d 66 69 6c 74 65   om:4px;-ms-filte
+05b0  72 3a 22 70 72 6f 67 69 64 3a 44 58 49 6d 61 67   r:"progid:DXImag
+05c0  65 54                                             eT
+No.     Time        Source                Destination           Protocol Info
+     17 4.124822    10.0.2.15             74.125.228.1          TCP      57306 > http [ACK] Seq=8 Ack=4893 Win=25560 Len=0
+
+Frame 17: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.598936000 EST
+    Epoch Time: 1362253152.598936000 seconds
+    [Time delta from previous captured frame: 0.000049000 seconds]
+    [Time delta from previous displayed frame: 0.000049000 seconds]
+    [Time since reference or first frame: 4.124822000 seconds]
+    Frame Number: 17
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.1 (74.125.228.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00)
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x34af (13487)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xcb83 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.1 (74.125.228.1)
+Transmission Control Protocol, Src Port: 57306 (57306), Dst Port: http (80), Seq: 8, Ack: 4893, Len: 0
+    Source port: 57306 (57306)
+    Destination port: http (80)
+    [Stream index: 2]
+    Sequence number: 8    (relative sequence number)
+    Acknowledgement number: 4893    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 25560
+    Checksum: 0x3aa8 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 16]
+        [The RTT to ACK the segment was: 0.000049000 seconds]
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 10   RT..5...'..q..E.
+0010  00 28 34 af 40 00 40 06 cb 83 0a 00 02 0f 4a 7d   .(4.@.@.......J}
+0020  e4 01 df da 00 50 16 e6 08 97 00 b8 a5 1e 50 10   .....P........P.
+0030  63 d8 3a a8 00 00                                 c.:...
+No.     Time        Source                Destination           Protocol Info
+     18 4.124912    74.125.228.1          10.0.2.15             TCP      [TCP segment of a reassembled PDU]
+
+Frame 18: 1474 bytes on wire (11792 bits), 1474 bytes captured (11792 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.599026000 EST
+    Epoch Time: 1362253152.599026000 seconds
+    [Time delta from previous captured frame: 0.000090000 seconds]
+    [Time delta from previous displayed frame: 0.000090000 seconds]
+    [Time since reference or first frame: 4.124912000 seconds]
+    Frame Number: 18
+    Frame Length: 1474 bytes (11792 bits)
+    Capture Length: 1474 bytes (11792 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+    Destination: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Source: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 74.125.228.1 (74.125.228.1), Dst: 10.0.2.15 (10.0.2.15)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 1460
+    Identification: 0x0216 (534)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x38a1 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 74.125.228.1 (74.125.228.1)
+    Destination: 10.0.2.15 (10.0.2.15)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 57306 (57306), Seq: 4893, Ack: 8, Len: 1420
+    Source port: http (80)
+    Destination port: 57306 (57306)
+    [Stream index: 2]
+    Sequence number: 4893    (relative sequence number)
+    [Next sequence number: 6313    (relative sequence number)]
+    Acknowledgement number: 8    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0x6111 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 1420]
+    [Reassembled PDU in frame: 76]
+    TCP segment data (1420 bytes)
+
+0000  08 00 27 b5 93 71 52 54 00 12 35 02 08 00 45 00   ..'..qRT..5...E.
+0010  05 b4 02 16 00 00 40 06 38 a1 4a 7d e4 01 0a 00   ......@.8.J}....
+0020  02 0f 00 50 df da 00 b8 a5 1e 16 e6 08 97 50 10   ...P..........P.
+0030  ff ff 61 11 00 00 72 61 6e 73 66 6f 72 6d 2e 4d   ..a...ransform.M
+0040  69 63 72 6f 73 6f 66 74 2e 42 6c 75 72 28 70 69   icrosoft.Blur(pi
+0050  78 65 6c 72 61 64 69 75 73 3d 35 29 22 3b 6f 70   xelradius=5)";op
+0060  61 63 69 74 79 3a 31 5c 30 2f 3b 74 6f 70 3a 2d   acity:1\0/;top:-
+0070  34 70 78 5c 30 2f 3b 6c 65 66 74 3a 2d 36 70 78   4px\0/;left:-6px
+0080  5c 30 2f 3b 72 69 67 68 74 3a 35 70 78 5c 30 2f   \0/;right:5px\0/
+0090  3b 62 6f 74 74 6f 6d 3a 34 70 78 5c 30 2f 7d 2e   ;bottom:4px\0/}.
+00a0  67 62 6d 61 7b 70 6f 73 69 74 69 6f 6e 3a 72 65   gbma{position:re
+00b0  6c 61 74 69 76 65 3b 74 6f 70 3a 2d 31 70 78 3b   lative;top:-1px;
+00c0  62 6f 72 64 65 72 2d 73 74 79 6c 65 3a 73 6f 6c   border-style:sol
+00d0  69 64 20 64 61 73 68 65 64 20 64 61 73 68 65 64   id dashed dashed
+00e0  3b 62 6f 72 64 65 72 2d 63 6f 6c 6f 72 3a 74 72   ;border-color:tr
+00f0  61 6e 73 70 61 72 65 6e 74 3b 62 6f 72 64 65 72   ansparent;border
+0100  2d 74 6f 70 2d 63 6f 6c 6f 72 3a 23 63 30 63 30   -top-color:#c0c0
+0110  63 30 3b 64 69 73 70 6c 61 79 3a 2d 6d 6f 7a 2d   c0;display:-moz-
+0120  69 6e 6c 69 6e 65 2d 62 6f 78 3b 64 69 73 70 6c   inline-box;displ
+0130  61 79 3a 69 6e 6c 69 6e 65 2d 62 6c 6f 63 6b 3b   ay:inline-block;
+0140  66 6f 6e 74 2d 73 69 7a 65 3a 30 3b 68 65 69 67   font-size:0;heig
+0150  68 74 3a 30 3b 6c 69 6e 65 2d 68 65 69 67 68 74   ht:0;line-height
+0160  3a 30 3b 77 69 64 74 68 3a 30 3b 62 6f 72 64 65   :0;width:0;borde
+0170  72 2d 77 69 64 74 68 3a 33 70 78 20 33 70 78 20   r-width:3px 3px 
+0180  30 3b 70 61 64 64 69 6e 67 2d 74 6f 70 3a 31 70   0;padding-top:1p
+0190  78 3b 6c 65 66 74 3a 34 70 78 7d 23 67 62 7a 74   x;left:4px}#gbzt
+01a0  6d 73 31 2c 23 67 62 69 34 6d 31 2c 23 67 62 69   ms1,#gbi4m1,#gbi
+01b0  34 73 2c 23 67 62 69 34 74 7b 7a 6f 6f 6d 3a 31   4s,#gbi4t{zoom:1
+01c0  7d 2e 67 62 74 63 2c 2e 67 62 6d 63 2c 2e 67 62   }.gbtc,.gbmc,.gb
+01d0  6d 63 63 7b 64 69 73 70 6c 61 79 3a 62 6c 6f 63   mcc{display:bloc
+01e0  6b 3b 6c 69 73 74 2d 73 74 79 6c 65 3a 6e 6f 6e   k;list-style:non
+01f0  65 3b 6d 61 72 67 69 6e 3a 30 3b 70 61 64 64 69   e;margin:0;paddi
+0200  6e 67 3a 30 7d 2e 67 62 6d 63 7b 62 61 63 6b 67   ng:0}.gbmc{backg
+0210  72 6f 75 6e 64 3a 23 66 66 66 3b 70 61 64 64 69   round:#fff;paddi
+0220  6e 67 3a 31 30 70 78 20 30 3b 70 6f 73 69 74 69   ng:10px 0;positi
+0230  6f 6e 3a 72 65 6c 61 74 69 76 65 3b 7a 2d 69 6e   on:relative;z-in
+0240  64 65 78 3a 32 3b 7a 6f 6f 6d 3a 31 7d 2e 67 62   dex:2;zoom:1}.gb
+0250  74 7b 70 6f 73 69 74 69 6f 6e 3a 72 65 6c 61 74   t{position:relat
+0260  69 76 65 3b 64 69 73 70 6c 61 79 3a 2d 6d 6f 7a   ive;display:-moz
+0270  2d 69 6e 6c 69 6e 65 2d 62 6f 78 3b 64 69 73 70   -inline-box;disp
+0280  6c 61 79 3a 69 6e 6c 69 6e 65 2d 62 6c 6f 63 6b   lay:inline-block
+0290  3b 6c 69 6e 65 2d 68 65 69 67 68 74 3a 32 37 70   ;line-height:27p
+02a0  78 3b 70 61 64 64 69 6e 67 3a 30 3b 76 65 72 74   x;padding:0;vert
+02b0  69 63 61 6c 2d 61 6c 69 67 6e 3a 74 6f 70 7d 2e   ical-align:top}.
+02c0  67 62 74 7b 2a 64 69 73 70 6c 61 79 3a 69 6e 6c   gbt{*display:inl
+02d0  69 6e 65 7d 2e 67 62 74 6f 7b 62 6f 78 2d 73 68   ine}.gbto{box-sh
+02e0  61 64 6f 77 3a 30 20 32 70 78 20 34 70 78 20 72   adow:0 2px 4px r
+02f0  67 62 61 28 30 2c 30 2c 30 2c 2e 32 29 3b 2d 6d   gba(0,0,0,.2);-m
+0300  6f 7a 2d 62 6f 78 2d 73 68 61 64 6f 77 3a 30 20   oz-box-shadow:0 
+0310  32 70 78 20 34 70 78 20 72 67 62 61 28 30 2c 30   2px 4px rgba(0,0
+0320  2c 30 2c 2e 32 29 3b 2d 77 65 62 6b 69 74 2d 62   ,0,.2);-webkit-b
+0330  6f 78 2d 73 68 61 64 6f 77 3a 30 20 32 70 78 20   ox-shadow:0 2px 
+0340  34 70 78 20 72 67 62 61 28 30 2c 30 2c 30 2c 2e   4px rgba(0,0,0,.
+0350  32 29 7d 2e 67 62 7a 74 2c 2e 67 62 67 74 7b 63   2)}.gbzt,.gbgt{c
+0360  75 72 73 6f 72 3a 70 6f 69 6e 74 65 72 3b 64 69   ursor:pointer;di
+0370  73 70 6c 61 79 3a 62 6c 6f 63 6b 3b 74 65 78 74   splay:block;text
+0380  2d 64 65 63 6f 72 61 74 69 6f 6e 3a 6e 6f 6e 65   -decoration:none
+0390  20 21 69 6d 70 6f 72 74 61 6e 74 7d 73 70 61 6e    !important}span
+03a0  23 67 62 67 36 2c 73 70 61 6e 23 67 62 67 34 7b   #gbg6,span#gbg4{
+03b0  63 75 72 73 6f 72 3a 64 65 66 61 75 6c 74 7d 2e   cursor:default}.
+03c0  67 62 74 73 7b 62 6f 72 64 65 72 2d 6c 65 66 74   gbts{border-left
+03d0  3a 31 70 78 20 73 6f 6c 69 64 20 74 72 61 6e 73   :1px solid trans
+03e0  70 61 72 65 6e 74 3b 62 6f 72 64 65 72 2d 72 69   parent;border-ri
+03f0  67 68 74 3a 31 70 78 20 73 6f 6c 69 64 20 74 72   ght:1px solid tr
+0400  61 6e 73 70 61 72 65 6e 74 3b 64 69 73 70 6c 61   ansparent;displa
+0410  79 3a 62 6c 6f 63 6b 3b 2a 64 69 73 70 6c 61 79   y:block;*display
+0420  3a 69 6e 6c 69 6e 65 2d 62 6c 6f 63 6b 3b 70 61   :inline-block;pa
+0430  64 64 69 6e 67 3a 30 20 35 70 78 3b 70 6f 73 69   dding:0 5px;posi
+0440  74 69 6f 6e 3a 72 65 6c 61 74 69 76 65 3b 7a 2d   tion:relative;z-
+0450  69 6e 64 65 78 3a 31 30 30 30 7d 2e 67 62 74 73   index:1000}.gbts
+0460  7b 2a 64 69 73 70 6c 61 79 3a 69 6e 6c 69 6e 65   {*display:inline
+0470  7d 2e 67 62 7a 74 20 2e 67 62 74 73 7b 64 69 73   }.gbzt .gbts{dis
+0480  70 6c 61 79 3a 69 6e 6c 69 6e 65 3b 7a 6f 6f 6d   play:inline;zoom
+0490  3a 31 7d 2e 67 62 74 6f 20 2e 67 62 74 73 7b 62   :1}.gbto .gbts{b
+04a0  61 63 6b 67 72 6f 75 6e 64 3a 23 66 66 66 3b 62   ackground:#fff;b
+04b0  6f 72 64 65 72 2d 63 6f 6c 6f 72 3a 23 62 65 62   order-color:#beb
+04c0  65 62 65 3b 63 6f 6c 6f 72 3a 23 33 36 63 3b 70   ebe;color:#36c;p
+04d0  61 64 64 69 6e 67 2d 62 6f 74 74 6f 6d 3a 31 70   adding-bottom:1p
+04e0  78 3b 70 61 64 64 69 6e 67 2d 74 6f 70 3a 32 70   x;padding-top:2p
+04f0  78 7d 2e 67 62 7a 30 6c 20 2e 67 62 74 73 7b 63   x}.gbz0l .gbts{c
+0500  6f 6c 6f 72 3a 23 66 66 66 3b 66 6f 6e 74 2d 77   olor:#fff;font-w
+0510  65 69 67 68 74 3a 62 6f 6c 64 7d 2e 67 62 74 73   eight:bold}.gbts
+0520  61 7b 70 61 64 64 69 6e 67 2d 72 69 67 68 74 3a   a{padding-right:
+0530  39 70 78 7d 23 67 62 7a 20 2e 67 62 7a 74 2c 23   9px}#gbz .gbzt,#
+0540  67 62 7a 20 2e 67 62 67 74 2c 23 67 62 67 20 2e   gbz .gbgt,#gbg .
+0550  67 62 67 74 7b 63 6f 6c 6f 72 3a 23 63 63 63 21   gbgt{color:#ccc!
+0560  69 6d 70 6f 72 74 61 6e 74 7d 2e 67 62 74 62 32   important}.gbtb2
+0570  7b 64 69 73 70 6c 61 79 3a 62 6c 6f 63 6b 3b 62   {display:block;b
+0580  6f 72 64 65 72 2d 74 6f 70 3a 32 70 78 20 73 6f   order-top:2px so
+0590  6c 69 64 20 74 72 61 6e 73 70 61 72 65 6e 74 7d   lid transparent}
+05a0  2e 67 62 74 6f 20 2e 67 62 7a 74 20 2e 67 62 74   .gbto .gbzt .gbt
+05b0  62 32 2c 2e 67 62 74 6f 20 2e 67 62 67 74 20 2e   b2,.gbto .gbgt .
+05c0  67 62                                             gb
+No.     Time        Source                Destination           Protocol Info
+     19 4.124925    10.0.2.15             74.125.228.1          TCP      57306 > http [ACK] Seq=8 Ack=6313 Win=28400 Len=0
+
+Frame 19: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.599039000 EST
+    Epoch Time: 1362253152.599039000 seconds
+    [Time delta from previous captured frame: 0.000013000 seconds]
+    [Time delta from previous displayed frame: 0.000013000 seconds]
+    [Time since reference or first frame: 4.124925000 seconds]
+    Frame Number: 19
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: CadmusCo_b5:93:71 (08:00:27:b5:93:71), Dst: RealtekU_12:35:02 (52:54:00:12:35:02)
+    Destination: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Source: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 10.0.2.15 (10.0.2.15), Dst: 74.125.228.1 (74.125.228.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00)
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 40
+    Identification: 0x34b0 (13488)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0xcb82 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.2.15 (10.0.2.15)
+    Destination: 74.125.228.1 (74.125.228.1)
+Transmission Control Protocol, Src Port: 57306 (57306), Dst Port: http (80), Seq: 8, Ack: 6313, Len: 0
+    Source port: 57306 (57306)
+    Destination port: http (80)
+    [Stream index: 2]
+    Sequence number: 8    (relative sequence number)
+    Acknowledgement number: 6313    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x10 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 28400
+    Checksum: 0x3aa8 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 18]
+        [The RTT to ACK the segment was: 0.000013000 seconds]
+
+0000  52 54 00 12 35 02 08 00 27 b5 93 71 08 00 45 10   RT..5...'..q..E.
+0010  00 28 34 b0 40 00 40 06 cb 82 0a 00 02 0f 4a 7d   .(4.@.@.......J}
+0020  e4 01 df da 00 50 16 e6 08 97 00 b8 aa aa 50 10   .....P........P.
+0030  6e f0 3a a8 00 00                                 n.:...
+No.     Time        Source                Destination           Protocol Info
+     20 4.124982    74.125.228.1          10.0.2.15             TCP      [TCP segment of a reassembled PDU]
+
+Frame 20: 686 bytes on wire (5488 bits), 686 bytes captured (5488 bits)
+    Arrival Time: Mar  2, 2013 14:39:12.599096000 EST
+    Epoch Time: 1362253152.599096000 seconds
+    [Time delta from previous captured frame: 0.000057000 seconds]
+    [Time delta from previous displayed frame: 0.000057000 seconds]
+    [Time since reference or first frame: 4.124982000 seconds]
+    Frame Number: 20
+    Frame Length: 686 bytes (5488 bits)
+    Capture Length: 686 bytes (5488 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80]
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+    Destination: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        Address: CadmusCo_b5:93:71 (08:00:27:b5:93:71)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+    Source: RealtekU_12:35:02 (52:54:00:12:35:02)
+        Address: RealtekU_12:35:02 (52:54:00:12:35:02)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+    Type: IP (0x0800)
+Internet Protocol, Src: 74.125.228.1 (74.125.228.1), Dst: 10.0.2.15 (10.0.2.15)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00)
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..0. = ECN-Capable Transport (ECT): 0
+        .... ...0 = ECN-CE: 0
+    Total Length: 672
+    Identification: 0x0217 (535)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x3bb4 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 74.125.228.1 (74.125.228.1)
+    Destination: 10.0.2.15 (10.0.2.15)
+Transmission Control Protocol, Src Port: http (80), Dst Port: 57306 (57306), Seq: 6313, Ack: 8, Len: 632
+    Source port: http (80)
+    Destination port: 57306 (57306)
+    [Stream index: 2]
+    Sequence number: 6313    (relative sequence number)
+    [Next sequence number: 6945    (relative sequence number)]
+    Acknowledgement number: 8    (relative ack number)
+    Header length: 20 bytes
+    Flags: 0x18 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgement: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size: 65535
+    Checksum: 0xfff7 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    [SEQ/ACK analysis]
+        [Number of bytes in flight: 632]
+    [Reassembled PDU in frame: 76]
+    TCP segment data (632 bytes)
+
+0000  08 00 27 b5 93 71 52 54 00 12 35 02 08 00 45 00   ..'..qRT..5...E.
+0010  02 a0 02 17 00 00 40 06 3b b4 4a 7d e4 01 0a 00   ......@.;.J}....
+0020  02 0f 00 50 df da 00 b8 aa aa 16 e6 08 97 50 18   ...P..........P.
+0030  ff ff ff f7 00 00 74 62 32 7b 62 6f 72 64 65 72   ......tb2{border
+0040  2d 74 6f 70 2d 77 69 64 74 68 3a 30 7d 2e 67 62   -top-width:0}.gb
+0050  74 62 20 2e 67 62 74 73 7b 62 61 63 6b 67 72 6f   tb .gbts{backgro
+0060  75 6e 64 3a 75 72 6c 28 2f 2f 73 73 6c 2e 67 73   und:url(//ssl.gs
+0070  74 61 74 69 63 2e 63 6f 6d 2f 67 62 2f 69 6d 61   tatic.com/gb/ima
+0080  67 65 73 2f 62 5f 38 64 35 61 66 63 30 39 2e 70   ges/b_8d5afc09.p
+0090  6e 67 29 3b 5f 62 61 63 6b 67 72 6f 75 6e 64 3a   ng);_background:
+00a0  75 72 6c 28 2f 2f 73 73 6c 2e 67 73 74 61 74 69   url(//ssl.gstati
+00b0  63 2e 63 6f 6d 2f 67 62 2f 69 6d 61 67 65 73 2f   c.com/gb/images/
+00c0  62 38 5f 33 36 31 35 64 36 34 64 2e 70 6e 67 29   b8_3615d64d.png)
+00d0  3b 62 61 63 6b 67 72 6f 75 6e 64 2d 70 6f 73 69   ;background-posi
+00e0  74 69 6f 6e 3a 2d 32 37 70 78 20 2d 32 32 70 78   tion:-27px -22px
+00f0  3b 62 6f 72 64 65 72 3a 30 3b 66 6f 6e 74 2d 73   ;border:0;font-s
+0100  69 7a 65 3a 30 3b 70 61 64 64 69 6e 67 3a 32 39   ize:0;padding:29
+0110  70 78 20 30 20 30 3b 2a 70 61 64 64 69 6e 67 3a   px 0 0;*padding:
+0120  32 37 70 78 20 30 20 30 3b 77 69 64 74 68 3a 31   27px 0 0;width:1
+0130  70 78 7d 2e 67 62 7a 74 2d 68 76 72 2c 2e 67 62   px}.gbzt-hvr,.gb
+0140  7a 74 3a 66 6f 63 75 73 2c 2e 67 62 67 74 2d 68   zt:focus,.gbgt-h
+0150  76 72 2c 2e 67 62 67 74 3a 66 6f 63 75 73 7b 62   vr,.gbgt:focus{b
+0160  61 63 6b 67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a   ackground-color:
+0170  23 34 63 34 63 34 63 3b 62 61 63 6b 67 72 6f 75   #4c4c4c;backgrou
+0180  6e 64 2d 69 6d 61 67 65 3a 6e 6f 6e 65 3b 5f 62   nd-image:none;_b
+0190  61 63 6b 67 72 6f 75 6e 64 2d 69 6d 61 67 65 3a   ackground-image:
+01a0  6e 6f 6e 65 3b 62 61 63 6b 67 72 6f 75 6e 64 2d   none;background-
+01b0  70 6f 73 69 74 69 6f 6e 3a 30 20 2d 31 30 32 70   position:0 -102p
+01c0  78 3b 62 61 63 6b 67 72 6f 75 6e 64 2d 72 65 70   x;background-rep
+01d0  65 61 74 3a 72 65 70 65 61 74 2d 78 3b 6f 75 74   eat:repeat-x;out
+01e0  6c 69 6e 65 3a 6e 6f 6e 65 3b 74 65 78 74 2d 64   line:none;text-d
+01f0  65 63 6f 72 61 74 69 6f 6e 3a 6e 6f 6e 65 20 21   ecoration:none !
+0200  69 6d 70 6f 72 74 61 6e 74 7d 2e 67 62 70 64 6a   important}.gbpdj
+0210  73 20 2e 67 62 74 6f 20 2e 67 62 6d 7b 6d 69 6e   s .gbto .gbm{min
+0220  2d 77 69 64 74 68 3a 39 39 25 7d 2e 67 62 7a 30   -width:99%}.gbz0
+0230  6c 20 2e 67 62 74 62 32 7b 62 6f 72 64 65 72 2d   l .gbtb2{border-
+0240  74 6f 70 2d 63 6f 6c 6f 72 3a 23 64 64 34 62 33   top-color:#dd4b3
+0250  39 21 69 6d 70 6f 72 74 61 6e 74 7d 23 67 62 69   9!important}#gbi
+0260  34 73 2c 23 67 62 69 34 73 31 7b 66 6f 6e 74 2d   4s,#gbi4s1{font-
+0270  77 65 69 67 68 74 3a 62 6f 6c 64 7d 23 67 62 67   weight:bold}#gbg
+0280  36 2e 67 62 67 74 2d 68 76 72 2c 23 67 62 67 36   6.gbgt-hvr,#gbg6
+0290  2e 67 62 67 74 3a 66 6f 63 75 73 7b 62 61 63 6b   .gbgt:focus{back
+02a0  67 72 6f 75 6e 64 2d 63 6f 6c 6f 72 3a 74         ground-color:t
