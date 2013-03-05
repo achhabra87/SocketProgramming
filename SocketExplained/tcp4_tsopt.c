@@ -1,18 +1,27 @@
-/*  Copyright (C) 2011  P.D. Buchan (pdbuchan@yahoo.com)
+//********************Citations*****************************//
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/*Source1: http://www.pdbuchan.com/rawsock/rawsock.html  
+Original Author P.D. Buchan (pdbuchan@yahoo.com)
+Downloaded: March 18, 2013 
+Sends a SYN Request to 
 */
+
+/*Source2: http://www.tcpdump.org/sniffex.c
+Downloaded: March 15, 2013 
+Captures packet from ethernet */
+//*********************************************************//
+
+// Modified by Amandeep Chhabra asc2171@columbia.edu 
+// Date March 4th, 2013
+
+/***************************************************************************************** 
+Modification by Amandeep are listed 
+ * Modified to send a SYN request (in the format accetpable for connectiona establishment)
+ * Added PCAP library to capture incoming packet from eth0 SYN+ ACK Packet. 
+ * Create a GET / request (packet) and send it.  
+The packet recieved after request was 
+This program was tested in virtual machine (Ubuntu) hosted on Windows 7. 
+****************************************************************************************/
 
 // Send an IPv4 TCP packet via raw socket at the link layer (ethernet frame).
 // Need to have destination MAC address.
@@ -46,7 +55,7 @@
 #define IP4_HDRLEN 20         // IPv4 header length
 #define TCP_HDRLEN 20         // TCP header length, excludes options data
 
-//3502
+//
 #define MAC_ADDR0 0x52
 #define MAC_ADDR1 0x54
 #define MAC_ADDR2 0x00
@@ -68,7 +77,7 @@
  ****************************************************************************
  *
  */
-#define PRINTHEADER 0
+#define PRINTHEADER 0 // To print everyfield of captured packet 
 
 char buffer[1024]; /* receve buffer */ 
 #define APP_NAME		"sniffex"
@@ -313,6 +322,8 @@ main (int argc, char **argv)
 
   tmp = (unsigned char *) malloc (40 * sizeof (unsigned char));
   if (tmp != NULL) {
+
+
     opt_buffer = tmp;
   } else {
     fprintf (stderr, "ERROR: Cannot allocate memory for array 'opt_buffer'.\n");
@@ -372,8 +383,8 @@ main (int argc, char **argv)
 	//strcpy (target, "74.125.228.66");
 	//strcpy (target, "127.0.0.1");
 	//strcpy (target, "74.125.228.4"); //Google.com
-	//strcpy (target, "206.190.36.45"); //yahoo.com
-	strcpy (target, "173.252.110.27"); //facebook.com
+	strcpy (target, "206.190.36.45"); //yahoo.com
+	//strcpy (target, "173.252.110.27"); //facebook.com
 
 // Fill out hints for getaddrinfo().
   memset (&hints, 0, sizeof (struct addrinfo));
@@ -419,8 +430,6 @@ main (int argc, char **argv)
   options[1][8] = 0x0u; opt_len[1]++;
   options[1][9] = 0x0u; opt_len[1]++;
 
-
-
   opt_len[2] = 0;				//Sack permitted true
   options[2][0] = 4u; opt_len[2]++;  // 
   options[2][1] = 0x2u; opt_len[2]++;  //
@@ -456,13 +465,10 @@ main (int argc, char **argv)
 	iphdr.ip_hl=5;
 // Internet Protocol version (4 bits): IPv4
   iphdr.ip_v = 4;
-
 // Type of service (8 bits)
   iphdr.ip_tos = 0;
-
 // Total length of datagram (16 bits): IP header + TCP header + TCP options
   iphdr.ip_len = htons (IP4_HDRLEN + TCP_HDRLEN + buf_len);
-
 // ID sequence number (16 bits): unused, since single datagram
   iphdr.ip_id = htons (0);
 
@@ -470,13 +476,10 @@ main (int argc, char **argv)
 
   // Zero (1 bit)
   ip_flags[0] = 0;
-
   // Do not fragment flag (1 bit)
   ip_flags[1] = 1;
-
   // More fragments following flag (1 bit)
   ip_flags[2] = 0;
-
   // Fragmentation offset (13 bits)
   ip_flags[3] = 0;
 
@@ -487,16 +490,12 @@ main (int argc, char **argv)
 
 // Time-to-Live (8 bits): default to maximum value
   iphdr.ip_ttl = 255;
-
 // Transport layer protocol (8 bits): 6 for TCP
   iphdr.ip_p = IPPROTO_TCP;
-
 // Source IPv4 address (32 bits)
   inet_pton (AF_INET, src_ip, &(iphdr.ip_src));
-
 // Destination IPv4 address (32 bits)
   inet_pton (AF_INET, dst_ip, &iphdr.ip_dst);
-
 // IPv4 header checksum (16 bits): set to 0 when calculating checksum
   iphdr.ip_sum = 0;
   iphdr.ip_sum = checksum ((unsigned short int *) &iphdr, IP4_HDRLEN);
@@ -505,16 +504,12 @@ main (int argc, char **argv)
 
 // Source port number (16 bits)
   tcphdr.th_sport = htons (36573);
-
 // Destination port number (16 bits)
   tcphdr.th_dport = htons (80);
-
 // Sequence number (32 bits)
   tcphdr.th_seq = htonl (0);
-
 // Acknowledgement number (32 bits): 0 in first packet of SYN/ACK process
   tcphdr.th_ack = htonl (0);
-
 // Reserved (4 bits): should be 0
   tcphdr.th_x2 = 0;
 
@@ -549,12 +544,9 @@ main (int argc, char **argv)
 
 // Urgent pointer (16 bits): 0 (only valid if URG flag is set)
   tcphdr.th_urp = htons (0);
-
 // TCP checksum (16 bits)
   tcphdr.th_sum = tcp4_checksum (iphdr, tcphdr, opt_buffer, buf_len);
-
 // Fill out ethernet frame header.
-
 // Ethernet frame length = ethernet header (MAC + MAC + ethernet type) + ethernet data (IP header + TCP header + TCP options)
   frame_length = 6 + 6 + 2 + IP4_HDRLEN + TCP_HDRLEN + buf_len;
 
@@ -578,7 +570,6 @@ main (int argc, char **argv)
 
 
 
-
 // Submit request for a raw socket descriptor.
   if ((sd = socket (PF_PACKET, SOCK_RAW, htons (ETH_P_ALL))) < 0) {
     perror ("socket() failed ");
@@ -590,62 +581,52 @@ main (int argc, char **argv)
     perror ("sendto() failed");
     exit (EXIT_FAILURE);
   }
-  else
+	else
 	{
 		printf("SYN sent\n");
 	}
 
 
 
-struct ether_header *recv_eh = (struct ether_header *) buffer;
+	struct ether_header *recv_eh = (struct ether_header *) buffer;
 	struct ip *recv_iph = (struct ip *) (buffer + sizeof(struct ether_header));
 	struct tcphdr *recv_tcph = (struct tcphdr *) (buffer +sizeof(struct ip) + sizeof(struct ether_header));
   	struct tcp_options *recv_tcpopt = (struct tcp_options *) (buffer + sizeof(struct ether_header)+sizeof(struct ip) + sizeof(struct tcphdr));
 
-int ddd=main_pcap();
-
-
-
-
-
+	int ddd=main_pcap(); // reading SYN + ACK packet
 
 
 	printf("sending ACK\n");
-	 memset (opt_buffer, 0, 40 * sizeof (unsigned char));
-	 memset (ether_frame + 14,0,(frame_length-14)* sizeof (unsigned char));
+	memset (opt_buffer, 0, 40 * sizeof (unsigned char));
+	memset (ether_frame + 14,0,(frame_length-14)* sizeof (unsigned char));
 
 
-// Number of TCP options
-  nopt = 2;
+	// Number of TCP options
+	nopt = 2;
 
-// First TCP option - Maximum segment size
-  opt_len[0] = 0;
-  options[0][0] = 0x00; opt_len[0]++;  // NOP
+	// First TCP option - Maximum segment size
+	opt_len[0] = 0;
+	options[0][0] = 0x00; opt_len[0]++;  // NOP
 
-
-
-// Second TCP option - Timestamp option
-  opt_len[1] = 0;
-  options[1][0] = 0x00; opt_len[1]++;  //NOP
+	// Second TCP option - Timestamp option
+	opt_len[1] = 0;
+	options[1][0] = 0x00; opt_len[1]++;  //NOP
  
 
+	// Copy all options into single options buffer.
+	buf_len = 0;
+	c = 0;  // index to opt_buffer
+	for (i=0; i<nopt; i++) {
+		memcpy (opt_buffer + c, options[i], opt_len[i]);
+		c += opt_len[i];
+		buf_len += opt_len[i];
+	}
 
-
-
-// Copy all options into single options buffer.
-  buf_len = 0;
-  c = 0;  // index to opt_buffer
-  for (i=0; i<nopt; i++) {
-    memcpy (opt_buffer + c, options[i], opt_len[i]);
-    c += opt_len[i];
-    buf_len += opt_len[i];
-  }
-
-// Pad to the next 4-byte boundary.
-  while ((buf_len%4) != 0) {
-    opt_buffer[buf_len] = 0;
-    buf_len++;
-  }
+	// Pad to the next 4-byte boundary.
+	while ((buf_len%4) != 0) {
+		opt_buffer[buf_len] = 0;
+		buf_len++;
+	}
 
 
 
@@ -663,32 +644,31 @@ int ddd=main_pcap();
 	// Fill out ethernet frame header.
 
 	// Ethernet frame length = ethernet header (MAC + MAC + ethernet type) + ethernet data (IP header + TCP header + TCP options)
-  frame_length = 6 + 6 + 2 + IP4_HDRLEN + TCP_HDRLEN + buf_len;
+	frame_length = 6 + 6 + 2 + IP4_HDRLEN + TCP_HDRLEN + buf_len;
 
-// IPv4 header
-  memcpy (ether_frame + 14, &iphdr, IP4_HDRLEN);
-// TCP header
-  memcpy (ether_frame + 14 + IP4_HDRLEN, &tcphdr, TCP_HDRLEN);
-// TCP Options
-  memcpy (ether_frame + 14 + IP4_HDRLEN + TCP_HDRLEN, opt_buffer, buf_len);
-printf("sending ACK......\n");
-// Send ACK ethernet frame to socket.
-  if ((bytes = sendto (sd, ether_frame, frame_length, 0, (struct sockaddr *) &device, sizeof (device))) <= 0) {
-    perror ("sendto() failed");
-	printf("sending ACK failed\n");
-    exit (EXIT_FAILURE);
-  }
-  else
+	// IPv4 header
+	memcpy (ether_frame + 14, &iphdr, IP4_HDRLEN);
+	// TCP header
+	memcpy (ether_frame + 14 + IP4_HDRLEN, &tcphdr, TCP_HDRLEN);
+	// TCP Options
+	memcpy (ether_frame + 14 + IP4_HDRLEN + TCP_HDRLEN, opt_buffer, buf_len);
+	printf("sending ACK......\n");
+	// Send ACK ethernet frame to socket.
+	if ((bytes = sendto (sd, ether_frame, frame_length, 0, (struct sockaddr *) &device, sizeof (device))) <= 0) {
+		perror ("sendto() failed");
+		printf("sending ACK failed\n");
+		exit (EXIT_FAILURE);
+	}
+	else
 	{
 		printf("ACK sent\n");
 	}
 
 
 
-// Sending Get Request
-
-//GET /\r\n
-printf("sending GET /\n");
+	// Sending Get Request
+	//GET /\r\n
+	printf("sending GET /\n");
 	 memset (opt_buffer, 0, 40 * sizeof (unsigned char));
 	 memset (ether_frame + 14,0,(frame_length-14)* sizeof (unsigned char));
 
@@ -1169,6 +1149,19 @@ got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
 return;
 }
 
+
+/*
+ *
+ * Expression			Description
+ * ----------			-----------
+ * ip					Capture all IP packets.
+ * tcp					Capture only TCP packets.
+ * tcp port 80			Capture only TCP packets with a port equal to 80.
+ * ip host 10.1.2.3		Capture all IP packets to or from host 10.1.2.3.
+ *
+ ****************************************************************************
+ *
+ */
 int main_pcap()
 {
 
