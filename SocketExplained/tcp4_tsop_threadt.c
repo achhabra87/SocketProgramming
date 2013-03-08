@@ -53,6 +53,8 @@ This program was tested in virtual machine (Ubuntu) hosted on Windows 7.
 #include <sys/time.h>
 
 
+#include <pthread.h>
+#define NUM_THREADS     1
 // Define some constants.
 #define IP4_HDRLEN 20         // IPv4 header length
 #define TCP_HDRLEN 20         // TCP header length, excludes options data
@@ -149,13 +151,7 @@ struct sniff_tcp {
         u_short th_sum;                 /* checksum */
         u_short th_urp;                 /* urgent pointer */
 };
-struct tcp_tcb
-{
- tcp_seq nxt_sequence;
- tcp_seq nxt_ack;
- u_int size_last_data_sent;	
- u_int size_data_recv;
-};
+
 
 
 
@@ -208,70 +204,19 @@ void *main_pcap_thread(void *threadid);
 int
 main (int argc, char **argv)
 {
-	char *dev = NULL;			/* capture device name */
-	char errbuf[PCAP_ERRBUF_SIZE];		/* error buffer */
-	pcap_t *handle;				/* packet capture handle */
-
-	char filter_exp[] = "ip";		/* filter expression [3] */
-	struct bpf_program fp;			/* compiled filter program (expression) */
-	bpf_u_int32 mask;			/* subnet mask */
-	bpf_u_int32 net;			/* ip */
-	int num_packets = 1;			/* number of packets to capture */
-
-	 /*find a capture device if not specified on command-line */
-	dev = pcap_lookupdev(errbuf);
-	if (dev == NULL) {
-		fprintf(stderr, "Couldn't find default device: %s\n",
-		    errbuf);
-		exit(EXIT_FAILURE);
+/*
+  pthread_t threads[NUM_THREADS];
+	int rc;
+	long t;
+	for(t=0; t<NUM_THREADS; t++){
+		printf("In main: creating thread %ld\n", t);
+		rc = pthread_create(&threads[t], NULL, main_pcap_thread, (void *)t);
+		if (rc){
+		 printf("ERROR; return code from pthread_create() is %d\n", rc);
+		 exit(-1);
+		}
 	}
-	//}
-	
-	/* get network number and mask associated with capture device */
-	if (pcap_lookupnet(dev, &net, &mask, errbuf) == -1) {
-		fprintf(stderr, "Couldn't get netmask for device %s: %s\n",
-		    dev, errbuf);
-		net = 0;
-		mask = 0;
-	}
-
-	/* print capture info */
-	printf("Device: %s\n", dev);
-	printf("Number of packets: %d\n", num_packets);
-	printf("Filter expression: %s\n", filter_exp);
-
-	/* open capture device */
-	handle = pcap_open_live(dev, SNAP_LEN, 1, 1000, errbuf);
-	if (handle == NULL) {
-		fprintf(stderr, "Couldn't open device %s: %s\n", dev, errbuf);
-		exit(EXIT_FAILURE);
-	}
-
-	/* make sure we're capturing on an Ethernet device [2] */
-	if (pcap_datalink(handle) != DLT_EN10MB) {
-		fprintf(stderr, "%s is not an Ethernet\n", dev);
-		exit(EXIT_FAILURE);
-	}
-
-	/* compile the filter expression */
-	if (pcap_compile(handle, &fp, filter_exp, 0, net) == -1) {
-		fprintf(stderr, "Couldn't parse filter %s: %s\n",
-		    filter_exp, pcap_geterr(handle));
-		exit(EXIT_FAILURE);
-	}
-
-	/* apply the compiled filter */
-	if (pcap_setfilter(handle, &fp) == -1) {
-		fprintf(stderr, "Couldn't install filter %s: %s\n",
-		    filter_exp, pcap_geterr(handle));
-		exit(EXIT_FAILURE);
-	}
-
-
-
-
-
-
+*/
 
   int i, c, status, frame_length, sd, bytes, *ip_flags, nopt, *opt_len, buf_len;
   char *interface, *target, *src_ip, *dst_ip;
@@ -457,11 +402,9 @@ main (int argc, char **argv)
   //strcpy (target, "www.google.com");
 	//strcpy (target, "74.125.228.66");
 	//strcpy (target, "127.0.0.1");
-	//strcpy (target, "74.125.228.4"); //Google.com
-	strcpy (target, "206.190.36.45"); //yahoo.com
+	strcpy (target, "74.125.228.4"); //Google.com
+	//strcpy (target, "206.190.36.45"); //yahoo.com
 	//strcpy (target, "173.252.110.27"); //facebook.com
-	//strcpy (target, "176.32.98.166");//amazon.com
-//strcpy (target, "208.80.152.201");//wikipedia
 
 // Fill out hints for getaddrinfo().
   memset (&hints, 0, sizeof (struct addrinfo));
@@ -670,11 +613,9 @@ main (int argc, char **argv)
 	struct ip *recv_iph = (struct ip *) (buffer + sizeof(struct ether_header));
 	struct tcphdr *recv_tcph = (struct tcphdr *) (buffer +sizeof(struct ip) + sizeof(struct ether_header));
 	struct tcp_options *recv_tcpopt = (struct tcp_options *) (buffer + sizeof(struct ether_header)+sizeof(struct ip) + sizeof(struct tcphdr));
-	struct tcp_tcb tcb;
 
 	int ddd=main_pcap(); // reading SYN + ACK packet
-	/* now we can set our callback function */
-	//pcap_loop(handle, num_packets, got_packet, NULL);
+
 
 	printf("sending ACK\n");
 	memset (opt_buffer, 0, 40 * sizeof (unsigned char));
@@ -752,16 +693,14 @@ main (int argc, char **argv)
 	memset (opt_buffer, 0, 40 * sizeof (unsigned char));
 	memset (ether_frame + 14,0,(frame_length-14)* sizeof (unsigned char));
 
-//HTTP/1.0 200 OK\r\n
-  //48 54 54 50 2f 31 2e 30 20 32 30 30 20 4f 4b 0d 0a
 
 
 
-//HTTP/1.0
-// 48 54 54 50 2f 31 2e 30
 	// Number of TCP options
   nopt = 1;
 
+
+ 
 	// Second TCP option - GET /\r\n\r\n
  	//47 45 54 20 2f 0d 0a
 	opt_len[0] = 0;
@@ -775,23 +714,6 @@ main (int argc, char **argv)
 	options[0][7] = 0x0d; opt_len[0]++;  //
 	options[0][8] = 0x0a; opt_len[0]++;  //
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-tcb.size_last_data_sent=opt_len[0]*sizeof(char);
-	
 // Copy all options into single options buffer.
   buf_len = 0;
   c = 0;  // index to opt_buffer
@@ -850,179 +772,12 @@ tcb.size_last_data_sent=opt_len[0]*sizeof(char);
   else
 	{
 		printf("GET / sent\n");
-	}	
-
-
-	memset (ether_frame + 14,0,(frame_length-14)* sizeof (unsigned char));
-	memset (opt_buffer, 0, 40 * sizeof (unsigned char));
-
-	
-
-	
-
-
-	
-	nopt = 2;// Number of TCP options
-
-	
-	opt_len[0] = 0;
-	options[0][0] = 0x00; opt_len[0]++;  // NOP
-
-	opt_len[1] = 0;
-	options[1][0] = 0x00; opt_len[1]++;  //NOP
- 
-	// Copy all options into single options buffer.
-	buf_len = 0;
-	c = 0;  // index to opt_buffer
-	for (i=0; i<nopt; i++) {
-		memcpy (opt_buffer + c, options[i], opt_len[i]);
-		c += opt_len[i];
-		buf_len += opt_len[i];
-	}
-
-	// Pad to the next 4-byte boundary.
-	while ((buf_len%4) != 0) {
-		opt_buffer[buf_len] = 0;
-		buf_len++;
-	}
-
-while(1){
-			//capturing data
-		ddd=main_pcap();
-		//sleep(3);
-		//pcap_loop(handle, num_packets, got_packet, NULL);
-		//sleep(3);
-
-
-		tcb.size_data_recv= ntohs(recv_iph->ip_len) - (IP4_HDRLEN + TCP_HDRLEN);
-
-		if(recv_tcph->th_flags==0x11 || tcb.size_data_recv==0)//[FIN,ACK]
-		{
-			break;
-		}
-
-		printf("BUffer Length= %d bytes\n",tcb.size_data_recv);
-		tcphdr.th_seq = htonl(ntohl(tcphdr.th_seq)+tcb.size_last_data_sent);
-		tcb.size_last_data_sent=0;
-		tcphdr.th_ack = htonl(ntohl(recv_tcph->th_seq)+tcb.size_data_recv);
-		iphdr.ip_id=htons(ntohs(iphdr.ip_id)+1);
-		iphdr.ip_len = htons (IP4_HDRLEN + TCP_HDRLEN + buf_len);
-		tcphdr.th_off = (TCP_HDRLEN  + buf_len) / 4;
-		tcphdr.th_flags = 0x10;//[ACK]
-		// TCP checksum (16 bits)
-		iphdr.ip_sum = 0;
-		iphdr.ip_sum = checksum ((unsigned short int *) &iphdr, IP4_HDRLEN);
-		tcphdr.th_sum = tcp4_checksum (iphdr, tcphdr, opt_buffer, buf_len);
-
-	 
-		frame_length = 6 + 6 + 2 + IP4_HDRLEN + TCP_HDRLEN + buf_len;
-
-		// IPv4 header
-		memcpy (ether_frame + 14, &iphdr, IP4_HDRLEN);
-		// TCP header
-		memcpy (ether_frame + 14 + IP4_HDRLEN, &tcphdr, TCP_HDRLEN);
-		// TCP Options
-		memcpy (ether_frame + 14 + IP4_HDRLEN + TCP_HDRLEN, opt_buffer, buf_len);
-
-		if ((bytes = sendto (sd, ether_frame, frame_length, 0, (struct sockaddr *) &device, sizeof (device))) <= 0) {
-		  perror ("sendto() failed");
-		printf("sending Data Recve Ack failed\n");
-		  exit (EXIT_FAILURE);
-		}
-		else
-		{
-			printf("Data Ack sent\n");
-		}
-
-
-}
-	
-
-	// Sending FIN ACK
-	memset (opt_buffer, 0, 40 * sizeof (unsigned char));
-
-	memset (ether_frame + 14,0,(frame_length-14)* sizeof (unsigned char));
-
-	// Number of TCP options
-	nopt = 2;
-
-	// First TCP option - Maximum segment size
-	opt_len[0] = 0;
-	options[0][0] = 0x00; opt_len[0]++;  // NOP
-
-	// Second TCP option - Timestamp option
-	opt_len[1] = 0;
-	options[1][0] = 0x00; opt_len[1]++;  //NOP
- 
-
-	// Copy all options into single options buffer.
-	buf_len = 0;
-	c = 0;  // index to opt_buffer
-	for (i=0; i<nopt; i++) {
-		memcpy (opt_buffer + c, options[i], opt_len[i]);
-		c += opt_len[i];
-		buf_len += opt_len[i];
-	}
-
-	// Pad to the next 4-byte boundary.
-	while ((buf_len%4) != 0) {
-		opt_buffer[buf_len] = 0;
-		buf_len++;
 	}
 
 
 
-	tcphdr.th_seq = htonl(ntohl(tcphdr.th_seq));
-	tcphdr.th_ack = htonl(ntohl(recv_tcph->th_seq));
-	iphdr.ip_id=htons(ntohs(iphdr.ip_id)+1);
-	iphdr.ip_len = htons (IP4_HDRLEN + TCP_HDRLEN + buf_len);
-	tcphdr.th_off = (TCP_HDRLEN  + buf_len) / 4;
-	tcphdr.th_flags = 0x01;//[FIN]
-	// TCP checksum (16 bits)
-	iphdr.ip_sum = 0;
-	iphdr.ip_sum = checksum ((unsigned short int *) &iphdr, IP4_HDRLEN);
-    tcphdr.th_sum = tcp4_checksum (iphdr, tcphdr, opt_buffer, buf_len);
 
-	// Fill out ethernet frame header.
-
-	// Ethernet frame length = ethernet header (MAC + MAC + ethernet type) + ethernet data (IP header + TCP header + TCP options)
-	frame_length = 6 + 6 + 2 + IP4_HDRLEN + TCP_HDRLEN + buf_len;
-
-	// IPv4 header
-	memcpy (ether_frame + 14, &iphdr, IP4_HDRLEN);
-	// TCP header
-	memcpy (ether_frame + 14 + IP4_HDRLEN, &tcphdr, TCP_HDRLEN);
-	// TCP Options
-	memcpy (ether_frame + 14 + IP4_HDRLEN + TCP_HDRLEN, opt_buffer, buf_len);
-	printf("sending FIN ACK......\n");
-	// Send ACK ethernet frame to socket.
-	if ((bytes = sendto (sd, ether_frame, frame_length, 0, (struct sockaddr *) &device, sizeof (device))) <= 0) {
-		perror ("sendto() failed");
-		printf("sending FIN ACK failed\n");
-		exit (EXIT_FAILURE);
-	}
-	else
-	{
-		printf("FIN ACK sent\n");
-	}
-
-
-sleep(5);
-
-
-
-
-ddd=main_pcap();
-
-
-
-
-
-
-
-	memset (opt_buffer, 0, 40 * sizeof (unsigned char));
-
-	memset (ether_frame + 14,0,(frame_length-14)* sizeof (unsigned char));
+memset (ether_frame + 14,0,(frame_length-14)* sizeof (unsigned char));
 
 // Sending reset to close the connection
 // Flags (8 bits)
@@ -1031,11 +786,11 @@ ddd=main_pcap();
   // SYN flag (1 bit): set to 1
   tcp_flags[1] = 0;
   // RST flag (1 bit)
-  tcp_flags[2] = 0;
+  tcp_flags[2] = 1;
   // PSH flag (1 bit)
   tcp_flags[3] = 0;
   // ACK flag (1 bit)
-  tcp_flags[4] = 1;
+  tcp_flags[4] = 0;
   // URG flag (1 bit)
   tcp_flags[5] = 0;
   // ECE flag (1 bit)
@@ -1048,47 +803,18 @@ ddd=main_pcap();
     tcphdr.th_flags += (tcp_flags[i] << i);
   }
 
-		// Number of TCP options
-	nopt = 2;
-
-	// First TCP option 
-	opt_len[0] = 0;
-	options[0][0] = 0x00; opt_len[0]++;  // NOP
-
-	// Second TCP option 
-	opt_len[1] = 0;
-	options[1][0] = 0x00; opt_len[1]++;  //NOP
- 
-
-	// Copy all options into single options buffer.
-	buf_len = 0;
-	c = 0;  // index to opt_buffer
-	for (i=0; i<nopt; i++) {
-		memcpy (opt_buffer + c, options[i], opt_len[i]);
-		c += opt_len[i];
-		buf_len += opt_len[i];
-	}
-
-	// Pad to the next 4-byte boundary.
-	while ((buf_len%4) != 0) {
-		opt_buffer[buf_len] = 0;
-		buf_len++;
-	}
-
-	tcphdr.th_seq = htonl(ntohl(tcphdr.th_seq));
-	tcphdr.th_ack = htonl(ntohl(recv_tcph->th_seq)+1);
 
 	iphdr.ip_id=htons(ntohs(iphdr.ip_id)+1);
 	iphdr.ip_len = htons (IP4_HDRLEN + TCP_HDRLEN + buf_len);
-	tcphdr.th_off = (TCP_HDRLEN + buf_len ) / 4;
+	tcphdr.th_off = (TCP_HDRLEN ) / 4;
 
 
-	tcphdr.th_seq = htonl(ntohl(tcphdr.th_seq)+1);
+
 	// TCP checksum (16 bits)
 	iphdr.ip_sum = 0;
 	iphdr.ip_sum = checksum ((unsigned short int *) &iphdr, IP4_HDRLEN);
     tcphdr.th_sum = tcp4_checksum (iphdr, tcphdr, opt_buffer, buf_len);
- frame_length = 6 + 6 + 2 + IP4_HDRLEN + TCP_HDRLEN + buf_len;
+
 	// Fill out ethernet frame header.
 
 	// Ethernet frame length = ethernet header (MAC + MAC + ethernet type) + ethernet data (IP header + TCP header + TCP options)
@@ -1098,18 +824,15 @@ ddd=main_pcap();
   memcpy (ether_frame + 14, &iphdr, IP4_HDRLEN);
 	// TCP header
   memcpy (ether_frame + 14 + IP4_HDRLEN, &tcphdr, TCP_HDRLEN);
-	// TCP Options
-  memcpy (ether_frame + 14 + IP4_HDRLEN + TCP_HDRLEN, opt_buffer, buf_len);
 
-  
-	if ((bytes = sendto (sd, ether_frame, frame_length, 0, (struct sockaddr *) &device, sizeof (device))) <= 0) {
+  if ((bytes = sendto (sd, ether_frame, frame_length, 0, (struct sockaddr *) &device, sizeof (device))) <= 0) {
     perror ("sendto() failed");
-	printf("sending ACK after FIN failed\n");
+	printf("sending RST failed\n");
     exit (EXIT_FAILURE);
   }
   else
 	{
-		printf("ACK sent\n");
+		printf("RST sent\n");
 	}
 
 
@@ -1122,13 +845,12 @@ ddd=main_pcap();
 
 
 
-	/* cleanup *///pcap
-	pcap_freecode(&fp);
-	pcap_close(handle);
-	// Close socket descriptor.
+
+
+// Close socket descriptor.
   close (sd);
 
-	// Free allocated memory.
+// Free allocated memory.
   free (src_mac);
   free (dst_mac);
   free (ether_frame);
@@ -1670,4 +1392,93 @@ void printbuffer(char *buffer)
 
 }
 
+
+void *main_pcap_thread(void *threadid)
+//int main_pcap_thread()
+{
+
+	char *dev = NULL;			/* capture device name */
+	char errbuf[PCAP_ERRBUF_SIZE];		/* error buffer */
+	pcap_t *handle;				/* packet capture handle */
+
+	char filter_exp[] = "ip";		/* filter expression [3] */
+	struct bpf_program fp;			/* compiled filter program (expression) */
+	bpf_u_int32 mask;			/* subnet mask */
+	bpf_u_int32 net;			/* ip */
+	int num_packets = 1;			/* number of packets to capture */
+
+	 /*find a capture device if not specified on command-line */
+	dev = pcap_lookupdev(errbuf);
+	if (dev == NULL) {
+		fprintf(stderr, "Couldn't find default device: %s\n",
+		    errbuf);
+		exit(EXIT_FAILURE);
+	}
+	//}
+	
+	/* get network number and mask associated with capture device */
+	if (pcap_lookupnet(dev, &net, &mask, errbuf) == -1) {
+		fprintf(stderr, "Couldn't get netmask for device %s: %s\n",
+		    dev, errbuf);
+		net = 0;
+		mask = 0;
+	}
+
+	/* print capture info */
+	printf("Device: %s\n", dev);
+	printf("Number of packets: %d\n", num_packets);
+	printf("Filter expression: %s\n", filter_exp);
+
+	/* open capture device */
+	handle = pcap_open_live(dev, SNAP_LEN, 1, 1000, errbuf);
+	if (handle == NULL) {
+		fprintf(stderr, "Couldn't open device %s: %s\n", dev, errbuf);
+		exit(EXIT_FAILURE);
+	}
+
+	/* make sure we're capturing on an Ethernet device [2] */
+	if (pcap_datalink(handle) != DLT_EN10MB) {
+		fprintf(stderr, "%s is not an Ethernet\n", dev);
+		exit(EXIT_FAILURE);
+	}
+
+	/* compile the filter expression */
+	if (pcap_compile(handle, &fp, filter_exp, 0, net) == -1) {
+		fprintf(stderr, "Couldn't parse filter %s: %s\n",
+		    filter_exp, pcap_geterr(handle));
+		exit(EXIT_FAILURE);
+	}
+
+	/* apply the compiled filter */
+	if (pcap_setfilter(handle, &fp) == -1) {
+		fprintf(stderr, "Couldn't install filter %s: %s\n",
+		    filter_exp, pcap_geterr(handle));
+		exit(EXIT_FAILURE);
+	}
+	struct ether_header *eh = (struct ether_header *) buffer;
+	struct ip *ip = (struct ip *) (buffer + sizeof(struct ether_header));
+	struct tcphdr *tcp = (struct tcphdr *) (buffer + sizeof(struct ip) + sizeof(struct ether_header));
+	struct tcp_options *tcpopt = (struct tcp_options *) (buffer + sizeof(struct ether_header)+sizeof(struct ip) + sizeof(struct tcphdr));
+
+	while(1)
+	{
+		packetrecvd=0;
+	/* now we can set our callback function */
+		pcap_loop(handle, num_packets, got_packet, NULL);
+		if(ntohs(tcp->th_dport)==src_port)
+		{
+			//packet recieved
+			packetrecvd=1;
+		}
+	
+
+	}
+	/* cleanup */
+	pcap_freecode(&fp);
+	pcap_close(handle);
+
+	printf("\nCapture complete.\n");
+pthread_exit(NULL);
+//return 0;
+}
 
